@@ -1,0 +1,20 @@
+{
+  "name": "Adrian Pantea Portfolio",
+  "short_name": "Portoflio",
+  "icons": [
+    {
+      "src": "public/me.jpeg",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "gcm_sender_id": "",
+  "gcm_user_visible_only": true,
+  "start_url": "/",
+  "permissions": ["gcm"],
+  "scope": "",
+  "orientation": "portrait",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
