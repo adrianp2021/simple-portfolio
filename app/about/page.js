@@ -266,7 +266,7 @@ export default function About() {
 
   return (
     <main className=" ">
-      <div className="pt-10 text-sm font-light decoration-1 text-gray-400 hover:text-orange-400">
+      <div className="pt-10 text-sm font-light decoration-1 text-neutral-500 hover:text-orange-600">
         <Link
           className="flex items-center"
           href="/"
@@ -292,8 +292,10 @@ export default function About() {
         </Link>
       </div>
       <section className="pt-8">
-        <h1 className="font-medium">About</h1>
-        <p className="text-sm font-light leading-relaxed my-3">
+        <p className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+          About
+        </p>
+        <p className="text-md font-light leading-relaxed text-neutral-400 mt-3">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -302,24 +304,28 @@ export default function About() {
       </section>
 
       <section className="pt-8">
-        <h1 className="font-medium">Work</h1>
-
-        <p className="text-sm font-light leading-relaxed mt-2">
+        <p className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+          Work
+        </p>
+        <p className="text-md font-light leading-relaxed mt-3 text-neutral-400">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
-          where I ensure data compliance and policy adherence while maintaining
-          the highest standards of integrity and user trust.
+          where I ensure <span className="font-bold ">data</span> compliance and
+          policy adherence while maintaining the highest standards of integrity
+          and user trust.
         </p>
       </section>
 
       <section className=" pt-8">
-        <h1 className="font-medium">Beyond the Screen</h1>
-        <p className="text-sm font-light  leading-relaxed my-3">
+        <p className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+          Beyond the Screen
+        </p>
+        <p className="text-md font-light leading-relaxed text-neutral-400 mt-3">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like{" "}
-          <span className="ml-1 text-sm font-semibold decoration-0 underline underline-offset-4 text-orange-500 hover:text-orange-400">
+          <span className="ml-1 text-md font-light leading-relaxed underline underline-offset-4 text-orange-500 hover:text-orange-600">
             <a
               href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
               target="_blank"
@@ -328,7 +334,7 @@ export default function About() {
             </a>
           </span>{" "}
           and{" "}
-          <span className="ml-1 text-sm font-semibold decoration-0 underline underline-offset-4 text-orange-500 hover:text-orange-400">
+          <span className="ml-1 text-md font-light leading-relaxed underline underline-offset-4 text-orange-500 hover:text-orange-600">
             <a
               href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
               target="_blank"
@@ -341,254 +347,254 @@ export default function About() {
       </section>
 
       <section className=" pt-8">
-        <h1>Stack</h1>
+        <p className="text-lg font-medium">Stack</p>
+
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Front End
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+            {frontEnd.map((item, i) => (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
+              >
+                <div
+                  key={i}
+                  className="text-md font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                >
+                  <div className="overflow-hidden rounded-md bg-gray-300">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Back End
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+            {backEnd.map((item, i) => (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              >
+                <div
+                  key={i}
+                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors  "
+                >
+                  <div className="overflow-hidden rounded-md bg-gray-300">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Coding
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+            {coding.map((item, i) => (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
+              >
+                <div
+                  key={i}
+                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                >
+                  <div className="overflow-hidden rounded-md bg-gray-300">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Productivity
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+            {productivity.map((item, i) => (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
+              >
+                <div
+                  key={i}
+                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                >
+                  <div className="overflow-hidden rounded-md bg-gray-300">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Design
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+            {design.map((item, i) => (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              >
+                <div
+                  key={i}
+                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors  "
+                >
+                  <div className="overflow-hidden rounded-md bg-gray-300">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Other
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+            {other.map((item, i) => (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              >
+                <div
+                  key={i}
+                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors  "
+                >
+                  <div className="overflow-hidden rounded-md bg-gray-300">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={32}
+                      height={32}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex items-center">
+                    <div>
+                      <p className="text-sm font-medium text-neutral-100 dark:text-neutral-100">
+                        {item.name}
+                      </p>
+                      <p className="text-sm text-neutral-100 dark:text-neutral-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
-
-      <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
-        <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
-          Front End
-        </p>
-        <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
-          {frontEnd.map((item, i) => (
-            <div
-              key={i}
-              className=" text-sm font-extralight hover:text-gray-400 mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 "
-            >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg"
-              >
-                <div className="overflow-hidden rounded-md bg-gray-300">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={32}
-                    height={32}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                      {item.name}
-                    </p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-        <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
-          Back End
-        </p>
-        <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
-          {backEnd.map((item, i) => (
-            <div
-              key={i}
-              className=" text-sm font-extralight hover:text-gray-400 mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 "
-            >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg"
-              >
-                <div className="overflow-hidden rounded-md bg-gray-300">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={32}
-                    height={32}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                      {item.name}
-                    </p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-        <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
-          Coding
-        </p>
-        <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
-          {coding.map((item, i) => (
-            <div
-              key={i}
-              className=" text-sm font-extralight hover:text-gray-400 mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 "
-            >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg"
-              >
-                <div className="overflow-hidden rounded-md bg-gray-300">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={32}
-                    height={32}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                      {item.name}
-                    </p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-        <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
-          Productivity
-        </p>
-        <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
-          {productivity.map((item, i) => (
-            <div
-              key={i}
-              className=" text-sm font-extralight hover:text-gray-400 mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 "
-            >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg"
-              >
-                <div className="overflow-hidden rounded-md bg-gray-300">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={32}
-                    height={32}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                      {item.name}
-                    </p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-        <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
-          Design
-        </p>
-        <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
-          {design.map((item, i) => (
-            <div
-              key={i}
-              className=" text-sm font-extralight hover:text-gray-400 mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 "
-            >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg"
-              >
-                <div className="overflow-hidden rounded-md bg-gray-300">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={32}
-                    height={32}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                      {item.name}
-                    </p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-        <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
-          Other
-        </p>
-        <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
-          {other.map((item, i) => (
-            <div
-              key={i}
-              className=" text-sm font-extralight hover:text-gray-400 mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800 "
-            >
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg"
-              >
-                <div className="overflow-hidden rounded-md bg-gray-300">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={32}
-                    height={32}
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center">
-                  <div>
-                    <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                      {item.name}
-                    </p>
-                    <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-      </div>
     </main>
   );
 }

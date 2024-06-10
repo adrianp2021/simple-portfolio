@@ -20,11 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className={`mx-auto max-w-2xl px-5`}>
         {children}
-        <footer className="  text-white">
+        <footer className=" text-neutral-400">
           <div className="text-center text-sm font-extralight border-t py-4">
             <p>
               &copy; 2024 Adrian Pantea. All rights reserved. Icons by{" "}
-              <span className="text-sm font-light decoration-1 underline underline-offset-4 text-gray-400 hover:text-orange-400">
+              <span className="text-sm font-light decoration-0 underline underline-offset-4 text-orange-500 hover:text-orange-600">
                 <a href="https://icons8.com/" target="_blank">
                   Icons8
                 </a>

@@ -135,18 +135,20 @@ export default function Home() {
             />
             <div className="pl-6">
               <h1>Adrian Pantea</h1>
-              <p className="text-sm font-light opacity-70">
+              <p className="font-light text-neutral-400 text-base sm:text-sm md:text-md lg:text-lg">
                 Product-focused Fullstack Developer
               </p>
             </div>
           </div>
           <div className="pt-10">
-            <h2 className="font-medium">About</h2>
-            <p className="text-sm font-light leading-relaxed mt-2">
+            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+              About
+            </h2>
+            <p className="text-md font-light leading-relaxed text-neutral-400 mt-2">
               Hi, I'm Adrian. I enjoy building dynamic, creative products from
               start to finish. Focused on developing intuitive experiences that
               constantly grow and improve based on user metrics. More about me
-              <span className="ml-1 text-sm font-semibold decoration-1 underline underline-offset-4 text-orange-400 hover:text-orange-300">
+              <span className="ml-1 text-md font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                 <Link href="/about">here</Link>
               </span>
               .
@@ -156,27 +158,29 @@ export default function Home() {
 
         <section className="">
           <div className="pb-5">
-            <h2 className="font-medium">Work experience</h2>
+            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+              Work experience
+            </h2>
           </div>
           {jobs.map((job, i) => (
             <div key={i} className="flex flex-col sm:flex-row pb-8">
               <div className="w-full sm:w-1/4">
-                <p className="opacity-70 text-sm font-extralight">{job.year}</p>
+                <p className="text-neutral-400 text-sm font-bold">{job.year}</p>
               </div>
               <div className="w-full sm:w-3/4 sm:mt-0 mt-4 ">
-                <h2 className="text-sm font-light mb-2">
+                <h2 className="text-md font-light mb-2">
                   {job.role} at{" "}
-                  <span className=" font-semibold text-sm decoration-1 underline underline-offset-4 text-orange-400 hover:text-orange-300">
+                  <span className="font-semibold text-md decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                     <a
                       href={job.recipient}
                       target="_blank"
-                      className="underline underline-offset-4"
+                      // className="underline"
                     >
                       {job.name}
                     </a>
                   </span>
                 </h2>
-                <p className="text-sm font-light leading-relaxed my-3">
+                <p className="text-md font-light leading-relaxed text-neutral-400 my-3">
                   {job.description}
                 </p>
               </div>
@@ -186,7 +190,9 @@ export default function Home() {
 
         <section className="pb-8">
           <div className="pb-5">
-            <h2 className="font-medium">Projects</h2>
+            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+              Projects
+            </h2>
           </div>
           {projects.map((project, i) => (
             <div key={i} className="flex flex-col sm:flex-row mb-8">
@@ -198,12 +204,12 @@ export default function Home() {
               <div className="w-full sm:w-3/4 sm:mt-0 mt-4">
                 <div className="">
                   <div>
-                    <span className="text-sm font-semibold decoration-0 underline underline-offset-4 text-orange-400 hover:text-orange-300">
+                    <span className="text-md font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
-                    <h2 className="text-sm font-extralight leading-relaxed my-3">
+                    <h2 className="text-md font-light leading-relaxed text-neutral-400  my-3">
                       {project.description}
                     </h2>
                   </div>
@@ -226,32 +232,16 @@ export default function Home() {
 
         <section className="">
           <div className="pb-5">
-            <h2 className="font-medium">Let's connect</h2>
+            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
+              Let's connect
+            </h2>
           </div>
           <div className="container flex justify-between items-center">
-            {/* <div className="flex">
-              {socialMedia.map((social, i) => {
-                return (
-                  <div
-                    key={i}
-                    className="flex mr-4 text-sm font-extralight hover:text-gray-400"
-                  >
-                    <div className="flex mb-6">
-                      <a href={social.recipient} target="_blank" aria-label={social.ariaLabel}>
-                        {social.name}
-                      </a>
-                    </div>
-                  </div>
-                );
-              })}
-            </div> */}
-
             <div className="flex">
               {socialMedia.map((social, i) => (
                 <div
                   key={i}
-                  // className="mr-4 text-sm font-extralight hover:text-gray-400  "
-                  className="mr-4 mb-6 text-sm font-semibold decoration-1 underline underline-offset-4 text-orange-400 hover:text-orange-300"
+                  className="mr-4 mb-6 text-sm font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100"
                 >
                   <a
                     href={social.recipient}
@@ -268,7 +258,7 @@ export default function Home() {
             <div className="mb-6">
               <Link
                 href="/contact"
-                className="text-sm font-semibold decoration-0 underline underline-offset-4 text-orange-400 hover:text-orange-300"
+                className="text-sm font-semibold decoration-0 underline underline-offset-4 text-orange-500 hover:text-orange-600"
               >
                 Contact Me
               </Link>
@@ -276,12 +266,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      {/* <footer className=" text-white">
-        <div className="text-center text-sm font-extralight border-t opacity-50 py-4">
-          <p>&copy; 2024 Adrian Pantea. All rights reserved.</p>
-        </div>
-      </footer> */}
     </>
   );
 }
