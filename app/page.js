@@ -135,20 +135,18 @@ export default function Home() {
             />
             <div className="pl-6">
               <h1>Adrian Pantea</h1>
-              <p className="font-light text-neutral-400 text-base sm:text-sm md:text-md lg:text-lg">
+              <p className="font-light text-base xs:text-xs  sm:text-sm md:text-md lg:text-lg text-orange-500 hover:text-orange-600">
                 Product-focused Fullstack Developer
               </p>
             </div>
           </div>
           <div className="pt-10">
-            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
-              About
-            </h2>
-            <p className="text-md font-light leading-relaxed text-neutral-400 mt-2">
+            <h2 className="text-lg font-semibold ">About</h2>
+            <p className="text-sm font-light leading-relaxed text-neutral-400 mt-2">
               Hi, I'm Adrian. I enjoy building dynamic, creative products from
               start to finish. Focused on developing intuitive experiences that
               constantly grow and improve based on user metrics. More about me
-              <span className="ml-1 text-md font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
+              <span className="ml-1 text-sm font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                 <Link href="/about">here</Link>
               </span>
               .
@@ -158,19 +156,17 @@ export default function Home() {
 
         <section className="">
           <div className="pb-5">
-            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
-              Work experience
-            </h2>
+            <h2 className="text-lg font-semibold ">Work experience</h2>
           </div>
           {jobs.map((job, i) => (
             <div key={i} className="flex flex-col sm:flex-row pb-8">
               <div className="w-full sm:w-1/4">
-                <p className="text-neutral-400 text-sm font-bold">{job.year}</p>
+                <p className="text-neutral-400 text-sm font-light">{job.year}</p>
               </div>
               <div className="w-full sm:w-3/4 sm:mt-0 mt-4 ">
-                <h2 className="text-md font-light mb-2">
+                <h2 className="text-sm font-light mb-2">
                   {job.role} at{" "}
-                  <span className="font-semibold text-md decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
+                  <span className="font-semibold text-sm decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                     <a
                       href={job.recipient}
                       target="_blank"
@@ -180,7 +176,7 @@ export default function Home() {
                     </a>
                   </span>
                 </h2>
-                <p className="text-md font-light leading-relaxed text-neutral-400 my-3">
+                <p className="text-sm font-light leading-relaxed text-neutral-400 my-3">
                   {job.description}
                 </p>
               </div>
@@ -190,9 +186,7 @@ export default function Home() {
 
         <section className="pb-8">
           <div className="pb-5">
-            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
-              Projects
-            </h2>
+            <h2 className="text-lg font-semibold ">Projects</h2>
           </div>
           {projects.map((project, i) => (
             <div key={i} className="flex flex-col sm:flex-row mb-8">
@@ -204,17 +198,17 @@ export default function Home() {
               <div className="w-full sm:w-3/4 sm:mt-0 mt-4">
                 <div className="">
                   <div>
-                    <span className="text-md font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
+                    <span className="text-sm font-semibold decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
-                    <h2 className="text-md font-light leading-relaxed text-neutral-400  my-3">
+                    <h2 className="text-sm font-light leading-relaxed text-neutral-400  my-3">
                       {project.description}
                     </h2>
                   </div>
 
-                  <div className="flex  gap-2 mt-2 justify-end ">
+                  <div className="flex gap-2 mt-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
                       <spans
                         key={index}
@@ -232,9 +226,7 @@ export default function Home() {
 
         <section className="">
           <div className="pb-5">
-            <h2 className="text-lg font-semibold text-orange-500 hover:text-orange-600">
-              Let's connect
-            </h2>
+            <h2 className="text-lg font-semibold ">Let's connect</h2>
           </div>
           <div className="container flex justify-between items-center">
             <div className="flex">
