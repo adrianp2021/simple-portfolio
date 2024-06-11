@@ -135,14 +135,14 @@ export default function Home() {
             />
             <div className="pl-6">
               <h1>Adrian Pantea</h1>
-              <p className="font-normal  text-md text-orange-500">
+              <p className="font-normal text-sm text-orange-500">
                 Product-focused Fullstack Developer
               </p>
             </div>
           </div>
           <div className="pt-8">
             {/* <h2 className="text-lg font-semibold text-orange-500">About</h2> */}
-            <p className=" text-sm font-normal leading-relaxed mt-2">
+            <p className=" text-sm font-light leading-relaxed mt-2">
               Hi, I'm Adrian. I enjoy building dynamic, creative products from
               start to finish. Focused on developing intuitive experiences that
               constantly grow and improve based on user metrics. Find out more
@@ -163,21 +163,21 @@ export default function Home() {
           {jobs.map((job, i) => (
             <div
               key={i}
-              className="flex flex-col sm:flex-row pb-8 text-sm font-normal leading-relaxed "
+              className="flex flex-col sm:flex-row pb-8 font-light text-sm leading-relaxed "
             >
               <div className="w-full sm:w-1/4">
                 <p className="text-neutral-400 ">{job.year}</p>
               </div>
-              <div className="w-full sm:w-3/4 sm:mt-0 mt-4">
-                <h2 className=" mb-2">
+              <div className="w-full sm:w-3/4 sm:mt-0 mt-4 ">
+                <h2 className="text-neutral-400 mb-2 ">
                   {job.role} at{" "}
-                  <span className="decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
+                  <span className="font-light decoration-0 underline underline-offset-4 hover:text-neutral-100">
                     <a href={job.recipient} target="_blank">
                       {job.name}
                     </a>
                   </span>
                 </h2>
-                <p className=" text-neutral-400 my-3">{job.description}</p>
+                <p className="  my-3">{job.description}</p>
               </div>
             </div>
           ))}
@@ -190,7 +190,7 @@ export default function Home() {
           {projects.map((project, i) => (
             <div
               key={i}
-              className="flex flex-col sm:flex-row mb-8 text-sm font-normal leading-relaxed"
+              className="flex flex-col sm:flex-row mb-8 font-light text-sm leading-relaxed"
             >
               <div className="w-full sm:w-1/4">
                 <p className="opacity-70">{project.year}</p>
@@ -198,14 +198,12 @@ export default function Home() {
               <div className="w-full sm:w-3/4 sm:mt-0 mt-4">
                 <div className="">
                   <div>
-                    <span className=" decoration-0 underline underline-offset-4 text-neutral-100 hover:text-neutral-400">
+                    <span className=" decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
-                    <h2 className=" text-neutral-400  my-3">
-                      {project.description}
-                    </h2>
+                    <h2 className="my-3">{project.description}</h2>
                   </div>
 
                   <div className="flex gap-2 mt-2 justify-end ">
@@ -230,12 +228,12 @@ export default function Home() {
               Let's connect
             </h2>
           </div>
-          <div className="container flex justify-between items-center">
+          <div className="container flex justify-between items-center font-light text-sm leading-relaxed">
             <div className="flex text-md">
               {socialMedia.map((social, i) => (
                 <div
                   key={i}
-                  className="mr-4 mb-6 text-sm font-normal leading-relaxed decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100"
+                  className="mr-4 mb-6  decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100"
                 >
                   <a
                     href={social.recipient}
@@ -249,7 +247,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mb-6 text-sm font-normal leading-relaxed">
+            <div className="mb-6 ">
               <Link
                 href="/contact"
                 className=" decoration-0 underline underline-offset-4 text-orange-500 hover:text-orange-600"
