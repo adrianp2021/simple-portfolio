@@ -292,8 +292,8 @@ export default function About() {
         </Link>
       </div>
       <section className="pt-8">
-        <p className="text-lg font-semibold ">More about me</p>
-        <p className="text-sm font-light leading-relaxed text-neutral-400 mt-3">
+        <p className="text-lg font-semibold text-orange-500">More about me</p>
+        <p className="text-sm font-normal leading-relaxed text-neutral-400 mt-3">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -302,8 +302,8 @@ export default function About() {
       </section>
 
       <section className="pt-8">
-        <p className="text-lg font-semibold ">Work</p>
-        <p className="text-sm font-light leading-relaxed mt-3 text-neutral-400">
+        <p className="text-lg font-semibold text-orange-500">Work</p>
+        <p className="text-sm font-normal leading-relaxed mt-3 text-neutral-400">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -314,12 +314,12 @@ export default function About() {
       </section>
 
       <section className=" pt-8">
-        <p className="text-lg font-semibold ">Beyond the Screen</p>
-        <p className="text-sm font-light leading-relaxed text-neutral-400 mt-3">
+        <p className="text-lg font-semibold text-orange-500">Beyond the Screen</p>
+        <p className="text-sm font-normal leading-relaxed text-neutral-400 mt-3">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
-          <span className="ml-1 text-md font-light leading-relaxed underline underline-offset-4 text-orange-500 hover:text-orange-600">
+          <span className="ml-1 underline underline-offset-4 text-orange-500 hover:text-orange-600">
             <a
               href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
               target="_blank"
@@ -328,7 +328,7 @@ export default function About() {
             </a>
           </span>{" "}
           and
-          <span className="ml-1 text-md font-light leading-relaxed underline underline-offset-4 text-orange-500 hover:text-orange-600">
+          <span className="ml-1 underline underline-offset-4 text-orange-500 hover:text-orange-600">
             <a
               href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
               target="_blank"
@@ -341,7 +341,7 @@ export default function About() {
       </section>
 
       <section className=" pt-8">
-        <p className="text-lg font-medium ">Stack</p>
+        <p className="text-lg font-medium text-orange-500">Stack</p>
 
         <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
           <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
