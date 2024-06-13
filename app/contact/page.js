@@ -93,7 +93,7 @@ export default function Contact() {
 
   return (
     <>
-      <section>
+      <section className="border ">
         <div className="pt-10 text-sm font-light decoration-1 ">
           <Link
             className="flex items-center  hover:text-orange-600"
@@ -118,6 +118,14 @@ export default function Contact() {
             </svg>
             Back to home page
           </Link>
+        </div>
+
+        <div>
+          <h1>Contact</h1>
+          <p>
+            If you just want to say hi, discuss a project or get to know each
+            other, let's get in touch.{" "}
+          </p>
         </div>
 
         {/* <div>
