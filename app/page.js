@@ -141,51 +141,51 @@ export default function Home() {
   //   setFormData({ ...formData, [e.target.value]: e.target.value });
   // };
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = async (e) => {
     
-    // ? below commented code is the one that didn't work. Learn from it!
-    // e.preventDefault();
-    // if (!firstName || email) return;
-    // try {
-    //   const response = await fetch("/api/send", {
-    //     method: "POST",
-    //     body: JSON.stringify({ firstName, lastName, email, message }),
+  //   // ? below commented code is the one that didn't work. Learn from it!
+  //   // e.preventDefault();
+  //   // if (!firstName || email) return;
+  //   // try {
+  //   //   const response = await fetch("/api/send", {
+  //   //     method: "POST",
+  //   //     body: JSON.stringify({ firstName, lastName, email, message }),
 
-    //   });
-    //   console.log(body)
-    // } catch {
-    //   console.error();
-    // }
+  //   //   });
+  //   //   console.log(body)
+  //   // } catch {
+  //   //   console.error();
+  //   // }
 
-    e.preventDefault();
-    console.log("Form submitted");
+  //   e.preventDefault();
+  //   console.log("Form submitted");
 
-    if (!firstName || !email) {
-      console.error("First name and email are required");
-      return;
-    }
+  //   if (!firstName || !email) {
+  //     console.error("First name and email are required");
+  //     return;
+  //   }
 
-    try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          // added headers
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ firstName, lastName, email, message }),
-      });
+  //   try {
+  //     const response = await fetch("/api/send", {
+  //       method: "POST",
+  //       headers: {
+  //         // added headers
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ firstName, lastName, email, message }),
+  //     });
 
-      if (!response.ok) {
-        // added catch error
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+  //     if (!response.ok) {
+  //       // added catch error
+  //       throw new Error(`HTTP error! status: ${response.status}`);
+  //     }
 
-      const data = await response.json();
-      console.log("Response data:", data);
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
-  };
+  //     const data = await response.json();
+  //     console.log("Response data:", data);
+  //   } catch (error) {
+  //     console.error("Error sending email:", error);
+  //   }
+  // };
 
   return (
     <>
@@ -229,79 +229,6 @@ export default function Home() {
           </div>
         </section>
 
-        <form
-          className="mt-6 flex flex-col text-black max-w-xl gap-4 z-10 w-56 "
-          onSubmit={handleSubmit}
-        >
-          <input
-            name="firstName"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="First name"
-            value={firstName}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setFirstName(e.target.value);
-              console.log(firstName);
-            }}
-          />
-
-          <input
-            name="lastName"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="Last name"
-            value={lastName}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setLastName(e.target.value);
-            }}
-          />
-
-          <input
-            name="email"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="Email"
-            value={email}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <textarea
-            name="message"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="Message"
-            value={message}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-          />
-          <button
-            type="submit"
-            className="flex justify-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500"
-          >
-            {" "}
-            send email
-            {/* {loading ? (
-              <div
-                style={{
-                  borderTopColor: "transparent",
-                }}
-                className="w-4 h-4 border-2 border-white border-solid rounded-full animate-spin"
-              ></div>
-            ) : (
-              "Submit"
-            )} */}
-          </button>
-        </form>
 
         <section>
           <div className="pb-5">

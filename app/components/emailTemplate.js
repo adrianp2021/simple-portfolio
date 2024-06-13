@@ -1,6 +1,4 @@
-// // export default function Contact() {
-// //   return <h1>this is the contact page</h1>;
-// // }
+
 // "use client";
 // import React from "react";
 
@@ -271,16 +269,16 @@ import * as React from "react";
 export const EmailTemplate = ({ firstName, lastName, email, message }) => {
   return (
     <div>
-      <h2>your received a new message</h2>
+      <h2>You received a new message</h2>
       <p>
         <span>First name: </span>
-        <strong>{firstName}</strong>
+        <strong> {firstName}</strong>
         <span>Last name: </span>
-        <strong>{lastName}</strong>
+        <strong> {lastName}</strong>
         <span>Email: </span>
-        <strong>{email}</strong>
+        <strong> {email}</strong>
         <span>Message: </span>
-        <strong>{message}</strong>
+        <strong> {message}</strong>
       </p>
     </div>
   );
