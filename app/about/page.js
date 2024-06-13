@@ -266,9 +266,9 @@ export default function About() {
 
   return (
     <main className=" ">
-      <div className="pt-10 text-sm font-light decoration-1 text-neutral-500 hover:text-orange-600">
+      <div className="pt-10 text-sm font-light decoration-1 ">
         <Link
-          className="flex items-center"
+          className="flex items-center  hover:text-orange-600"
           href="/"
           aria-label="Back to home page"
         >
@@ -282,7 +282,7 @@ export default function About() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className=" w-4 mr-1"
+            className=" w-4 mr-1 "
           >
             <path d="M3 19V5"></path>
             <path d="m13 6-6 6 6 6"></path>
@@ -373,7 +373,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
                         {item.name}
                       </p>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral-500 dark:text-neutral-400">
                         {item.description}
                       </p>
                     </div>
