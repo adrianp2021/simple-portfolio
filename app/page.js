@@ -188,9 +188,15 @@ export default function Home() {
   //   }
   // };
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <>
-      <main>
+      <main className={`${darkMode && "dark"}`}>
         {/* <button
           onClick={async () => {
             await fetch("/api/emails", { method: 'POST' });
@@ -199,7 +205,7 @@ export default function Home() {
           send email
         </button> */}
 
-        <section className="pt-20 pb-8">
+        <section className="pt-20 pb-8 dark:bg-neutral-300">
           <div className="flex items-center">
             <Image
               src={photo}
@@ -333,6 +339,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <button
+          onClick={toggleDarkMode}
+          className="absolute w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white  text-white dark:text-black"
+        >
+          {darkMode ? "light" : "dark"}
+        </button>
       </main>
     </>
   );

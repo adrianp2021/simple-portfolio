@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body className={`mx-auto max-w-2xl px-5  leading-6`}>
+      <body className={` mx-auto max-w-2xl px-5  leading-6`}>
         {children}
         <footer className=" text-neutral-400">
           <div className="text-center text-sm font-extralight border-t border-t-gray-800 py-4">
