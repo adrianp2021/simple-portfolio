@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import photo from "../public/me.jpeg";
+// import photo from "../public/me.jpeg";
+import photo from "../public/me.jpg";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
@@ -142,7 +143,7 @@ export default function Home() {
   // };
 
   // const handleSubmit = async (e) => {
-    
+
   //   // ? below commented code is the one that didn't work. Learn from it!
   //   // e.preventDefault();
   //   // if (!firstName || email) return;
@@ -229,7 +230,6 @@ export default function Home() {
           </div>
         </section>
 
-
         <section>
           <div className="pb-5">
             <h2 className="text-lg font-semibold text-orange-500">
@@ -245,7 +245,7 @@ export default function Home() {
                 <p className="text-neutral-400 ">{job.year}</p>
               </div>
               <div className="w-full sm:w-3/4 sm:mt-0 mt-4 ">
-                <h2 className="text-neutral-400 mb-2 ">
+                <h2 className=" mb-2 ">
                   {job.role} at{" "}
                   <span className="font-light decoration-0 underline underline-offset-4 hover:text-neutral-100">
                     <a href={job.recipient} target="_blank">
@@ -253,7 +253,7 @@ export default function Home() {
                     </a>
                   </span>
                 </h2>
-                <p className=" my-3">{job.description}</p>
+                <p className="text-neutral-400 my-3">{job.description}</p>
               </div>
             </div>
           ))}

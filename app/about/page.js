@@ -266,7 +266,7 @@ export default function About() {
 
   return (
     <main className=" ">
-      <div className="pt-10 text-sm font-light decoration-1 ">
+      <div className="pt-20 text-sm font-light decoration-1 w-max">
         <Link
           className="flex items-center  hover:text-orange-600"
           href="/"
@@ -314,7 +314,9 @@ export default function About() {
       </section>
 
       <section className=" pt-8">
-        <p className="text-lg font-semibold text-orange-500">Beyond the Screen</p>
+        <p className="text-lg font-semibold text-orange-500">
+          Beyond the Screen
+        </p>
         <p className="text-sm font-light leading-relaxed mt-3">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
@@ -340,7 +342,7 @@ export default function About() {
         </p>
       </section>
 
-      <section className=" pt-8">
+      <section className="pt-8">
         <p className="text-lg font-medium text-orange-500">Stack</p>
 
         <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">

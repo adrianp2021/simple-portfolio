@@ -8,7 +8,7 @@ import {
   Heading,
 } from "@react-email/components";
 
-export const EmailTemplate = ({ firstName, lastName, email, message }) => {
+export const EmailTemplate = ({ name, email, message }) => {
   return (
     <Html lang="en" dir="ltr">
       <Head>
@@ -26,16 +26,16 @@ export const EmailTemplate = ({ firstName, lastName, email, message }) => {
       </Head>
       <Container style={styles.container}>
         <Heading style={styles.heading}>
-          Hi, you've received an email from {firstName} {lastName}
+          Hi, you've received an email from {name}
         </Heading>
         <div style={styles.formContainer}>
           <div style={styles.formGroup}>
             <label style={styles.label}>First name:</label>
-            <div style={styles.input}>{firstName}</div>
+            <div style={styles.input}>{name}</div>
           </div>
           <div style={styles.formGroup}>
             <label style={styles.label}>Last name:</label>
-            <div style={styles.input}>{lastName}</div>
+            <div style={styles.input}></div>
           </div>
           <div style={styles.formGroup}>
             <label style={styles.label}>Email:</label>
@@ -62,7 +62,7 @@ const styles = {
     borderRadius: "10px",
     textAlign: "start",
     fontFamily: "Roboto, sans-serif",
-    width:"500px"
+    width: "500px",
   },
   button: {
     background: "#6C63FF",
@@ -88,7 +88,7 @@ const styles = {
   },
   formGroup: {
     marginBottom: "15px",
-    color: "#ffffff"
+    color: "#ffffff",
   },
   label: {
     fontWeight: "bold",

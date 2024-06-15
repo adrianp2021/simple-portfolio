@@ -1,102 +1,88 @@
 "use client";
-import { useState } from "react";
+import { use, useState } from "react";
 import emailTemplate from "../components/emailTemplate";
 import Link from "next/link";
 
 export default function Contact() {
-  // const socialMedia = [
-  //   {
-  //     name: "Send an email",
-  //     link: "mailto:adrianpantea10@gmail.com",
-  //   },
-  //   {
-  //     name: "Follow me on Linkedin",
-  //     link: "https://www.linkedin.com/in/adrian-pantea/",
-  //   },
-  //   {
-  //     name: "Follow me on Github",
-  //     link: "https://github.com/adrianp2021",
-  //   },
-  //   {
-  //     name: "Follow me on Twitter",
-  //     link: "https://twitter.com/AdrianPantea4",
-  //   },
-  // ];
 
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
-  // const [submitted, setSubmitted] = useState(false);
-  // const [status, setStatus] = useState("");
-
-  // async function handleOnSubmit(e) {
-  //   e.preventDefault();
-  //   const formData = {
-  //     name,
-  //     email,
-  //     message,
-  //   };
-
-  //   setSubmitted(true);
-
-  //   fetch("/api/mail", {
-  //     method: "post",
-  //     body: JSON.stringify(formData),
-  //   }).then((res) => {
-  //     if (res.status === 200) {
-  //       setSubmitted(false);
-  //       setName("");
-  //       setEmail("");
-  //       setMessage("");
-  //       setStatus("success");
-  //     } else {
-  //       setStatus("error");
-  //     }
-  //   });
-  // }
-
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  // const [firstName, setFirstName] = useState("");
+  const [name, setName] = useState("");
+  // const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submitted");
 
-    if (!firstName || !email) {
+    if (!name || !email) {
       console.error("First name and email are required");
       return;
     }
+
+    // try {
+    //   const response = await fetch("/api/send", {
+    //     method: "POST",
+    //     headers: {
+    //       // added headers
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({ name, email, message }),
+    //   });
+
+    //   if (!response.ok) {
+    //     // added catch error
+    //     throw new Error(`HTTP error! status: ${response.status}`);
+
+    //   } else {
+    //     setStatus("error");
+    //   }
+
+    //   const data = await response.json();
+    //   setStatus("success");
+    //   console.log("Response data:", data);
+    // } catch (error) {
+    //   console.error("Error sending email:", error);
+    // }
 
     try {
       const response = await fetch("/api/send", {
         method: "POST",
         headers: {
-          // added headers
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ firstName, lastName, email, message }),
+        body: JSON.stringify({ name, email, message }),
       });
 
-      if (!response.ok) {
-        // added catch error
-        throw new Error(`HTTP error! status: ${response.status}`);
+      if (response.ok) {
+        setStatus("success");
+        const data = await response.json();
+        console.log("Response data:", data);
+      } else {
+        setStatus("error");
+        const errorData = await response.json();
+        console.error("Error response data:", errorData);
       }
-
-      const data = await response.json();
-      console.log("Response data:", data);
     } catch (error) {
       console.error("Error sending email:", error);
+      setStatus("error");
     }
+
+    setTimeout(() => {
+      setStatus(null);
+      setName("");
+      setEmail("");
+      setMessage("");
+    }, 8000);
   };
 
   return (
     <>
-      <section className="border ">
-        <div className="pt-10 text-sm font-light decoration-1 ">
+      <section className="pt-20 pb-8 ">
+        <div className=" text-sm font-light decoration-1 w-max">
           <Link
-            className="flex items-center  hover:text-orange-600"
+            className="flex items-center  hover:text-orange-600 "
             href="/"
             aria-label="Back to home page"
           >
@@ -120,161 +106,114 @@ export default function Contact() {
           </Link>
         </div>
 
-        <div>
-          <h1>Contact</h1>
-          <p>
-            If you just want to say hi, discuss a project or get to know each
-            other, let's get in touch.{" "}
-          </p>
-        </div>
+        <h2 className=" pt-8 text-2xl font-semibold text-orange-500">
+          Contact
+        </h2>
+        <p className="text-md pt-3">
+          If you just want to say hi, discuss a project or get to know each
+          other, let's get in touch.{" "}
+        </p>
 
-        {/* <div>
-          <div>
-            <h1>Contact</h1>
-            <p>
-              If you just want to say hi, discuss a project or get to know each
-              other, let's get in touch.{" "}
-            </p>
-          </div>
-          <div>
-            <div>
-              <form
-                action="submit"
-                method="POST"
-                // onSubmit={handleOnSubmit}
-              >
-                Name
+        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
+          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+            Let's connect
+          </p>
+          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 ">
+            <div className="text-md font-extralight  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors ">
+              <form className="w-full p-2" onSubmit={handleSubmit}>
+                <label
+                  htmlFor="name"
+                  className="text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500"
+                >
+                  Full name
+                </label>
                 <input
+                  name="name"
                   type="text"
-                  // value={name}
+                  required
+                  className="my-2 rounded-md focus:outline-none dark:bg-neutral-950 dark:border-neutral-800 px-3 py-2.5  ring-1 ring-inset ring-gray-600 focus:ring-orange-500 text-sm w-full "
+                  placeholder="John"
+                  value={name}
+                  // onChange={handleChange}
                   onChange={(e) => {
                     setName(e.target.value);
-                  }}
-                  placeholder="John Doe"
-                  _placeholder={{ fontSize: "14px" }}
-                  name="name"
-                  isRequired
-                />
-                Email address
-                <input
-                  type="email"
-                  placeholder="john.doe@email.com"
-                  _placeholder={{ fontSize: "14px" }}
-                  // value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
+                    console.log(setName);
                   }}
                 />
-                Message
+
+                <label className="block">
+                  <span className="block text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500 ">
+                    Email
+                  </span>
+
+                  <input
+                    name="email"
+                    type="email"
+                    // required
+                    className="peer ... my-2 rounded-md focus:outline-none dark:bg-neutral-950 dark:border-neutral-800 px-3 py-2.5 ring-1 ring-inset ring-gray-600 focus:ring-orange-500 text-sm w-full disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                    invalid:border-red-500 invalid:text-red-600
+                    focus:invalid:border-red-500 focus:invalid:ring-red-500"
+                    placeholder="johndoe@email.com"
+                    value={email}
+                    // onChange={handleChange}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                  <p className="invisible peer-invalid:visible text-orange-500 text-sm">
+                    Please provide a valid email address.
+                  </p>
+                </label>
+
+                <label
+                  htmlFor="message"
+                  className="text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500"
+                >
+                  Message
+                </label>
                 <textarea
-                  placeholder="write your message..."
-                  _placeholder={{ fontSize: "14px" }}
-                  // value={message}
+                  name="message"
+                  type="text"
+                  required
+                  className="my-2 rounded-md focus:outline-none dark:bg-neutral-950 dark:border-neutral-800 px-3 py-2.5 ring-1 ring-inset ring-gray-600 focus:ring-orange-500 text-sm w-full"
+                  placeholder="Write your message..."
+                  value={message}
+                  // onChange={handleChange}
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
                 />
-                <div>
-                  <button
-                    mt={5}
-                    borderRadius="xl"
-                    type="submit"
-                    color="#7A7171"
-                  >
-                    <p>Send </p>
-                  </button>
-                </div>
-                <div>
+
+                <button
+                  type="submit"
+                  className={`flex justify-center rounded-md px-3 py-2.5 text-sm font-semibold text-white shadow-sm ${
+                    status === "success"
+                      ? "bg-orange-500 opacity-50 cursor-not-allowed"
+                      : "rounded-md bg-orange-500 px-3  text-sm font-semibold text-white shadow-sm hover:bg-orange-600"
+                  }`}
+                  disabled={status === "success"}
+                >
+                  Send email
+                </button>
+
+                <div className=" " role="alert">
                   {status === "success" ? (
-                    <div status="success">
-                      <p mr={2}>Success!</p>
-                      <p>Your email has been sent.</p>
+                    <div className="rounded-md bg-green-500 px-3 py-3.5 mt-4 text-sm font-semibold text-white shadow-sm ">
+                      Your email has been sent.
                     </div>
                   ) : status === "error" ? (
-                    <div status="error">
-                      <div mr={2}>Error!</div>
-                      Your email was unable to be sent.
+                    <div
+                      role="alert"
+                      className="bg-red-500  border-red-400 px-3 py-3.5 mt-4 text-sm font-medium text-white shadow-sm rounded-md"
+                    >
+                      Holy smokes! Something bad happened.
                     </div>
                   ) : null}
                 </div>
               </form>
             </div>
           </div>
-        </div> */}
-
-        <form
-          className="mt-6 flex flex-col text-black max-w-xl gap-4 z-10 w-56 "
-          onSubmit={handleSubmit}
-        >
-          <input
-            name="firstName"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="First name"
-            value={firstName}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setFirstName(e.target.value);
-              console.log(firstName);
-            }}
-          />
-
-          <input
-            name="lastName"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="Last name"
-            value={lastName}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setLastName(e.target.value);
-            }}
-          />
-
-          <input
-            name="email"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="Email"
-            value={email}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <textarea
-            name="message"
-            type="text"
-            required
-            className="rounded-md  px-3.5 py-2.5  ring-1 ring-inset focus:ring-blue-600 text-sm md:w-96"
-            placeholder="Message"
-            value={message}
-            // onChange={handleChange}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-          />
-          <button
-            type="submit"
-            className="flex justify-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500"
-          >
-            {" "}
-            send email
-            {/* {loading ? (
-              <div
-                style={{
-                  borderTopColor: "transparent",
-                }}
-                className="w-4 h-4 border-2 border-white border-solid rounded-full animate-spin"
-              ></div>
-            ) : (
-              "Submit"
-            )} */}
-          </button>
-        </form>
+        </div>
       </section>
     </>
   );

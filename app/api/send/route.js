@@ -12,8 +12,7 @@ export async function POST(req) {
       to: ["adrianpantea10@gmail.com"],
       subject: "Hello world",
       react: EmailTemplate({
-        firstName: body.firstName || "empty",
-        lastName: body.lastName || "empty",
+        name: body.name || "empty",
         email: body.email || "empty",
         message: body.message || "empty",
       }),
