@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,6 +41,8 @@ import behance from "../../public/behance.svg";
 
 import spotify from "../../public/spotify.svg";
 import youtube from "../../public/youtube.svg";
+
+import ToggleButton from "../components/buttonDarkMode";
 
 export default function About() {
   const frontEnd = [
@@ -291,9 +294,12 @@ export default function About() {
           Back to home page
         </Link>
       </div>
+      <ToggleButton />
       <section className="pt-8">
-        <p className="text-lg font-semibold text-orange-500">More about me</p>
-        <p className="text-sm font-light leading-relaxed mt-3">
+        <p className="text-2xl font-semibold text-black dark:text-yellow">
+          More about me
+        </p>
+        <p className="text-md font-light dark:text-offWhite text-black leading-relaxed mt-8">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -302,8 +308,10 @@ export default function About() {
       </section>
 
       <section className="pt-8">
-        <p className="text-lg font-semibold text-orange-500">Work</p>
-        <p className="text-sm font-light leading-relaxed mt-3">
+        <p className="text-2xl font-semibold text-black dark:text-yellow">
+          Work
+        </p>
+        <p className="text-md font-light dark:text-offWhite text-black leading-relaxed mt-8">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -314,10 +322,10 @@ export default function About() {
       </section>
 
       <section className=" pt-8">
-        <p className="text-lg font-semibold text-orange-500">
+        <p className="text-2xl font-semibold text-black dark:text-yellow">
           Beyond the Screen
         </p>
-        <p className="text-sm font-light leading-relaxed mt-3">
+        <p className="text-md font-light dark:text-offWhite text-black leading-relaxed mt-8">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
@@ -343,7 +351,9 @@ export default function About() {
       </section>
 
       <section className="pt-8">
-        <p className="text-lg font-medium text-orange-500">Stack</p>
+        <p className="text-2xl font-semibold text-black dark:text-yellow">
+          Stack
+        </p>
 
         <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
           <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">

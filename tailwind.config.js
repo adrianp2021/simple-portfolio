@@ -6,6 +6,35 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      background: "#121212",
+      text: "#F3F4F8",
+      accent: "#FF7F11",
+      lightBackground: "#FDFFFC",
+      darkBlue: "#011627",
+      offWhite: "#FDFFFC",
+      turquoise: "#2EC4B6",
+      red: "#E71D36",
+      // orange: "#FF9F1C",
+      orange: "#f3a712",
+      pink: "#fccfd4",
+      black: "#0b1a25",
+      teal: "#94f7df",
+      yellow: "#f7d528",
+      gray: "#FFF1D0",
+      blue: "#5c78f8"
+    },
+    
+    fontSize: {
+      sm: '0.8rem',
+      base: '0.95rem',
+      xl: '1.25rem',
+      '2xl': '1.563rem',
+      '3xl': '1.953rem',
+      '4xl': '2.441rem',
+      '5xl': '3.052rem',
+    },
+
     // colors: {
     //   iron: {
     //     50: "#f7f7f7",
@@ -60,5 +89,5 @@ module.exports = {
     },
   },
   plugins: [],
-  darkMode: 'class',
+  darkMode: "class",
 };

@@ -6,6 +6,8 @@ import photo from "../public/me.jpg";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
+import ToggleButton from "./components/buttonDarkMode";
+
 const jobs = [
   {
     // src: "https://static-00.iconduck.com/assets.00/uber-icon-256x256-649uswep.png",
@@ -14,7 +16,7 @@ const jobs = [
     year: "2021 - present",
     alt: "Uber",
     location: "London, UK (remote based)",
-    role: "Public Safety Response Specialist",
+    title: "Public Safety Response Specialist",
     description:
       "Data Compliance and Policy, liaising with law enforcement agencies worldwide. Daily responsibilities include meticulous analyses of data requests to align with global policies and GDPR regulations, all while upholding the highest standards of personal integrity and user trust.",
     recipient: "https://www.uber.com/gb/en/",
@@ -28,7 +30,7 @@ const jobs = [
     description:
       "In a 12-week bootcamp, I delved into JavaScript, React, Vue JS, and more for front-end development, refining UI design. Gained expertise in Python, Django, NodeJS, SQL, and MongoDB for back-end. Proficient in Git, GitHub, VS Code, and Agile for efficient project management.",
     location: "London, UK",
-    role: "Software Engineering Immersive",
+    title: "Software Engineering Immersive",
     recipient: "https://generalassemb.ly/",
   },
   {
@@ -40,7 +42,7 @@ const jobs = [
     description:
       "At the UK's oldest notarial firm, I complemented my legal studies by drafting and revising legal documents in English and foreign languages. Delivered over 20 daily translations, ensuring precise alignment with client requirements for swift processing.",
     location: "London, UK",
-    role: "Multilingual Paralegal",
+    title: "Multilingual Paralegal",
     recipient: "https://depinna.com/",
   },
 ];
@@ -51,7 +53,7 @@ const projects = [
     year: "May 2021",
     project: "Project 1",
     description:
-      "A childhood classic, I recreated Snake with a colour twist. Recreating this game as my first project was a meaningful milestone. Though simple, it symbolized my growing JavaScript skills.",
+      "A childhood classic, I recreated Snake with a colour twist. Working this game as my first project was a meaningful milestone. Though simple, it symbolized my growing JavaScript skills.",
     tech: "HTML · CSS · JavsScript",
     githubRepo: "https://github.com/adrianp2021/SEI-Project-1",
     deployed: "https://adrianp2021.github.io/SEI-Project-1/",
@@ -123,80 +125,19 @@ const socialMedia = [
 // console.log('what version is ->', a)
 
 export default function Home() {
-  // const initialFormData = {
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   message: "",
+  // const [darkMode, setDarkMode] = useState(false);
+
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
   // };
-
-  // const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
-
-  // const [formData, setFormData] = useState(initialFormData);
-
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   setFormData({ ...formData, [e.target.value]: e.target.value });
-  // };
-
-  // const handleSubmit = async (e) => {
-
-  //   // ? below commented code is the one that didn't work. Learn from it!
-  //   // e.preventDefault();
-  //   // if (!firstName || email) return;
-  //   // try {
-  //   //   const response = await fetch("/api/send", {
-  //   //     method: "POST",
-  //   //     body: JSON.stringify({ firstName, lastName, email, message }),
-
-  //   //   });
-  //   //   console.log(body)
-  //   // } catch {
-  //   //   console.error();
-  //   // }
-
-  //   e.preventDefault();
-  //   console.log("Form submitted");
-
-  //   if (!firstName || !email) {
-  //     console.error("First name and email are required");
-  //     return;
-  //   }
-
-  //   try {
-  //     const response = await fetch("/api/send", {
-  //       method: "POST",
-  //       headers: {
-  //         // added headers
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ firstName, lastName, email, message }),
-  //     });
-
-  //     if (!response.ok) {
-  //       // added catch error
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-
-  //     const data = await response.json();
-  //     console.log("Response data:", data);
-  //   } catch (error) {
-  //     console.error("Error sending email:", error);
-  //   }
-  // };
-
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   return (
     <>
-      <main className={`${darkMode && "dark"}`}>
+      <main
+      // className={`${darkMode && "dark"}`}
+      >
+        <ToggleButton />
+
         {/* <button
           onClick={async () => {
             await fetch("/api/emails", { method: 'POST' });
@@ -205,7 +146,7 @@ export default function Home() {
           send email
         </button> */}
 
-        <section className="pt-20 pb-8 dark:bg-neutral-300">
+        <section className="pt-20 pb-8 dark:text-offWhite text-black">
           <div className="flex items-center">
             <Image
               src={photo}
@@ -215,20 +156,19 @@ export default function Home() {
               className="rounded-full"
               unoptimized
             />
-            <div className="pl-6">
-              <h1>Adrian Pantea</h1>
-              <p className="font-normal text-sm text-orange-500">
+            <div className="pl-5">
+              <h1 className="text-xl mb-1">Adrian Pantea</h1>
+              <p className="font-semibold text-xl text-black dark:text-yellow">
                 Product-focused Fullstack Developer
               </p>
             </div>
           </div>
-          <div className="pt-8">
-            {/* <h2 className="text-lg font-semibold text-orange-500">About</h2> */}
-            <p className=" text-sm font-light leading-relaxed mt-2">
+          <div className="pt-5">
+            <p className="text-base font-light mt-2">
               Hi, I'm Adrian. I enjoy building dynamic, creative products from
               start to finish. Focused on developing intuitive experiences that
               constantly grow and improve based on user metrics. Find out more
-              <span className="ml-1 decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
+              <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black">
                 <Link href="/about">here</Link>
               </span>
               .
@@ -236,63 +176,69 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <div className="pb-5">
-            <h2 className="text-lg font-semibold text-orange-500">
+        <section className="dark:text-offWhite text-black">
+          <div className="pb-8">
+            <h2 className="text-2xl font-semibold text-black dark:text-yellow ">
               Work experience
             </h2>
           </div>
           {jobs.map((job, i) => (
             <div
               key={i}
-              className="flex flex-col sm:flex-row pb-8 text-sm font-light leading-relaxed  "
+              className="flex flex-col sm:flex-row pb-8 text-md font-light  "
             >
-              <div className="w-full sm:w-1/4">
-                <p className="text-neutral-400 ">{job.year}</p>
+              <div className="w-full sm:w-1/4 ">
+                <p>{job.year}</p>
               </div>
-              <div className="w-full sm:w-3/4 sm:mt-0 mt-4 ">
-                <h2 className=" mb-2 ">
-                  {job.role} at{" "}
-                  <span className="font-light decoration-0 underline underline-offset-4 hover:text-neutral-100">
+
+              <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
+                <h2 className="font-semibold mb-2 ">
+                  {job.title} at{" "}
+                  <span className="dark:hover:text-yellow underline underline-offset-4">
                     <a href={job.recipient} target="_blank">
                       {job.name}
                     </a>
                   </span>
                 </h2>
-                <p className="text-neutral-400 my-3">{job.description}</p>
+                <p className=" my-3 text-base font-base">{job.description}</p>
               </div>
             </div>
           ))}
         </section>
 
-        <section className="pb-8">
-          <div className="pb-5">
-            <h2 className="text-lg font-semibold text-orange-500">Projects</h2>
+        <section className=" dark:text-offWhite text-black">
+          <div className="pb-8">
+            <h2 className="text-2xl font-semibold text-black dark:text-yellow">
+              Projects
+            </h2>
           </div>
           {projects.map((project, i) => (
             <div
               key={i}
-              className="flex flex-col sm:flex-row mb-8 font-light text-sm leading-relaxed"
+              className="flex flex-col sm:flex-row pb-8 text-md leading-relaxed"
             >
               <div className="w-full sm:w-1/4">
-                <p className="opacity-70">{project.year}</p>
+                <p className="mb-2">{project.year}</p>
               </div>
-              <div className="w-full sm:w-3/4 sm:mt-0 mt-4">
+
+              <div className="w-full sm:w-3/4 sm:mt-0 ">
                 <div className="">
                   <div>
-                    <span className=" decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100">
+                    <span className="font-semibold  dark:hover:text-yellow  underline underline-offset-4">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
-                    <h2 className="my-3">{project.description}</h2>
+                    <h2 className="my-3  text-base font-light">
+                      {project.description}
+                    </h2>
                   </div>
 
                   <div className="flex gap-2 mt-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
                       <spans
                         key={index}
-                        className="font-light text-xs px-2.5 py-1 rounded-full bg-zinc-800 text-gray-100 hover:bg-zinc-700"
+                        className="font-light text-sm px-2.5 py-1 rounded-full bg-black text-text "
                       >
                         {tech}
                       </spans>
@@ -306,16 +252,16 @@ export default function Home() {
 
         <section className="">
           <div className="pb-5">
-            <h2 className="text-lg font-semibold text-orange-500">
+            <h2 className="text-2xl font-semibold text-black dark:text-yellow">
               Let's connect
             </h2>
           </div>
-          <div className="container flex justify-between items-center font-light text-sm leading-relaxed">
-            <div className="flex text-md">
+          <div className="container flex justify-between items-center text-md ">
+            <div className="flex ">
               {socialMedia.map((social, i) => (
                 <div
                   key={i}
-                  className="mr-4 mb-6  decoration-0 underline underline-offset-4 text-neutral-400 hover:text-neutral-100"
+                  className="mr-4 mb-6 dark:hover:text-yellow font-light underline underline-offset-4"
                 >
                   <a
                     href={social.recipient}
@@ -332,7 +278,7 @@ export default function Home() {
             <div className="mb-6 ">
               <Link
                 href="/contact"
-                className=" decoration-0 underline underline-offset-4 text-orange-500 hover:text-orange-600"
+                className="text-md font-based   dark:hover:text-yellow font-semibold underline underline-offset-4"
               >
                 Contact Me
               </Link>
@@ -340,12 +286,12 @@ export default function Home() {
           </div>
         </section>
 
-        <button
+        {/* <button
           onClick={toggleDarkMode}
           className="absolute w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white  text-white dark:text-black"
         >
           {darkMode ? "light" : "dark"}
-        </button>
+        </button> */}
       </main>
     </>
   );
