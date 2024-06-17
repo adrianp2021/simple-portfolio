@@ -294,12 +294,12 @@ export default function About() {
           Return to main page
         </Link>
       </div>
-      <ToggleButton />
+      {/* <ToggleButton /> */}
       <section className="pt-8">
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           More about me
         </p>
-        <p className="text-base font-light dark:text-offWhite text-black leading-relaxed mt-8">
+        <p className="text-base font-normal dark:text-offWhite text-black leading-relaxed mt-4">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -311,7 +311,7 @@ export default function About() {
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           Work
         </p>
-        <p className="text-base font-light dark:text-offWhite text-black leading-relaxed mt-8">
+        <p className="text-base font-normal dark:text-offWhite text-black leading-relaxed mt-4">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -325,11 +325,11 @@ export default function About() {
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           Beyond the Screen
         </p>
-        <p className="text-base font-light dark:text-offWhite text-black leading-relaxed mt-8">
+        <p className="text-base font-normal dark:text-offWhite text-black leading-relaxed mt-4">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
-          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow">
+          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
             <a
               href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
               target="_blank"
@@ -338,7 +338,7 @@ export default function About() {
             </a>
           </span>{" "}
           and
-          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow">
+          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
             <a
               href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
               target="_blank"

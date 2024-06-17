@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // import photo from "../public/me.jpeg";
-import photo from "../public/me.jpg";
+import photo from "../public/gandalf.png";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
@@ -120,39 +120,18 @@ const socialMedia = [
   },
 ];
 
-// import React from "react";
-// let a = React.version
-// console.log('what version is ->', a)
-
 export default function Home() {
-  // const [darkMode, setDarkMode] = useState(false);
-
-  // const toggleDarkMode = () => {
-  //   setDarkMode(!darkMode);
-  // };
-
   return (
     <>
-      <main
-      // className={`${darkMode && "dark"}`}
-      >
+      <main>
         <ToggleButton />
-
-        {/* <button
-          onClick={async () => {
-            await fetch("/api/emails", { method: 'POST' });
-          }}
-        >
-          send email
-        </button> */}
-
         <section className="pt-20 pb-8 dark:text-offWhite text-black">
           <div className="flex items-center">
             <Image
               src={photo}
               alt="my photo"
-              width={80}
-              height={80}
+              width={70}
+              height={70}
               className="rounded-full"
               unoptimized
             />
@@ -164,11 +143,11 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-5">
-            <p className="text-base font-light mt-2">
+            <p className="text-base font-normal mt-2">
               Hi, I'm Adrian. I enjoy building dynamic, creative products from
               start to finish. Focused on developing intuitive experiences that
               constantly grow and improve based on user metrics. More about me
-              <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black">
+              <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black hover:text-neutral600">
                 <Link href="/about">here</Link>
               </span>
               .
@@ -194,13 +173,13 @@ export default function Home() {
               <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
                 <h2 className="font-bold ">
                   {job.title} at{" "}
-                  <span className="dark:hover:text-yellow underline underline-offset-4">
+                  <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
                     <a href={job.recipient} target="_blank">
                       {job.name}
                     </a>
                   </span>
                 </h2>
-                <p className="mt-3 text-base">{job.description}</p>
+                <p className="mt-4 font-normal text-base">{job.description}</p>
               </div>
             </div>
           ))}
@@ -222,26 +201,26 @@ export default function Home() {
               </div>
 
               <div className="w-full sm:w-3/4 sm:mt-0 ">
-                <div className="">
+                <div>
                   <div>
-                    <span className="font-bold  dark:hover:text-yellow  underline underline-offset-4">
+                    <span className="font-bold dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
-                    <h2 className="my-3  text-base font-light">
+                    <h2 className="my-4 text-base font-normal">
                       {project.description}
                     </h2>
                   </div>
 
                   <div className="flex gap-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
-                      <spans
+                      <span
                         key={index}
-                        className="font-light text-sm px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text "
+                        className="font-normal text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text "
                       >
                         {tech}
-                      </spans>
+                      </span>
                     ))}
                   </div>
                 </div>

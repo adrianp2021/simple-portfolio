@@ -1,22 +1,6 @@
-// import { useState } from "react";
-// const [darkMode, setDarkMode] = useState(false);
-
-// const toggleDarkMode = () => {
-//   setDarkMode(!darkMode);
-// };
-
-// export default function ButtonDarkMode() {
-//   return (
-//     <button
-//       onClick={toggleDarkMode}
-//       className="absolute w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white  text-white dark:text-black"
-//     >
-//       {darkMode ? "light" : "dark"}
-//     </button>
-//   );
-// }
-
 import { useEffect, useState } from "react";
+import sun from "../../public/sun.svg"
+import moon from "../../public/moon.svg"
 
 const ToggleButton = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,23 +18,22 @@ const ToggleButton = () => {
     }
   }, []);
 
-  // stores mode preference
   const toggleDarkMode = () => {
     if (darkMode) {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light"); // Write a note saying you like it bright
+      localStorage.setItem("theme", "light");
     } else {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark"); // Write a note saying you like it dark
+      localStorage.setItem("theme", "dark");
     }
     setDarkMode(!darkMode);
   };
 
-  // toggle light
+  // toggle light - no styling/position yet
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 bg-gray-200 dark:bg-gray-800 rounded dark:text-offWhite text-black"
+      className="p-2 bg-gray-200 dark:bg-gray-800 border rounded dark:text-offWhite text-black"
     >
       {darkMode ? "Light Mode" : "Dark Mode"}
     </button>

@@ -11,6 +11,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
+  const [emailTouched, setEmailTouched] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,31 +21,6 @@ export default function Contact() {
       console.error("First name and email are required");
       return;
     }
-
-    // try {
-    //   const response = await fetch("/api/send", {
-    //     method: "POST",
-    //     headers: {
-    //       // added headers
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ name, email, message }),
-    //   });
-
-    //   if (!response.ok) {
-    //     // added catch error
-    //     throw new Error(`HTTP error! status: ${response.status}`);
-
-    //   } else {
-    //     setStatus("error");
-    //   }
-
-    //   const data = await response.json();
-    //   setStatus("success");
-    //   console.log("Response data:", data);
-    // } catch (error) {
-    //   console.error("Error sending email:", error);
-    // }
 
     try {
       const response = await fetch("/api/send", {
@@ -77,13 +53,23 @@ export default function Contact() {
     }, 8000);
   };
 
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailTouched(true);
+  };
+
+  const isValidEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   return (
     <>
-      <ToggleButton />
+      {/* <ToggleButton /> */}
       <section className="pt-20 pb-8 ">
-        <div className=" text-sm font-light decoration-1 w-max">
+        <div className=" text-base font-normal decoration-1 w-max text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
-            className="flex items-center  hover:text-orange-600 "
+            className="flex items-center  "
             href="/"
             aria-label="Back to home page"
           >
@@ -107,7 +93,7 @@ export default function Contact() {
           </Link>
         </div>
 
-        <h2 className=" pt-8 text-2xl font-semibold text-orange-500">
+        <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">
           Contact
         </h2>
         <p className="text-md text-black dark:text-offWhite pt-3">
@@ -127,7 +113,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="name"
-                  className="text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500"
+                  className="text-md font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red"
                 >
                   Full name
                 </label>
@@ -135,7 +121,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   required
-                  className="my-2 rounded-md focus:outline-none  dark:bg-background dark:border-neutral800 px-3 py-2.5 ring-1 ring-inset dark:ring-gray600 ring-neutral200  dark:focus:ring-gray600 focus:ring-yellow text-sm w-full "
+                  className="my-2 rounded-md font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
                   placeholder="John Doe"
                   value={name}
                   // onChange={handleChange}
@@ -146,32 +132,29 @@ export default function Contact() {
                 />
 
                 <label className="block">
-                  <span className="block text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500 ">
+                  <span className="text-md font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red">
                     Email
                   </span>
 
                   <input
                     name="email"
                     type="email"
-                    // required
-                    className="peer ... my-2 rounded-md focus:outline-none dark:bg-neutral-950 dark:border-neutral-800 px-3 py-2.5 ring-1 ring-inset ring-gray-600 focus:ring-orange-500 text-sm w-full disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-                    invalid:border-red-500 invalid:text-red-600
-                    focus:invalid:border-red-500 focus:invalid:ring-red-500"
+                    className="peer ... dark:bg-neutral-950 dark:border-neutral-800 ring-gray-600 focus:ring-orange-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500 my-2 rounded-md font-normal focus:outline-none px-3 py-2.5 ring-1 ring-inset dark:bg-background dark:border-neutral800 dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full"
                     placeholder="johndoe@email.com"
                     value={email}
-                    // onChange={handleChange}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
+                    onChange={handleEmailChange}
+                    onBlur={() => setEmailTouched(true)}
                   />
-                  <p className="invisible peer-invalid:visible text-orange text-sm">
-                    Please provide a valid email address.
-                  </p>
+                  {emailTouched && email && !isValidEmail(email) && (
+                    <p className="my-1 text-sm dark:text-yellow text-black font-normal">
+                      Please provide a valid email address.
+                    </p>
+                  )}
                 </label>
 
                 <label
                   htmlFor="message"
-                  className="text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500"
+                  className="text-md font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red"
                 >
                   Message
                 </label>
@@ -179,7 +162,7 @@ export default function Contact() {
                   name="message"
                   type="text"
                   required
-                  className="my-2 rounded-md focus:outline-none dark:bg-neutral-950 dark:border-neutral-800 px-3 py-2.5 ring-1 ring-inset ring-gray-600 focus:ring-orange-500 text-sm w-full"
+                  className="my-2 rounded-md font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
                   placeholder="Write your message..."
                   value={message}
                   // onChange={handleChange}
@@ -193,7 +176,7 @@ export default function Contact() {
                   className={`flex justify-center rounded-md px-3 py-2.5 text-sm font-semibold text-white shadow-sm ${
                     status === "success"
                       ? "bg-orange-500 opacity-50 cursor-not-allowed"
-                      : "rounded-md bg-orange-500 px-3  text-sm font-semibold text-white shadow-sm hover:bg-orange-600"
+                      : "rounded-md px-3  text-sm font-semibold text-white shadow-sm dark:bg-yellow dark:hover:bg-saffron dark:text-black  bg-neutral900 text-offWhite hover:bg-neutral600"
                   }`}
                   disabled={status === "success"}
                 >
