@@ -3,6 +3,8 @@ import "./globals.css";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
+import Footer from "./components/footer";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,10 +21,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body
-        className={` mx-auto max-w-2xl px-5 leading-6 bg-lightBackground dark:bg-background`}
+        className={` mx-auto max-w-xl px-5 leading-6 bg-lightBackground dark:bg-background`}
       >
         {children}
-        <footer className=" text-neutral-400">
+
+        <Footer />
+        {/* <footer className=" text-neutral-400">
           <div className="text-center text-sm font-extralight border-t border-t-gray-800 py-4">
             <p>
               &copy; 2024 Adrian Pantea. All rights reserved. Icons by{" "}
@@ -33,7 +37,7 @@ export default function RootLayout({ children }) {
               </span>{" "}
             </p>
           </div>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );

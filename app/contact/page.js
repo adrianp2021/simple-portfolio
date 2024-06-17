@@ -2,9 +2,9 @@
 import { use, useState } from "react";
 import emailTemplate from "../components/emailTemplate";
 import Link from "next/link";
+import ToggleButton from "../components/buttonDarkMode";
 
 export default function Contact() {
-
   // const [firstName, setFirstName] = useState("");
   const [name, setName] = useState("");
   // const [lastName, setLastName] = useState("");
@@ -79,6 +79,7 @@ export default function Contact() {
 
   return (
     <>
+      <ToggleButton />
       <section className="pt-20 pb-8 ">
         <div className=" text-sm font-light decoration-1 w-max">
           <Link
@@ -109,18 +110,21 @@ export default function Contact() {
         <h2 className=" pt-8 text-2xl font-semibold text-orange-500">
           Contact
         </h2>
-        <p className="text-md pt-3">
+        <p className="text-md text-black dark:text-offWhite pt-3">
           If you just want to say hi, discuss a project or get to know each
           other, let's get in touch.{" "}
         </p>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl mt-8 p-1 bg-babyPowder dark:bg-neutral900 text-black">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Let's connect
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 ">
+          <div className="border rounded-xl overflow-hidden shadow-sm border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 ">
             <div className="text-md font-extralight  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors ">
-              <form className="w-full p-2" onSubmit={handleSubmit}>
+              <form
+                className="w-full p-2 dark:text-offWhite"
+                onSubmit={handleSubmit}
+              >
                 <label
                   htmlFor="name"
                   className="text-sm font-light text-neutral-400 after:content-['*'] after:ml-0.5 after:text-red-500"
@@ -131,8 +135,8 @@ export default function Contact() {
                   name="name"
                   type="text"
                   required
-                  className="my-2 rounded-md focus:outline-none dark:bg-neutral-950 dark:border-neutral-800 px-3 py-2.5  ring-1 ring-inset ring-gray-600 focus:ring-orange-500 text-sm w-full "
-                  placeholder="John"
+                  className="my-2 rounded-md focus:outline-none  dark:bg-background dark:border-neutral800 px-3 py-2.5 ring-1 ring-inset dark:ring-gray600 ring-neutral200  dark:focus:ring-gray600 focus:ring-yellow text-sm w-full "
+                  placeholder="John Doe"
                   value={name}
                   // onChange={handleChange}
                   onChange={(e) => {
@@ -160,7 +164,7 @@ export default function Contact() {
                       setEmail(e.target.value);
                     }}
                   />
-                  <p className="invisible peer-invalid:visible text-orange-500 text-sm">
+                  <p className="invisible peer-invalid:visible text-orange text-sm">
                     Please provide a valid email address.
                   </p>
                 </label>

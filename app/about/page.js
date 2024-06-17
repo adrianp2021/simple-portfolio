@@ -271,9 +271,9 @@ export default function About() {
     <main className=" ">
       <div className="pt-20 text-sm font-light decoration-1 w-max">
         <Link
-          className="flex items-center  hover:text-orange-600"
+          className="flex items-center text-base font-normal text-black dark:text-offWhite dark:hover:text-yellow"
           href="/"
-          aria-label="Back to home page"
+          aria-label="Back to main page"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +291,7 @@ export default function About() {
             <path d="m13 6-6 6 6 6"></path>
             <path d="M7 12h14"></path>
           </svg>
-          Back to home page
+          Return to main page
         </Link>
       </div>
       <ToggleButton />
@@ -299,7 +299,7 @@ export default function About() {
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           More about me
         </p>
-        <p className="text-md font-light dark:text-offWhite text-black leading-relaxed mt-8">
+        <p className="text-base font-light dark:text-offWhite text-black leading-relaxed mt-8">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -311,7 +311,7 @@ export default function About() {
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           Work
         </p>
-        <p className="text-md font-light dark:text-offWhite text-black leading-relaxed mt-8">
+        <p className="text-base font-light dark:text-offWhite text-black leading-relaxed mt-8">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -325,11 +325,11 @@ export default function About() {
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           Beyond the Screen
         </p>
-        <p className="text-md font-light dark:text-offWhite text-black leading-relaxed mt-8">
+        <p className="text-base font-light dark:text-offWhite text-black leading-relaxed mt-8">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
-          <span className="ml-1 underline underline-offset-4 text-orange-500 hover:text-orange-600">
+          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow">
             <a
               href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
               target="_blank"
@@ -338,7 +338,7 @@ export default function About() {
             </a>
           </span>{" "}
           and
-          <span className="ml-1 underline underline-offset-4 text-orange-500 hover:text-orange-600">
+          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow">
             <a
               href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
               target="_blank"
@@ -350,28 +350,28 @@ export default function About() {
         </p>
       </section>
 
-      <section className="pt-8">
+      <section className="py-8">
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           Stack
         </p>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 mt-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl mt-8 p-1 bg-babyPowder dark:bg-neutral900 ">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Front End
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
             {frontEnd.map((item, i) => (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
               >
                 <div
                   key={i}
-                  className="text-md font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray-300">
+                  <div className="overflow-hidden rounded-md dark:bg-gray ">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -380,12 +380,12 @@ export default function About() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center ">
                     <div>
-                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral-500 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -396,23 +396,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Back End
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
             {backEnd.map((item, i) => (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
               >
                 <div
                   key={i}
-                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors  "
+                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray-300">
+                  <div className="overflow-hidden rounded-md bg-gray300">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -423,10 +423,10 @@ export default function About() {
                   </div>
                   <div className="flex items-center">
                     <div>
-                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -437,23 +437,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Coding
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
             {coding.map((item, i) => (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
               >
                 <div
                   key={i}
-                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray-300">
+                  <div className="overflow-hidden rounded-md bg-gray300">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -464,10 +464,10 @@ export default function About() {
                   </div>
                   <div className="flex items-center">
                     <div>
-                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -478,23 +478,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Productivity
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
             {productivity.map((item, i) => (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
               >
                 <div
                   key={i}
-                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray-300">
+                  <div className="overflow-hidden rounded-md bg-gray300">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -505,10 +505,10 @@ export default function About() {
                   </div>
                   <div className="flex items-center">
                     <div>
-                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -519,23 +519,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Design
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
             {design.map((item, i) => (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
               >
                 <div
                   key={i}
-                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors  "
+                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray-300">
+                  <div className="overflow-hidden rounded-md bg-gray300">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -546,10 +546,10 @@ export default function About() {
                   </div>
                   <div className="flex items-center">
                     <div>
-                      <p className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -560,23 +560,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-1 bg-neutral-100 dark:bg-neutral-900 my-8">
-          <p className="text-sm font-medium py-2 px-4 text-neutral-900 dark:text-neutral-100">
+        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 my-3">
+          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Other
           </p>
-          <div className="border rounded-xl overflow-hidden shadow-sm bg-white border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800 p-2 grid sm:grid-cols-2 gap-x-2">
+          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
             {other.map((item, i) => (
               <a
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
               >
                 <div
                   key={i}
-                  className=" text-sm font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors  "
+                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray-300">
+                  <div className="overflow-hidden rounded-md bg-gray300">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -587,10 +587,10 @@ export default function About() {
                   </div>
                   <div className="flex items-center">
                     <div>
-                      <p className="text-sm font-medium text-neutral-100 dark:text-neutral-100">
+                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm text-neutral-100 dark:text-neutral-400">
+                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>

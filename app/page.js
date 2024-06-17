@@ -40,7 +40,7 @@ const jobs = [
     year: "2020 - 2021",
     alt: "De Pinna LLP",
     description:
-      "At the UK's oldest notarial firm, I complemented my legal studies by drafting and revising legal documents in English and foreign languages. Delivered over 20 daily translations, ensuring precise alignment with client requirements for swift processing.",
+      "At the UK's oldest notarial firm, I complemented my legal studies by drafting and revising legal documents in English and foreign languages.",
     location: "London, UK",
     title: "Multilingual Paralegal",
     recipient: "https://depinna.com/",
@@ -158,7 +158,7 @@ export default function Home() {
             />
             <div className="pl-5">
               <h1 className="text-xl mb-1">Adrian Pantea</h1>
-              <p className="font-semibold text-xl text-black dark:text-yellow">
+              <p className="font-bold  text-black dark:text-yellow text-lg">
                 Product-focused Fullstack Developer
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function Home() {
             <p className="text-base font-light mt-2">
               Hi, I'm Adrian. I enjoy building dynamic, creative products from
               start to finish. Focused on developing intuitive experiences that
-              constantly grow and improve based on user metrics. Find out more
+              constantly grow and improve based on user metrics. More about me
               <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black">
                 <Link href="/about">here</Link>
               </span>
@@ -188,11 +188,11 @@ export default function Home() {
               className="flex flex-col sm:flex-row pb-8 text-md font-light  "
             >
               <div className="w-full sm:w-1/4 ">
-                <p>{job.year}</p>
+                <p className="text-base font-normal">{job.year}</p>
               </div>
 
               <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                <h2 className="font-semibold mb-2 ">
+                <h2 className="font-bold ">
                   {job.title} at{" "}
                   <span className="dark:hover:text-yellow underline underline-offset-4">
                     <a href={job.recipient} target="_blank">
@@ -200,7 +200,7 @@ export default function Home() {
                     </a>
                   </span>
                 </h2>
-                <p className=" my-3 text-base font-base">{job.description}</p>
+                <p className="mt-3 text-base">{job.description}</p>
               </div>
             </div>
           ))}
@@ -218,13 +218,13 @@ export default function Home() {
               className="flex flex-col sm:flex-row pb-8 text-md leading-relaxed"
             >
               <div className="w-full sm:w-1/4">
-                <p className="mb-2">{project.year}</p>
+                <p className="mb-2 text-base font-normal">{project.year}</p>
               </div>
 
               <div className="w-full sm:w-3/4 sm:mt-0 ">
                 <div className="">
                   <div>
-                    <span className="font-semibold  dark:hover:text-yellow  underline underline-offset-4">
+                    <span className="font-bold  dark:hover:text-yellow  underline underline-offset-4">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
@@ -234,11 +234,11 @@ export default function Home() {
                     </h2>
                   </div>
 
-                  <div className="flex gap-2 mt-2 justify-end ">
+                  <div className="flex gap-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
                       <spans
                         key={index}
-                        className="font-light text-sm px-2.5 py-1 rounded-full bg-black text-text "
+                        className="font-light text-sm px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text "
                       >
                         {tech}
                       </spans>
@@ -248,42 +248,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </section>
-
-        <section className="">
-          <div className="pb-5">
-            <h2 className="text-2xl font-semibold text-black dark:text-yellow">
-              Let's connect
-            </h2>
-          </div>
-          <div className="container flex justify-between items-center text-md ">
-            <div className="flex ">
-              {socialMedia.map((social, i) => (
-                <div
-                  key={i}
-                  className="mr-4 mb-6 dark:hover:text-yellow font-light underline underline-offset-4"
-                >
-                  <a
-                    href={social.recipient}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit my ${social.name} profile`}
-                  >
-                    {social.name}
-                  </a>
-                </div>
-              ))}
-            </div>
-
-            <div className="mb-6 ">
-              <Link
-                href="/contact"
-                className="text-md font-based   dark:hover:text-yellow font-semibold underline underline-offset-4"
-              >
-                Contact Me
-              </Link>
-            </div>
-          </div>
         </section>
 
         {/* <button

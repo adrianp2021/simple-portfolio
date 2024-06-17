@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     colors: {
       background: "#121212",
+      lightBackground: "#fbfefe",
       text: "#F3F4F8",
       accent: "#FF7F11",
-      lightBackground: "#FDFFFC",
       darkBlue: "#011627",
       offWhite: "#FDFFFC",
       turquoise: "#2EC4B6",
@@ -18,21 +18,33 @@ module.exports = {
       // orange: "#FF9F1C",
       orange: "#f3a712",
       pink: "#fccfd4",
-      black: "#0b1a25",
+      black: "#011627",
       teal: "#94f7df",
       yellow: "#f7d528",
-      gray: "#FFF1D0",
-      blue: "#5c78f8"
+      // gray: "#FFF1D0",
+      gray: "#E2E8F0",
+      gray400: "#6b7280",
+      gray600: "#4b5563",
+      blue: "#5c78f8",
+      red: "#DD1C1A",
+      neutral100: "#f5f5f5",
+      neutral200: "#e5e5e5",
+      neutral500: "#737373",
+      neutral800: "#262626",
+      neutral900: "#171717",
+      neutral950: "#0a0a0a",
+      babyPowder: "#f6f7f5"
     },
-    
+
     fontSize: {
-      sm: '0.8rem',
-      base: '0.95rem',
-      xl: '1.25rem',
-      '2xl': '1.563rem',
-      '3xl': '1.953rem',
-      '4xl': '2.441rem',
-      '5xl': '3.052rem',
+      sm: "0.8rem",
+      base: "0.95rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
     },
 
     // colors: {
