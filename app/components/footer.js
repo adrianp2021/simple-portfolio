@@ -20,7 +20,7 @@ const socialMedia = [
 
 export default function Footer() {
   return (
-    <footer className=" text-neutral-400">
+    <footer className="mx-auto max-w-xl px-5 leading-6 bg-lightBackground dark:bg-background  text-neutral-400">
       <section className="">
         <div className="pb-5">
           <h2 className="text-2xl font-semibold text-black dark:text-yellow">

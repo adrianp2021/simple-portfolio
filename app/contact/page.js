@@ -35,12 +35,12 @@ export default function Contact() {
 
       if (response.ok) {
         setStatus("success");
-        const data = await response.json();
-        console.log("Response data:", data);
+        const data = await respons.json();
+        console.log("what is the response data ->", data);
       } else {
         setStatus("error");
         const errorData = await response.json();
-        console.error("Error response data:", errorData);
+        console.error("Error response data ->", errorData);
       }
     } catch (error) {
       console.error("Error sending email:", error);
@@ -52,7 +52,7 @@ export default function Contact() {
       setName("");
       setEmail("");
       setMessage("");
-    }, 8000);
+    }, 800000);
   };
 
   const handleEmailChange = (e) => {
@@ -67,13 +67,10 @@ export default function Contact() {
 
   return (
     <>
-      <ToggleButton />
-  
-
       <section className="pt-20 pb-8 mb-12  ">
-        <div className=" text-base font-normal decoration-1 w-max text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
+        <div className="flex justify-between items-center text-base font-normal decoration-1 ">
           <Link
-            className="flex items-center  "
+            className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
             href="/"
             aria-label="Back to home page"
           >
@@ -95,6 +92,7 @@ export default function Contact() {
             </svg>
             Back to home page
           </Link>
+          <ToggleButton />
         </div>
 
         <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">
@@ -110,9 +108,9 @@ export default function Contact() {
             Let's connect
           </p>
           <div className="border rounded-xl overflow-hidden shadow-sm border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 ">
-            <div className="text-md font-extralight  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors ">
+            <div className="text-md font-extralight  no-underline items-center flex gap-4 p-2  transition-colors ">
               <form
-                className="w-full p-2 dark:text-offWhite"
+                className="w-full p-2 dark:text-offWhite rounded-lg"
                 onSubmit={handleSubmit}
               >
                 <label
@@ -125,7 +123,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   required
-                  className="my-2 rounded-md font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
+                  className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full "
                   placeholder="John Doe"
                   value={name}
                   // onChange={handleChange}
@@ -143,7 +141,7 @@ export default function Contact() {
                   <input
                     name="email"
                     type="email"
-                    className="peer ... dark:bg-neutral-950 dark:border-neutral-800 ring-gray-600 focus:ring-orange-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500 my-2 rounded-md font-normal focus:outline-none px-3 py-2.5 ring-1 ring-inset dark:bg-background dark:border-neutral800 dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full"
+                    className="peer ... dark:bg-neutral-950 dark:border-neutral-800 ring-gray-600 focus:ring-orange-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500 my-2 rounded-lg font-normal focus:outline-none px-3 py-2.5 ring-1 ring-inset dark:bg-background dark:border-neutral800 dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full"
                     placeholder="johndoe@email.com"
                     value={email}
                     onChange={handleEmailChange}
@@ -166,7 +164,7 @@ export default function Contact() {
                   name="message"
                   type="text"
                   required
-                  className="my-2 rounded-md font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
+                  className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
                   placeholder="Write your message..."
                   value={message}
                   // onChange={handleChange}
@@ -177,27 +175,51 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className={`flex justify-center rounded-md px-3 py-2.5 text-sm font-semibold text-white shadow-sm ${
+                  className={`flex justify-center rounded-lg px-3 py-2.5 text-sm text-white shadow-sm ${
                     status === "success"
-                      ? "bg-orange-500 opacity-50 cursor-not-allowed"
-                      : "rounded-md px-3  text-sm font-semibold text-white shadow-sm dark:bg-yellow dark:hover:bg-saffron dark:text-black bg-neutral900 text-offWhite hover:bg-neutral600"
+                      ? "bg-neutral600 text-offWhite font-normal cursor-not-allowed"
+                      : "rounded-lg px-3 font-normal shadow-sm dark:bg-yellow dark:hover:bg-saffron dark:text-black bg-neutral800 text-offWhite hover:bg-neutral600"
                   }`}
                   disabled={status === "success"}
                 >
                   Send email
                 </button>
 
-                <div className=" " role="alert">
+                <div className="" role="alert">
                   {status === "success" ? (
-                    <div className="rounded-md bg-green-500 px-3 py-3.5 mt-4 text-sm font-semibold text-white shadow-sm ">
-                      Your email has been sent.
+                    <div className="flex items-center rounded-lg bg-green font-medium px-3 py-2.5 mt-4 text-sm text-white shadow-sm ">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="size-5 mr-1"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Successfully submitted.
                     </div>
                   ) : status === "error" ? (
                     <div
                       role="alert"
-                      className="bg-red-500  border-red-400 px-3 py-3.5 mt-4 text-sm font-medium text-white shadow-sm rounded-md"
+                      className="flex items-center bg-red px-3 py-2.5 mt-4 text-sm font-medium shadow-sm rounded-lg text-offWhite"
                     >
-                      Holy smokes! Something bad happened.
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="size-5 mr-1"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12ZM12 8.25a.75.75 0 0 1 .75.75v3.75a.75.75 0 0 1-1.5 0V9a.75.75 0 0 1 .75-.75Zm0 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      Oops, please try again.
                     </div>
                   ) : null}
                 </div>

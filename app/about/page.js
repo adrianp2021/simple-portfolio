@@ -271,12 +271,12 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen ">
-      <div className="pt-20 text-sm font-light decoration-1 w-max">
+    <main className="">
+      <div className="pt-20 flex justify-between items-center text-base font-normal decoration-1 ">
         <Link
-          className="flex items-center text-base font-normal text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600"
+          className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
           href="/"
-          aria-label="Back to main page"
+          aria-label="Back to home page"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -294,11 +294,11 @@ export default function About() {
             <path d="m13 6-6 6 6 6"></path>
             <path d="M7 12h14"></path>
           </svg>
-          Return to main page
+          Back to home page
         </Link>
+        <ToggleButton />
       </div>
-      {/* <ToggleButton /> */}
-      {/* <FiMoon /> */}
+
       <section className="pt-8">
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           More about me
@@ -373,7 +373,7 @@ export default function About() {
               >
                 <div
                   key={i}
-                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight mb-1 no-underline items-center flex gap-4 p-1 rounded-lg transition-colors "
                 >
                   <div className="overflow-hidden rounded-md dark:bg-gray ">
                     <Image
@@ -414,9 +414,9 @@ export default function About() {
               >
                 <div
                   key={i}
-                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray300">
+                  <div className="overflow-hidden rounded-md dark:bg-gray">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -455,9 +455,9 @@ export default function About() {
               >
                 <div
                   key={i}
-                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray300">
+                  <div className="overflow-hidden rounded-md dark:bg-gray">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -496,9 +496,9 @@ export default function About() {
               >
                 <div
                   key={i}
-                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray300">
+                  <div className="overflow-hidden rounded-md dark:bg-gray">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -537,9 +537,9 @@ export default function About() {
               >
                 <div
                   key={i}
-                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray300">
+                  <div className="overflow-hidden rounded-md dark:bg-gray">
                     <Image
                       src={item.image}
                       alt={item.name}
@@ -578,9 +578,9 @@ export default function About() {
               >
                 <div
                   key={i}
-                  className="font-extralight  mb-2  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
                 >
-                  <div className="overflow-hidden rounded-md bg-gray300">
+                  <div className="overflow-hidden rounded-md dark:bg-gray">
                     <Image
                       src={item.image}
                       alt={item.name}
