@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import sun from "../../public/sun.svg"
-import moon from "../../public/moon.svg"
+// import sun from "../../public/sun.svg"
+// import moon from "../../public/moon.svg"
+
+
 
 const ToggleButton = () => {
   
