@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
         className={`mx-auto max-w-xl px-5 leading-6 bg-lightBackground dark:bg-background min-h-screen `}
       >
         {children}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }

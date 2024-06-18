@@ -68,9 +68,9 @@ export default function Contact() {
   return (
     <>
       <section className="pt-20 pb-8 mb-12  ">
-        <div className="flex justify-between items-center text-base font-normal decoration-1 ">
+        <div className="flex justify-between items-center  text-base font-normal decoration-1 text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
-            className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
+            className="flex items-center "
             href="/"
             aria-label="Back to home page"
           >
