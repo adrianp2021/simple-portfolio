@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body
-        className={`mx-auto max-w-xl px-5  leading-6 bg-lightBackground dark:bg-background`}
+        className={`mx-auto max-w-xl px-5  leading-6 bg-lightBackground dark:bg-background `}
       >
         {children}
         <Footer />

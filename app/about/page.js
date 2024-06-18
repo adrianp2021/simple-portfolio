@@ -268,10 +268,10 @@ export default function About() {
   ];
 
   return (
-    <main className=" ">
+    <main className="min-h-screen ">
       <div className="pt-20 text-sm font-light decoration-1 w-max">
         <Link
-          className="flex items-center text-base font-normal text-black dark:text-offWhite dark:hover:text-yellow"
+          className="flex items-center text-base font-normal text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600"
           href="/"
           aria-label="Back to main page"
         >

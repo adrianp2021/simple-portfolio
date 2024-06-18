@@ -3,6 +3,7 @@ import { use, useState } from "react";
 import emailTemplate from "../components/emailTemplate";
 import Link from "next/link";
 import ToggleButton from "../components/buttonDarkMode";
+import Footer from "../components/footer";
 
 export default function Contact() {
   // const [firstName, setFirstName] = useState("");
@@ -65,8 +66,8 @@ export default function Contact() {
 
   return (
     <>
-      {/* <ToggleButton /> */}
-      <section className="pt-20 pb-8 ">
+      <ToggleButton />
+      <section className="pt-20 pb-8 mb-12  ">
         <div className=" text-base font-normal decoration-1 w-max text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
             className="flex items-center  "
@@ -176,7 +177,7 @@ export default function Contact() {
                   className={`flex justify-center rounded-md px-3 py-2.5 text-sm font-semibold text-white shadow-sm ${
                     status === "success"
                       ? "bg-orange-500 opacity-50 cursor-not-allowed"
-                      : "rounded-md px-3  text-sm font-semibold text-white shadow-sm dark:bg-yellow dark:hover:bg-saffron dark:text-black  bg-neutral900 text-offWhite hover:bg-neutral600"
+                      : "rounded-md px-3  text-sm font-semibold text-white shadow-sm dark:bg-yellow dark:hover:bg-saffron dark:text-black bg-neutral900 text-offWhite hover:bg-neutral600"
                   }`}
                   disabled={status === "success"}
                 >
@@ -202,6 +203,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      {/* <Footer /> */}
     </>
   );
 }

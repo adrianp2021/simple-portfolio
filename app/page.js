@@ -123,118 +123,117 @@ const socialMedia = [
 export default function Home() {
   return (
     <>
-      <main>
-        <ToggleButton />
-        <section className="pt-20 pb-8 dark:text-offWhite text-black">
-          <div className="flex items-center">
-            <Image
-              src={photo}
-              alt="my photo"
-              width={70}
-              height={70}
-              className="rounded-full"
-              unoptimized
-            />
-            <div className="pl-5">
-              <h1 className="text-xl mb-1">Adrian Pantea</h1>
-              <p className="font-bold  text-black dark:text-yellow text-lg">
-                Product-focused Fullstack Developer
+      <ToggleButton />
+      <main className="">
+        <div class="flex flex-col min-h-screen">
+          {/* <ToggleButton /> */}
+          <section className="pt-20 pb-8 dark:text-offWhite text-black ">
+            <div className="flex items-center">
+              <Image
+                src={photo}
+                alt="my photo"
+                width={70}
+                height={70}
+                className="rounded-full"
+                unoptimized
+              />
+              <div className="pl-5">
+                <h1 className="text-xl mb-1">Adrian Pantea</h1>
+                <p className="font-bold  text-black dark:text-yellow text-lg">
+                  Product-focused Fullstack Developer
+                </p>
+              </div>
+            </div>
+            <div className="pt-5">
+              <p className="text-base font-normal mt-2">
+                Hi, I'm Adrian. I enjoy building dynamic, creative products from
+                start to finish. Focused on developing intuitive experiences
+                that constantly grow and improve based on user metrics. More
+                about me
+                <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black hover:text-neutral600">
+                  <Link href="/about">here</Link>
+                </span>
+                .
               </p>
             </div>
-          </div>
-          <div className="pt-5">
-            <p className="text-base font-normal mt-2">
-              Hi, I'm Adrian. I enjoy building dynamic, creative products from
-              start to finish. Focused on developing intuitive experiences that
-              constantly grow and improve based on user metrics. More about me
-              <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black hover:text-neutral600">
-                <Link href="/about">here</Link>
-              </span>
-              .
-            </p>
-          </div>
-        </section>
+          </section>
 
-        <section className="dark:text-offWhite text-black">
-          <div className="pb-8">
-            <h2 className="text-2xl font-semibold text-black dark:text-yellow ">
-              Work experience
-            </h2>
-          </div>
-          {jobs.map((job, i) => (
-            <div
-              key={i}
-              className="flex flex-col sm:flex-row pb-8 text-md font-light  "
-            >
-              <div className="w-full sm:w-1/4 ">
-                <p className="text-base font-normal">{job.year}</p>
-              </div>
-
-              <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                <h2 className="font-bold ">
-                  {job.title} at{" "}
-                  <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
-                    <a href={job.recipient} target="_blank">
-                      {job.name}
-                    </a>
-                  </span>
-                </h2>
-                <p className="mt-4 font-normal text-base">{job.description}</p>
-              </div>
+          <section className="dark:text-offWhite text-black">
+            <div className="pb-8">
+              <h2 className="text-2xl font-semibold text-black dark:text-yellow ">
+                Work experience
+              </h2>
             </div>
-          ))}
-        </section>
+            {jobs.map((job, i) => (
+              <div
+                key={i}
+                className="flex flex-col sm:flex-row pb-8 text-md font-light  "
+              >
+                <div className="w-full sm:w-1/4 ">
+                  <p className="text-base font-normal">{job.year}</p>
+                </div>
 
-        <section className=" dark:text-offWhite text-black">
-          <div className="pb-8">
-            <h2 className="text-2xl font-semibold text-black dark:text-yellow">
-              Projects
-            </h2>
-          </div>
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="flex flex-col sm:flex-row pb-8 text-md leading-relaxed"
-            >
-              <div className="w-full sm:w-1/4">
-                <p className="mb-2 text-base font-normal">{project.year}</p>
-              </div>
-
-              <div className="w-full sm:w-3/4 sm:mt-0 ">
-                <div>
-                  <div>
-                    <span className="font-bold dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
-                      <a href={project.githubRepo} target="_blank">
-                        {project.name}
+                <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
+                  <h2 className="font-bold ">
+                    {job.title} at{" "}
+                    <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
+                      <a href={job.recipient} target="_blank">
+                        {job.name}
                       </a>
                     </span>
-                    <h2 className="my-4 text-base font-normal">
-                      {project.description}
-                    </h2>
-                  </div>
+                  </h2>
+                  <p className="mt-4 font-normal text-base">
+                    {job.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </section>
 
-                  <div className="flex gap-2 justify-end ">
-                    {project.tech.split(" · ").map((tech, index) => (
-                      <span
-                        key={index}
-                        className="font-normal text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text "
-                      >
-                        {tech}
+          <section className=" dark:text-offWhite text-black">
+            <div className="pb-8">
+              <h2 className="text-2xl font-semibold text-black dark:text-yellow">
+                Projects
+              </h2>
+            </div>
+            {projects.map((project, i) => (
+              <div
+                key={i}
+                className="flex flex-col sm:flex-row pb-8 text-md leading-relaxed"
+              >
+                <div className="w-full sm:w-1/4">
+                  <p className="mb-2 text-base font-normal">{project.year}</p>
+                </div>
+
+                <div className="w-full sm:w-3/4 sm:mt-0 ">
+                  <div>
+                    <div>
+                      <span className="font-bold dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
+                        <a href={project.githubRepo} target="_blank">
+                          {project.name}
+                        </a>
                       </span>
-                    ))}
+                      <h2 className="my-4 text-base font-normal">
+                        {project.description}
+                      </h2>
+                    </div>
+
+                    <div className="flex gap-2 justify-end ">
+                      {project.tech.split(" · ").map((tech, index) => (
+                        <span
+                          key={index}
+                          className="font-normal text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text "
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </section>
-
-        {/* <button
-          onClick={toggleDarkMode}
-          className="absolute w-16 h-16 bottom-16 right-16 bg-neutral-900 dark:bg-white  text-white dark:text-black"
-        >
-          {darkMode ? "light" : "dark"}
-        </button> */}
+            ))}
+          </section>
+        </div>
       </main>
     </>
   );
