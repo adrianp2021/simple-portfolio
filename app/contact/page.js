@@ -4,6 +4,7 @@ import emailTemplate from "../components/emailTemplate";
 import Link from "next/link";
 import ToggleButton from "../components/buttonDarkMode";
 import Footer from "../components/footer";
+// import { BeakerIcon } from "@heroicons/react/24/solid";
 
 export default function Contact() {
   // const [firstName, setFirstName] = useState("");
@@ -67,6 +68,8 @@ export default function Contact() {
   return (
     <>
       <ToggleButton />
+  
+
       <section className="pt-20 pb-8 mb-12  ">
         <div className=" text-base font-normal decoration-1 w-max text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
@@ -114,7 +117,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="name"
-                  className="text-md font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red"
+                  className="text-sm font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red"
                 >
                   Full name
                 </label>
@@ -133,7 +136,7 @@ export default function Contact() {
                 />
 
                 <label className="block">
-                  <span className="text-md font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red">
+                  <span className="text-sm font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red">
                     Email
                   </span>
 
@@ -155,7 +158,7 @@ export default function Contact() {
 
                 <label
                   htmlFor="message"
-                  className="text-md font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red"
+                  className="text-sm font-normal text-neutral900 dark:text-neutral100 after:content-['*'] after:ml-0.5 after:text-red"
                 >
                   Message
                 </label>

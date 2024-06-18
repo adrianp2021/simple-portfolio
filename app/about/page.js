@@ -44,8 +44,8 @@ import youtube from "../../public/youtube.svg";
 
 import ToggleButton from "../components/buttonDarkMode";
 
-import { FiSun } from "react-icons/fi";
-import { FiMoon } from "react-icons/fi";
+// import { FiSun } from "react-icons/fi";
+// import { FiMoon } from "react-icons/fi";
 
 export default function About() {
   const frontEnd = [
@@ -298,7 +298,7 @@ export default function About() {
         </Link>
       </div>
       {/* <ToggleButton /> */}
-<FiMoon />
+      {/* <FiMoon /> */}
       <section className="pt-8">
         <p className="text-2xl font-semibold text-black dark:text-yellow">
           More about me
