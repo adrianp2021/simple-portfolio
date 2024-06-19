@@ -35,7 +35,7 @@ export default function Contact() {
 
       if (response.ok) {
         setStatus("success");
-        const data = await respons.json();
+        const data = await response.json();
         console.log("what is the response data ->", data);
       } else {
         setStatus("error");
@@ -52,7 +52,7 @@ export default function Contact() {
       setName("");
       setEmail("");
       setMessage("");
-    }, 800000);
+    }, 4000);
   };
 
   const handleEmailChange = (e) => {
@@ -67,6 +67,7 @@ export default function Contact() {
 
   return (
     <>
+      <ToggleButton />
       <section className="pt-20 pb-8 mb-12  ">
         <div className="flex justify-between items-center  text-base font-normal decoration-1 text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
@@ -92,7 +93,6 @@ export default function Contact() {
             </svg>
             Back to home page
           </Link>
-          <ToggleButton />
         </div>
 
         <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">

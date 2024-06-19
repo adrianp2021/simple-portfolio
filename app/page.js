@@ -123,9 +123,8 @@ const socialMedia = [
 export default function Home() {
   return (
     <>
+      <ToggleButton />
       <main className=" ">
-        <ToggleButton />
-
         <div className="min-h-screen">
           <section className="pt-20 pb-8 dark:text-offWhite text-black ">
             <div className="flex items-center">

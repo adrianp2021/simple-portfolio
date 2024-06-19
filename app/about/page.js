@@ -272,6 +272,7 @@ export default function About() {
 
   return (
     <main className="">
+      <ToggleButton />
       <div className="pt-20 flex justify-between items-center text-base font-normal decoration-1 ">
         <Link
           className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
@@ -294,9 +295,8 @@ export default function About() {
             <path d="m13 6-6 6 6 6"></path>
             <path d="M7 12h14"></path>
           </svg>
-          Back to home page
+          Return to home page
         </Link>
-        <ToggleButton />
       </div>
 
       <section className="pt-8">
