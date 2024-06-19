@@ -273,7 +273,7 @@ export default function About() {
   return (
     <main className="">
       <ToggleButton />
-      <div className="pt-20 flex justify-between items-center text-base font-normal decoration-1 ">
+      <div className="pt-10 flex justify-between items-center text-base font-normal decoration-1 ">
         <Link
           className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
           href="/"

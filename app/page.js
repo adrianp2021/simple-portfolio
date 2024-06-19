@@ -126,7 +126,7 @@ export default function Home() {
       <ToggleButton />
       <main className=" ">
         <div className="min-h-screen">
-          <section className="pt-20 pb-8 dark:text-offWhite text-black ">
+          <section className="pt-10 pb-8 dark:text-offWhite text-black ">
             <div className="flex items-center">
               <Image
                 src={photo}

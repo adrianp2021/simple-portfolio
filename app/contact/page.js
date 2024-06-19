@@ -68,7 +68,7 @@ export default function Contact() {
   return (
     <>
       <ToggleButton />
-      <section className="pt-20 pb-8 mb-12  ">
+      <section className="pt-10 pb-8 mb-12  ">
         <div className="flex justify-between items-center  text-base font-normal decoration-1 text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
             className="flex items-center "
