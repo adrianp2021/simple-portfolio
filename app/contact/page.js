@@ -68,8 +68,8 @@ export default function Contact() {
   return (
     <>
       <ToggleButton />
-      <section className="pt-10 pb-8 mb-12  ">
-        <div className="flex justify-between items-center  text-base font-normal decoration-1 text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
+      <section className=" pb-8 mb-12  ">
+        {/* <div className="flex justify-between items-center  text-base font-normal decoration-1 text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
           <Link
             className="flex items-center "
             href="/"
@@ -93,7 +93,7 @@ export default function Contact() {
             </svg>
             Return to home page
           </Link>
-        </div>
+        </div> */}
 
         <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">
           Contact

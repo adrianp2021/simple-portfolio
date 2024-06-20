@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { Montserrat, Poppins } from "next/font/google";
 
-import { useState, useEffect } from "react";
-
 const poppins = Poppins({
   weight: ["300", "400", "700"],
   subsets: ["latin"],
@@ -32,8 +30,6 @@ const socialMedia = [
 ];
 
 export default function Footer() {
-  const [isVisible, setIsVisible] = useState(false);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -69,7 +65,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="flex items-end mb-4">
+        <div className="block mb-4">
           <div>
             <Link
               href="/"
@@ -79,7 +75,7 @@ export default function Footer() {
             </Link>
           </div>
           {/* <div> */}
-          <div className="mx-4">
+          <div className="my-4">
             <Link
               href="/about"
               className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-offWhite hover:text-neutral600 underline underline-offset-4`}
@@ -110,7 +106,7 @@ export default function Footer() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="h-6 w-6 mb-4 rounded-full dark:bg-black bg-black group-hover:bg-neutral600 dark:group-hover:text-yellow transition-colors"
+              className="h-6 w-6 mb-3 rounded-full dark:bg-black bg-black group-hover:bg-neutral600 dark:group-hover:text-yellow transition-colors"
             >
               <path
                 fillRule="evenodd"
