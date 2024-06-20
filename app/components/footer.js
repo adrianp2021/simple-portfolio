@@ -69,7 +69,7 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className={`${montserrat.className} font-normal text-sm  dark:hover:text-yellow  text-offWhite hover:text-neutral600 underline underline-offset-4`}
+              className={`${montserrat.className} font-normal text-sm  dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
             >
               Home
             </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="my-4">
             <Link
               href="/about"
-              className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-offWhite hover:text-neutral600 underline underline-offset-4`}
+              className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
             >
               About
             </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
           <div>
             <Link
               href="/contact"
-              className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-offWhite hover:text-neutral600 underline underline-offset-4`}
+              className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
             >
               Contact
             </Link>
