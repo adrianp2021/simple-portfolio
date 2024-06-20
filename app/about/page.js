@@ -44,8 +44,23 @@ import youtube from "../../public/youtube.svg";
 
 import ToggleButton from "../components/buttonDarkMode";
 
-// import { FiSun } from "react-icons/fi";
-// import { FiMoon } from "react-icons/fi";
+import {
+  Roboto,
+  Montserrat,
+  Merriweather,
+  Poppins,
+  Source_Sans_3,
+} from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+});
 
 export default function About() {
   const frontEnd = [
@@ -273,7 +288,9 @@ export default function About() {
   return (
     <main className="">
       <ToggleButton />
-      <div className="pt-10 flex justify-between items-center text-base font-normal decoration-1 ">
+      <div
+        className={`${poppins.className} pt-10 flex justify-between items-center text-base font-normal decoration-1`}
+      >
         <Link
           className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
           href="/"
@@ -300,10 +317,14 @@ export default function About() {
       </div>
 
       <section className="pt-8">
-        <p className="text-2xl font-semibold text-black dark:text-yellow">
+        <p
+          className={`${montserrat.className} text-2xl font-semibold text-black dark:text-yellow`}
+        >
           More about me
         </p>
-        <p className="text-base font-normal dark:text-offWhite text-black leading-relaxed mt-4">
+        <p
+          className={`${poppins.className} text-sm font-normal dark:text-offWhite text-black  mt-4`}
+        >
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -311,11 +332,15 @@ export default function About() {
         </p>
       </section>
 
-      <section className="pt-8">
-        <p className="text-2xl font-semibold text-black dark:text-yellow">
+      <section className="">
+        <p
+          className={`${montserrat.className} text-2xl font-semibold dark:text-yellow text-black mt-4`}
+        >
           Work
         </p>
-        <p className="text-base font-normal dark:text-offWhite text-black leading-relaxed mt-4">
+        <p
+          className={`${poppins.className} text-sm font-normal dark:text-offWhite text-black  mt-4`}
+        >
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -325,11 +350,15 @@ export default function About() {
         </p>
       </section>
 
-      <section className=" pt-8">
-        <p className="text-2xl font-semibold text-black dark:text-yellow">
+      <section className="">
+        <p
+          className={`${montserrat.className} text-2xl font-semibold dark:text-yellow  text-black mt-4`}
+        >
           Beyond the Screen
         </p>
-        <p className="text-base font-normal dark:text-offWhite text-black leading-relaxed mt-4">
+        <p
+          className={`${poppins.className} text-sm font-normal dark:text-offWhite text-black  mt-4`}
+        >
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
@@ -354,12 +383,14 @@ export default function About() {
         </p>
       </section>
 
-      <section className="py-8">
-        <p className="text-2xl font-semibold text-black dark:text-yellow">
+      <section >
+        <p
+          className={`${montserrat.className} text-2xl font-semibold dark:text-yellow  text-black mt-4`}
+        >
           Stack
         </p>
 
-        <div className="rounded-2xl mt-8 p-1 bg-babyPowder dark:bg-neutral900 ">
+        <div className="rounded-2xl mt-4 p-1 bg-babyPowder dark:bg-neutral900 ">
           <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Front End
           </p>
@@ -389,7 +420,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -430,7 +461,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -471,7 +502,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>
@@ -512,7 +543,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
                         {item.description}
                       </p>
                     </div>

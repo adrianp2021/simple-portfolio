@@ -69,32 +69,6 @@ export default function Contact() {
     <>
       <ToggleButton />
       <section className=" pb-8 mb-12  ">
-        {/* <div className="flex justify-between items-center  text-base font-normal decoration-1 text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite">
-          <Link
-            className="flex items-center "
-            href="/"
-            aria-label="Back to home page"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className=" w-4 mr-1 "
-            >
-              <path d="M3 19V5"></path>
-              <path d="m13 6-6 6 6 6"></path>
-              <path d="M7 12h14"></path>
-            </svg>
-            Return to home page
-          </Link>
-        </div> */}
-
         <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">
           Contact
         </h2>

@@ -3,9 +3,21 @@ import "./globals.css";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
+import {
+  Roboto,
+  Montserrat,
+  Merriweather,
+  Poppins,
+  Source_Sans_3,
+} from "next/font/google";
+
 import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Adrian Pantea Portfolio",
@@ -21,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body
-        className={`mx-auto max-w-xl px-5 leading-6 bg-lightBackground dark:bg-background min-h-screen `}
+        className={`mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
         {children}
         <Footer />

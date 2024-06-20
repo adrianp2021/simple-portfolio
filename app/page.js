@@ -82,7 +82,7 @@ const projects = [
     year: "May 2021",
     project: "Project 1",
     description:
-      "A childhood classic, I recreated Snake with a colour twist. Working this game as my first project was a meaningful milestone. Though simple, it symbolized my growing JavaScript skills.",
+      "A childhood classic, I recreated Snake with a colour twist. Working on this game as my first project was a meaningful milestone. Though simple, it symbolised my JavaScript learning.",
     tech: "HTML · CSS · JavsScript",
     githubRepo: "https://github.com/adrianp2021/SEI-Project-1",
     deployed: "https://adrianp2021.github.io/SEI-Project-1/",
@@ -154,7 +154,7 @@ export default function Home() {
     <>
       <ToggleButton />
       <main>
-        <div className="min-h-screen">
+        <div className="">
           <section className="py-8 dark:text-offWhite text-black ">
             <div className="flex items-center">
               <Image
@@ -165,15 +165,15 @@ export default function Home() {
                 className="rounded-full"
                 unoptimized
               />
-              <div className={`${poppins.className} pl-5`}>
-                <h1 className="text-xl font-normal mb-1">Adrian Pantea</h1>
-                <p className="font-bold dark:text-yellow text-lg ">
+              <div className="pl-5 text-lg">
+                <h1 className=" font-normal ">Adrian Pantea</h1>
+                <p className="font-bold dark:text-yellow  ">
                   Product-focused Fullstack Developer
                 </p>
               </div>
             </div>
-            <div className={`${montserrat.className} pt-5`}>
-              <p className="text-sm mt-2 font-normal">
+            <div className="pt-5">
+              <p className="text-sm mt-2 font-light">
                 Hi, I'm Adrian. I enjoy building dynamic, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
@@ -187,23 +187,17 @@ export default function Home() {
           </section>
 
           <section className="dark:text-offWhite text-black">
-            <div
-              className={`${poppins.className} text-2xl font-semibold text-black dark:text-yellow pb-8`}
-            >
+            <div className=" text-xl font-semibold text-black dark:text-yellow pb-8">
               <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
               <div key={i} className="flex flex-col sm:flex-row pb-8">
-                <div
-                  className={`${poppins.className} w-full sm:w-1/4 font-normal text-sm dark:text-neutral400`}
-                >
+                <div className="w-full sm:w-1/4 font-normal text-sm dark:text-neutral400">
                   <p>{job.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2
-                    className={`${poppins.className} font-semibold text-base`}
-                  >
+                  <h2 className=" font-semibold text-sm">
                     {job.title} at{" "}
                     <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
@@ -211,20 +205,14 @@ export default function Home() {
                       </a>
                     </span>
                   </h2>
-                  <p
-                    className={`${montserrat.className} mt-4 font-normal text-sm`}
-                  >
-                    {job.description}
-                  </p>
+                  <p className=" mt-2 font-light text-sm">{job.description}</p>
                 </div>
               </div>
             ))}
           </section>
 
           <section className=" dark:text-offWhite text-black">
-            <div
-              className={`${poppins.className} text-2xl font-semibold text-black dark:text-yellow pb-8`}
-            >
+            <div className=" text-xl font-semibold text-black dark:text-yellow pb-8">
               <h2>Projects</h2>
             </div>
 
@@ -233,32 +221,26 @@ export default function Home() {
                 key={i}
                 className="flex flex-col sm:flex-row pb-8 font-light  "
               >
-                <div
-                  className={`${poppins.className} w-full sm:w-1/4 font-normal dark:text-neutral400`}
-                >
+                <div className="w-full sm:w-1/4 font-normal dark:text-neutral400">
                   <p className="text-sm ">{project.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2
-                    className={`${poppins.className} font-semibold text-base`}
-                  >
+                  <h2 className=" font-semibold text-base">
                     <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
                   </h2>
-                  <p
-                    className={`${montserrat.className} mt-4 font-normal text-sm`}
-                  >
+                  <p className=" mt-4 font-normal text-sm">
                     {project.description}
                   </p>
                   <div className="flex gap-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
                       <span
                         key={index}
-                        className={`${montserrat.className} mt-4 font-semibold text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text`}
+                        className=" mt-4 font-medium text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text"
                       >
                         {tech}
                       </span>

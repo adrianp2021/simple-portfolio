@@ -69,7 +69,7 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className={`${montserrat.className} font-normal text-sm  dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
+              className={`${poppins.className} font-normal text-sm  dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
             >
               Home
             </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
           <div className="my-4">
             <Link
               href="/about"
-              className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
+              className={`${poppins.className} font-normal text-sm dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
             >
               About
             </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
           <div>
             <Link
               href="/contact"
-              className={`${montserrat.className} font-normal text-sm dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
+              className={`${poppins.className} font-normal text-sm dark:hover:text-yellow  text-neutral600 dark:text-offWhite hover:text-neutral600 underline underline-offset-4`}
             >
               Contact
             </Link>
@@ -94,19 +94,16 @@ export default function Footer() {
           {/* </div> */}
         </div>
 
-        <div className="group flex items-end">
+        <div className=" flex items-end">
           <button
             onClick={scrollToTop}
             className="flex justify-center rounded transition"
           >
-            <p className="text-black mx-2 dark:text-offWhite group-hover:text-neutral600 dark:group-hover:text-yellow transition-colors">
-              Back to top
-            </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="h-6 w-6 mb-3 rounded-full dark:bg-black bg-black group-hover:bg-neutral600 dark:group-hover:text-yellow transition-colors"
+              className="mb-3 size-7 dark:bg-black rounded-full bg-black hover:bg-neutral600 dark:hover:text-yellow transition-colors"
             >
               <path
                 fillRule="evenodd"
