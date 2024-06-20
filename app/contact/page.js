@@ -91,7 +91,7 @@ export default function Contact() {
               <path d="m13 6-6 6 6 6"></path>
               <path d="M7 12h14"></path>
             </svg>
-            Back to home page
+            Return to home page
           </Link>
         </div>
 

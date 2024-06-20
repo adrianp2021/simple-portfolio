@@ -8,6 +8,35 @@ import { useState } from "react";
 
 import ToggleButton from "./components/buttonDarkMode";
 
+import {
+  Roboto,
+  Montserrat,
+  Merriweather,
+  Poppins,
+  Source_Sans_3,
+} from "next/font/google";
+
+const roboto = Roboto({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+});
+const montserrat = Montserrat({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+const merriweather = Merriweather({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+});
+const poppins = Poppins({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+});
+const sourceSans = Source_Sans_3({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+});
+
 const jobs = [
   {
     // src: "https://static-00.iconduck.com/assets.00/uber-icon-256x256-649uswep.png",
@@ -124,9 +153,9 @@ export default function Home() {
   return (
     <>
       <ToggleButton />
-      <main className=" ">
+      <main>
         <div className="min-h-screen">
-          <section className="pt-10 pb-8 dark:text-offWhite text-black ">
+          <section className="py-8 dark:text-offWhite text-black ">
             <div className="flex items-center">
               <Image
                 src={photo}
@@ -136,20 +165,20 @@ export default function Home() {
                 className="rounded-full"
                 unoptimized
               />
-              <div className="pl-5">
-                <h1 className="text-xl mb-1">Adrian Pantea</h1>
-                <p className="font-bold  text-black dark:text-yellow text-lg">
+              <div className={`${poppins.className} pl-5`}>
+                <h1 className="text-xl font-normal mb-1">Adrian Pantea</h1>
+                <p className="font-bold dark:text-yellow text-lg ">
                   Product-focused Fullstack Developer
                 </p>
               </div>
             </div>
-            <div className="pt-5">
-              <p className="text-base font-normal mt-2">
+            <div className={`${montserrat.className} pt-5`}>
+              <p className="text-sm mt-2 font-normal">
                 Hi, I'm Adrian. I enjoy building dynamic, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
                 about me
-                <span className="ml-1 underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black hover:text-neutral600">
+                <span className="ml-1 font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black hover:text-neutral600">
                   <Link href="/about">here</Link>
                 </span>
                 .
@@ -158,22 +187,23 @@ export default function Home() {
           </section>
 
           <section className="dark:text-offWhite text-black">
-            <div className="pb-8">
-              <h2 className="text-2xl font-semibold text-black dark:text-yellow ">
-                Work experience
-              </h2>
+            <div
+              className={`${poppins.className} text-2xl font-semibold text-black dark:text-yellow pb-8`}
+            >
+              <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
-              <div
-                key={i}
-                className="flex flex-col sm:flex-row pb-8 text-md font-light  "
-              >
-                <div className="w-full sm:w-1/4 ">
-                  <p className="text-base font-normal">{job.year}</p>
+              <div key={i} className="flex flex-col sm:flex-row pb-8">
+                <div
+                  className={`${poppins.className} w-full sm:w-1/4 font-normal text-sm dark:text-neutral400`}
+                >
+                  <p>{job.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className="font-bold ">
+                  <h2
+                    className={`${poppins.className} font-semibold text-base`}
+                  >
                     {job.title} at{" "}
                     <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
@@ -181,7 +211,9 @@ export default function Home() {
                       </a>
                     </span>
                   </h2>
-                  <p className="mt-4 font-normal text-base">
+                  <p
+                    className={`${montserrat.className} mt-4 font-normal text-sm`}
+                  >
                     {job.description}
                   </p>
                 </div>
@@ -190,43 +222,47 @@ export default function Home() {
           </section>
 
           <section className=" dark:text-offWhite text-black">
-            <div className="pb-8">
-              <h2 className="text-2xl font-semibold text-black dark:text-yellow">
-                Projects
-              </h2>
+            <div
+              className={`${poppins.className} text-2xl font-semibold text-black dark:text-yellow pb-8`}
+            >
+              <h2>Projects</h2>
             </div>
+
             {projects.map((project, i) => (
               <div
                 key={i}
-                className="flex flex-col sm:flex-row pb-8 text-md leading-relaxed"
+                className="flex flex-col sm:flex-row pb-8 font-light  "
               >
-                <div className="w-full sm:w-1/4">
-                  <p className="mb-2 text-base font-normal">{project.year}</p>
+                <div
+                  className={`${poppins.className} w-full sm:w-1/4 font-normal dark:text-neutral400`}
+                >
+                  <p className="text-sm ">{project.year}</p>
                 </div>
 
-                <div className="w-full sm:w-3/4 sm:mt-0 ">
-                  <div>
-                    <div>
-                      <span className="font-bold dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
-                        <a href={project.githubRepo} target="_blank">
-                          {project.name}
-                        </a>
+                <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
+                  <h2
+                    className={`${poppins.className} font-semibold text-base`}
+                  >
+                    <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
+                      <a href={project.githubRepo} target="_blank">
+                        {project.name}
+                      </a>
+                    </span>
+                  </h2>
+                  <p
+                    className={`${montserrat.className} mt-4 font-normal text-sm`}
+                  >
+                    {project.description}
+                  </p>
+                  <div className="flex gap-2 justify-end ">
+                    {project.tech.split(" · ").map((tech, index) => (
+                      <span
+                        key={index}
+                        className={`${montserrat.className} mt-4 font-semibold text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text`}
+                      >
+                        {tech}
                       </span>
-                      <h2 className="my-4 text-base font-normal">
-                        {project.description}
-                      </h2>
-                    </div>
-
-                    <div className="flex gap-2 justify-end ">
-                      {project.tech.split(" · ").map((tech, index) => (
-                        <span
-                          key={index}
-                          className="font-normal text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text "
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
