@@ -3,8 +3,8 @@ import "./globals.css";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
-import Script from 'next/script'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import {
   Roboto,
@@ -37,16 +37,30 @@ export const metadata = {
   /* <link rel="manifest" href="~/manifest.json"></link> */
 }
 
-const GA = (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
+const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.className}`}>
-      
       <body
         className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
-        <GoogleAnalytics gaId={GA} />
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
         {children}
         <Footer />
       </body>
