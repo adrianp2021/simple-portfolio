@@ -290,7 +290,7 @@ export default function About() {
       <ToggleButton />
       <div className={`${poppins.className} pt-6 `}>
         <Link
-          className="flex items-center text-sm font-medium transition text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
+          className="flex items-center text-sm font-medium text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
           href="/"
           aria-label="Back to home page"
         >

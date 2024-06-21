@@ -100,22 +100,9 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className="flex justify-center rounded transition  "
+          className="my-4 font-medium text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="my-6 size-8 rounded-full transition-colors bg-background dark:hover:bg-yellow hover:bg-neutral600"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            />
-          </svg>
+          Back to Top
         </button>
       </div>
 
