@@ -180,7 +180,7 @@ export default function Home() {
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
                 about me
-                <span className="ml-1 font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-text text-black hover:text-neutral600">
+                <span className="ml-1 font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-neutral300 text-black hover:text-neutral600">
                   <Link href="/about">here</Link>
                 </span>
                 .

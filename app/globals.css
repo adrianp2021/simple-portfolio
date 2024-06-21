@@ -26,11 +26,3 @@ body {
   }
 }
 
-
-.svg-path {
-  fill: black; /* Default color for light mode */
-}
-
-.dark .svg-path {
-  fill: white; /* Color for dark mode */
-}
