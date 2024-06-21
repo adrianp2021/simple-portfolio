@@ -36,6 +36,7 @@ export default function Footer() {
       behavior: "smooth",
     });
   };
+
   return (
     <footer>
       {/* <div className="text-center border-gray-300 border-t border-t-neutral600 dark:border-t-neutral600" /> */}
@@ -100,9 +101,9 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className="my-4 font-medium text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow"
+          className={`${montserrat.className} my-4 font-medium text-xs px-2 py-1 rounded-full bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
         >
-          Back to Top
+          Back to top
         </button>
       </div>
 

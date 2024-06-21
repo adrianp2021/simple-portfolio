@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
 import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import {
   Roboto,
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
       <body
         className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
+        <GoogleAnalytics gaId="G-75GKZZPWKE" />
         {children}
         <Footer />
       </body>
