@@ -176,7 +176,7 @@ export default function Home() {
             </div>
             <div className="pt-5">
               <p className="text-sm mt-2 tracking-normal">
-                Hi, I'm Adrian. I enjoy building dynamic, creative products from
+                Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
                 about me
@@ -190,21 +190,21 @@ export default function Home() {
 
           <section className="dark:text-offWhite text-black">
             <div
-              className={`${montserrat.className} text-xl font-extrabold pb-8 dark:text-yellow`}
+              className={`${montserrat.className} text-xl font-extrabold pb-4 dark:text-yellow`}
             >
               <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
               <div
                 key={i}
-                className="flex  flex-col sm:flex-row pb-8 dark:text-offWhite "
+                className="flex  flex-col sm:flex-row pb-6 dark:text-offWhite "
               >
                 <div className="w-full sm:w-1/4 text-sm ">
                   <p>{job.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className=" font-bold dark:text-neutral300 text-sm ">
+                  <h2 className=" font-semibold  dark:text-neutral300 text-sm ">
                     {job.title} at{" "}
                     <span className="dark:hover:text-yellow hover:text-neutral500 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
@@ -212,7 +212,9 @@ export default function Home() {
                       </a>
                     </span>
                   </h2>
-                  <p className="mt-2 text-sm tracking-normal">{job.description}</p>
+                  <p className="mt-2 text-sm tracking-normal">
+                    {job.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -220,26 +222,28 @@ export default function Home() {
 
           <section className=" dark:text-offWhite text-black">
             <div
-              className={`${montserrat.className} text-xl font-extrabold pb-8 dark:text-yellow`}
+              className={`${montserrat.className} text-xl font-extrabold pb-4 dark:text-yellow`}
             >
               <h2>Projects</h2>
             </div>
 
             {projects.map((project, i) => (
-              <div key={i} className="flex flex-col sm:flex-row pb-8 ">
+              <div key={i} className="flex flex-col sm:flex-row pb-6 ">
                 <div className="w-full sm:w-1/4 font-normal dark:text-neutral300">
                   <p className="text-sm ">{project.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className=" font-semibold text-base">
+                  <h2 className=" font-semibold text-sm">
                     <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4 dark:text-neutral300 ">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
                   </h2>
-                  <p className=" mt-4 text-sm  tracking-normal">{project.description}</p>
+                  <p className=" mt-4 text-sm  tracking-normal">
+                    {project.description}
+                  </p>
                   <div className="flex gap-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
                       <span
