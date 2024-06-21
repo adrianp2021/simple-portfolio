@@ -40,20 +40,23 @@ export default function Footer() {
     <footer>
       {/* <div className="text-center border-gray-300 border-t border-t-neutral600 dark:border-t-neutral600" /> */}
       <div className=" dark:text-offWhite text-black">
-        <h2 className="text-xl font-bold">Connect</h2>
+        <h2
+          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
+        >
+          Connect
+        </h2>
       </div>
       {/* <div> */}
       <div className="justify-between block sm:flex ">
         <div className="">
-          <h2 className="dark:text-offWhite text-neutral600 mt-6 mb-2 font-semibold">
+          <h2 className="dark:text-offWhite text-neutral800 mt-6 mb-2 font-semibold">
             Links
           </h2>
           <div className="text-sm flex ">
             {socialMedia.map((social, i) => (
               <div
                 key={i}
-                // className=" mb-4 dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600 underline underline-offset-4"
-                className=" mr-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+                className=" mr-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-neutral600 hover:text-neutral600 underline underline-offset-4"
               >
                 <a
                   href={social.recipient}
@@ -68,25 +71,25 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h2 className=" dark:text-offWhite text-neutral600 mt-6 mb-2 font-semibold">
+          <h2 className=" dark:text-offWhite text-neutral800 mt-6 mb-2 font-semibold">
             Pages
           </h2>
           <div>
             <Link
-              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-neutral600 hover:text-neutral600 underline underline-offset-4"
               href="/"
             >
               Home
             </Link>
             <Link
-              className="mx-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+              className="mx-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-neutral600 hover:text-neutral600 underline underline-offset-4"
               href="/about"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-neutral600 hover:text-neutral600 underline underline-offset-4"
             >
               Contact
             </Link>

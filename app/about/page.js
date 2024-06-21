@@ -317,8 +317,12 @@ export default function About() {
       </div>
 
       <section className="pt-4 dark:text-offWhite text-black">
-        <p className="text-xl font-bold">More about me</p>
-        <p className="mt-4  text-sm dark:text-neutral400">
+        <p
+          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
+        >
+          More about me
+        </p>
+        <p className="mt-4  text-sm tracking-normal">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -327,8 +331,12 @@ export default function About() {
       </section>
 
       <section className="pt-4 dark:text-offWhite text-black">
-        <p className="text-xl font-bold">Work</p>
-        <p className="mt-4  text-sm dark:text-neutral400">
+        <p
+          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
+        >
+          Work
+        </p>
+        <p className="mt-4  text-sm tracking-normal">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -339,8 +347,12 @@ export default function About() {
       </section>
 
       <section className="pt-4 dark:text-offWhite text-black">
-        <p className="text-xl font-bold">Beyond the Screen</p>
-        <p className="mt-4  text-sm dark:text-neutral400">
+        <p
+          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
+        >
+          Beyond the Screen
+        </p>
+        <p className="mt-4 text-sm tracking-normal ">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
@@ -366,10 +378,16 @@ export default function About() {
       </section>
 
       <section className="pt-4 dark:text-offWhite text-black">
-        <p className="text-xl font-bold">Stack</p>
+        <p
+          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
+        >
+          Stack
+        </p>
 
         <div className="rounded-2xl mt-4 p-1 bg-babyPowder dark:bg-neutral900 ">
-          <p className="text-sm font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+          <p
+            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
+          >
             Front End
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
@@ -395,10 +413,10 @@ export default function About() {
                   </div>
                   <div className="flex items-center ">
                     <div>
-                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
+                      <p className="text-sm font-medium tracking-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
                         {item.description}
                       </p>
                     </div>
@@ -410,7 +428,9 @@ export default function About() {
         </div>
 
         <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+          <p
+            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
+          >
             Back End
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
@@ -439,7 +459,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
                         {item.description}
                       </p>
                     </div>
@@ -451,7 +471,9 @@ export default function About() {
         </div>
 
         <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+          <p
+            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
+          >
             Coding
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
@@ -480,7 +502,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
                         {item.description}
                       </p>
                     </div>
@@ -492,7 +514,9 @@ export default function About() {
         </div>
 
         <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+          <p
+            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
+          >
             Productivity
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
@@ -521,7 +545,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
                         {item.description}
                       </p>
                     </div>
@@ -533,7 +557,9 @@ export default function About() {
         </div>
 
         <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+          <p
+            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
+          >
             Design
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
@@ -562,7 +588,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light text-neutral500  dark:text-neutral300">
                         {item.description}
                       </p>
                     </div>
@@ -573,8 +599,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 my-3">
-          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-3 mb-8">
+          <p
+            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
+          >
             Other
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
@@ -603,7 +631,7 @@ export default function About() {
                       <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
                         {item.name}
                       </p>
-                      <p className="text-sm font-light leading-relaxed text-neutral500  dark:text-neutral400">
+                      <p className="text-sm font-light text-neutral500  dark:text-neutral300">
                         {item.description}
                       </p>
                     </div>
