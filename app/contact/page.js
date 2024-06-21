@@ -72,7 +72,7 @@ export default function Contact() {
         <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">
           Contact
         </h2>
-        <p className="text-md text-black dark:text-offWhite pt-3">
+        <p className="text-base text-black dark:text-offWhite pt-3">
           If you just want to say hi, discuss a project or get to know each
           other, let's get in touch.{" "}
         </p>

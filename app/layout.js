@@ -19,6 +19,11 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+const montserrat = Montserrat({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+
 export const metadata = {
   title: "Adrian Pantea Portfolio",
   description: "My portfolio",
@@ -31,9 +36,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${montserrat.className}`}>
+      
       <body
-        className={`mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen `}
+        className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
         {children}
         <Footer />

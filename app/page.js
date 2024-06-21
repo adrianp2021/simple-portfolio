@@ -29,7 +29,7 @@ const merriweather = Merriweather({
   subsets: ["latin"],
 });
 const poppins = Poppins({
-  weight: ["300", "400", "700"],
+  weight: ["300", "400", "600", "700", "800"],
   subsets: ["latin"],
 });
 const sourceSans = Source_Sans_3({
@@ -46,8 +46,8 @@ const jobs = [
     alt: "Uber",
     location: "London, UK (remote based)",
     title: "Public Safety Response Specialist",
-    description:
-      "Data Compliance and Policy, liaising with law enforcement agencies worldwide. Daily responsibilities include meticulous analyses of data requests to align with global policies and GDPR regulations, all while upholding the highest standards of personal integrity and user trust.",
+    description: "Data Compliance and Policy to collaborate with international law enforcement agencies. I conduct in-depth analyses of data requests, guaranteeing alignment with GDPR and international regulations. My focus is on protecting user privacy and fostering trust.",
+      // "Data Compliance and Policy, liaising with law enforcement agencies worldwide. Daily responsibilities include meticulous analyses of data requests to align with global policies and GDPR regulations, all while upholding the highest standards of personal integrity and user trust.",
     recipient: "https://www.uber.com/gb/en/",
   },
   {
@@ -56,8 +56,8 @@ const jobs = [
     name: "General Assembly",
     year: "May - July 2021",
     alt: "General Assembly",
-    description:
-      "In a 12-week bootcamp, I delved into JavaScript, React, Vue JS, and more for front-end development, refining UI design. Gained expertise in Python, Django, NodeJS, SQL, and MongoDB for back-end. Proficient in Git, GitHub, VS Code, and Agile for efficient project management.",
+    description: "Intensive 12-week bootcamp equipped me with full-stack development capabilities (JavaScript, React) for crafting exceptional UIs. Backend proficiency in Python (Django), Node.js, SQL, and MongoDB.",
+      // "In a 12-week bootcamp, I delved into JavaScript, React, Vue JS, and more for front-end development, refining UI design. Gained expertise in Python, Django, NodeJS, SQL, and MongoDB for back-end. Proficient in Git, GitHub, VS Code, and Agile for efficient project management.",
     location: "London, UK",
     title: "Software Engineering Immersive",
     recipient: "https://generalassemb.ly/",
@@ -154,7 +154,7 @@ export default function Home() {
     <>
       <ToggleButton />
       <main>
-        <div className="">
+        <div>
           <section className="py-8 dark:text-offWhite text-black ">
             <div className="flex items-center">
               <Image
@@ -165,7 +165,7 @@ export default function Home() {
                 className="rounded-full"
                 unoptimized
               />
-              <div className="pl-5 text-lg">
+              <div className=" pl-5 text-lg">
                 <h1 className=" font-normal ">Adrian Pantea</h1>
                 <p className="font-bold dark:text-yellow  ">
                   Product-focused Fullstack Developer
@@ -173,7 +173,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-5">
-              <p className="text-sm mt-2 font-light">
+              <p className="text-sm mt-2 dark:text-neutral400">
                 Hi, I'm Adrian. I enjoy building dynamic, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
@@ -187,39 +187,44 @@ export default function Home() {
           </section>
 
           <section className="dark:text-offWhite text-black">
-            <div className=" text-xl font-semibold text-black dark:text-yellow pb-8">
+            <div className="text-xl font-bold pb-8">
               <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
-              <div key={i} className="flex flex-col sm:flex-row pb-8">
-                <div className="w-full sm:w-1/4 font-normal text-sm dark:text-neutral400">
+              <div
+                key={i}
+                className="flex flex-col sm:flex-row pb-8 dark:text-offWhite "
+              >
+                <div className="w-full sm:w-1/4 font-normal text-sm ">
                   <p>{job.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className=" font-semibold text-sm">
+                  <h2 className=" font-bold text-sm ">
                     {job.title} at{" "}
-                    <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4">
+                    <span className="dark:hover:text-yellow hover:text-neutral500 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
                         {job.name}
                       </a>
                     </span>
                   </h2>
-                  <p className=" mt-2 font-light text-sm">{job.description}</p>
+                  <p className="mt-2 font-light text-sm dark:text-neutral400">
+                    {job.description}
+                  </p>
                 </div>
               </div>
             ))}
           </section>
 
           <section className=" dark:text-offWhite text-black">
-            <div className=" text-xl font-semibold text-black dark:text-yellow pb-8">
+            <div className="dark:text-offWhite text-xl font-bold text-black pb-8">
               <h2>Projects</h2>
             </div>
 
             {projects.map((project, i) => (
               <div
                 key={i}
-                className="flex flex-col sm:flex-row pb-8 font-light  "
+                className="flex flex-col sm:flex-row pb-8 font-light "
               >
                 <div className="w-full sm:w-1/4 font-normal dark:text-neutral400">
                   <p className="text-sm ">{project.year}</p>
@@ -233,7 +238,7 @@ export default function Home() {
                       </a>
                     </span>
                   </h2>
-                  <p className=" mt-4 font-normal text-sm">
+                  <p className=" mt-4 font-normal text-sm dark:text-neutral400 ">
                     {project.description}
                   </p>
                   <div className="flex gap-2 justify-end ">

@@ -289,7 +289,7 @@ export default function About() {
     <main className="">
       <ToggleButton />
       <div
-        className={`${poppins.className} pt-10 flex justify-between items-center text-base font-normal decoration-1`}
+        className={`${poppins.className} pt-8 flex justify-between items-center text-base decoration-1`}
       >
         <Link
           className="flex items-center text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
@@ -316,15 +316,9 @@ export default function About() {
         </Link>
       </div>
 
-      <section className="pt-8">
-        <p
-          className={`${montserrat.className} text-2xl font-semibold text-black dark:text-yellow`}
-        >
-          More about me
-        </p>
-        <p
-          className={`${poppins.className} text-sm font-normal dark:text-offWhite text-black  mt-4`}
-        >
+      <section className="pt-4 dark:text-offWhite text-black">
+        <p className="text-xl font-bold">More about me</p>
+        <p className="mt-4  text-sm dark:text-neutral400">
           Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
           by curiosity and a passion for problem-solving. While I'm relatively
           new to the tech scene, I'm eager to dive headfirst into the world of
@@ -332,15 +326,9 @@ export default function About() {
         </p>
       </section>
 
-      <section className="">
-        <p
-          className={`${montserrat.className} text-2xl font-semibold dark:text-yellow text-black mt-4`}
-        >
-          Work
-        </p>
-        <p
-          className={`${poppins.className} text-sm font-normal dark:text-offWhite text-black  mt-4`}
-        >
+      <section className="pt-4 dark:text-offWhite text-black">
+        <p className="text-xl font-bold">Work</p>
+        <p className="mt-4  text-sm dark:text-neutral400">
           My professional journey has been diverse, with experiences ranging
           from legal translation to data compliance and software engineering.
           Currently, I serve as a Public Safety Response Specialist at Uber,
@@ -350,15 +338,9 @@ export default function About() {
         </p>
       </section>
 
-      <section className="">
-        <p
-          className={`${montserrat.className} text-2xl font-semibold dark:text-yellow  text-black mt-4`}
-        >
-          Beyond the Screen
-        </p>
-        <p
-          className={`${poppins.className} text-sm font-normal dark:text-offWhite text-black  mt-4`}
-        >
+      <section className="pt-4 dark:text-offWhite text-black">
+        <p className="text-xl font-bold">Beyond the Screen</p>
+        <p className="mt-4  text-sm dark:text-neutral400">
           When I'm not coding, you'll often find me immersing myself in virtual
           worlds or tinkering with new gadgets. I'm an avid gamer, currently
           engrossed in titles like
@@ -383,15 +365,11 @@ export default function About() {
         </p>
       </section>
 
-      <section >
-        <p
-          className={`${montserrat.className} text-2xl font-semibold dark:text-yellow  text-black mt-4`}
-        >
-          Stack
-        </p>
+      <section className="pt-4 dark:text-offWhite text-black">
+        <p className="text-xl font-bold">Stack</p>
 
         <div className="rounded-2xl mt-4 p-1 bg-babyPowder dark:bg-neutral900 ">
-          <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+          <p className="text-sm font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
             Front End
           </p>
           <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
