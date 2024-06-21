@@ -37,30 +37,13 @@ export const metadata = {
   /* <link rel="manifest" href="~/manifest.json"></link> */
 }
 
-const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.className}`}>
       <body
         className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
+        <GoogleAnalytics gaId="G-75GKZZPWKE" />
         {children}
         <Footer />
       </body>
