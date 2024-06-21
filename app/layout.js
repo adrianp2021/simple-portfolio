@@ -36,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${montserrat.className}`}>
+    <html lang="en" className={`${poppins.className}`}>
       
       <body
         className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}

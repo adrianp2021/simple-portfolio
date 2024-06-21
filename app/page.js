@@ -173,7 +173,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-5">
-              <p className="text-sm mt-2 dark:text-neutral400">
+              <p className="text-sm mt-2 font dark:text-neutral400">
                 Hi, I'm Adrian. I enjoy building dynamic, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
