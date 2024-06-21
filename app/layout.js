@@ -37,6 +37,8 @@ export const metadata = {
   /* <link rel="manifest" href="~/manifest.json"></link> */
 }
 
+const GA = (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.className}`}>
@@ -44,7 +46,7 @@ export default function RootLayout({ children }) {
       <body
         className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
-        <GoogleAnalytics gaId="G-75GKZZPWKE" />
+        <GoogleAnalytics gaId={GA} />
         {children}
         <Footer />
       </body>
