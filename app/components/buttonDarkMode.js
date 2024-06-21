@@ -31,7 +31,7 @@ const ToggleButton = () => {
     <>
       <button
         onClick={toggleDarkMode}
-        className="bg-gray-200 dark:bg-gray-800 dark:text-offWhite text-black pt-8"
+        className="bg-gray-200 dark:bg-gray-800 dark:text-offWhite text-black mt-8"
       >
         {/* {darkMode ? "Light Mode" : "Dark Mode"} */}
         {darkMode ? (

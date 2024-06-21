@@ -71,12 +71,25 @@ export default function Footer() {
           <h2 className=" dark:text-offWhite text-neutral600 mt-6 mb-2 font-semibold">
             Pages
           </h2>
-          <div className=" font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4">
-            <Link href="/">Home</Link>
-            <Link className="mx-4" href="/about">
+          <div>
+            <Link
+              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className="mx-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+              href="/about"
+            >
               About
             </Link>
-            <Link href="/contact">Contact</Link>
+            <Link
+              href="/contact"
+              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral400 text-neutral600 hover:text-neutral600 underline underline-offset-4"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
