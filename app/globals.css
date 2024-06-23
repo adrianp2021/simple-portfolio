@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: "#0c0c0c";
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -16,8 +16,18 @@
   }
 }
 
+/* body {
+  color: rgb(var(--foreground-rgb));
+} */
+
 body {
   color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+}
+
+/* Apply the colors to the html element */
+html {
+  background-color: rgb(var(--background-rgb));
 }
 
 @layer utilities {
