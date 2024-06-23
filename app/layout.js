@@ -26,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${nunito.className}`}>
+    <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="gandalf.png" size={48} type="/gandalf.png" />
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body
-        className={`mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen `}
+        className={`${nunito.className} mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
         <GoogleAnalytics gaId="G-75GKZZPWKE" />
         {children}

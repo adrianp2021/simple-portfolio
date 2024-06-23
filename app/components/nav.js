@@ -11,19 +11,19 @@ export default function Nav() {
             className=" dark:hover:text-yellow hover:text-neutral600"
             href="/"
           >
-            /home
+            Home
           </Link>
           <Link
             className="mx-4 dark:hover:text-yellow hover:text-neutral600"
             href="/about"
           >
-            /about
+            About
           </Link>
           <Link
             href="/contact"
             className="dark:hover:text-yellow hover:text-neutral600"
           >
-            /contact
+            Contact
           </Link>
         </div>
       </div>
