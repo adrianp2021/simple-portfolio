@@ -1,11 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Montserrat, Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const poppins = Poppins({
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-});
 const montserrat = Montserrat({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
@@ -39,10 +35,9 @@ export default function Footer() {
 
   return (
     <footer>
-      {/* <div className="text-center border-gray-300 border-t border-t-neutral600 dark:border-t-neutral600" /> */}
       <div className=" dark:text-offWhite text-black">
         <h2
-          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
+          className={`${montserrat.className} text-lg font-bold`}
         >
           Connect
         </h2>
@@ -50,14 +45,14 @@ export default function Footer() {
       {/* <div> */}
       <div className="justify-between block sm:flex ">
         <div className="">
-          <h2 className="dark:text-offWhite text-neutral800 mt-6 mb-2 font-semibold">
-            Links
+          <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
+            Social
           </h2>
           <div className="text-sm flex ">
             {socialMedia.map((social, i) => (
               <div
                 key={i}
-                className=" mr-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-black hover:text-neutral600 underline underline-offset-4"
+                className=" mr-4 font-normal text-sm dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600 underline underline-offset-4"
               >
                 <a
                   href={social.recipient}
@@ -72,27 +67,27 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h2 className=" dark:text-offWhite text-neutral800 mt-6 mb-2 font-semibold">
+          <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
             Pages
           </h2>
-          <div>
+          <div className="font-normal text-sm underline underline-offset-4  dark:text-offWhite text-black ">
             <Link
-              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-black hover:text-neutral600 underline underline-offset-4"
+              className=" dark:hover:text-yellow hover:text-neutral600"
               href="/"
             >
-              Home
+              /home
             </Link>
             <Link
-              className="mx-4 font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-black hover:text-neutral600 underline underline-offset-4"
+              className="mx-4 dark:hover:text-yellow hover:text-neutral600"
               href="/about"
             >
-              About
+              /about
             </Link>
             <Link
               href="/contact"
-              className="font-normal text-sm dark:hover:text-yellow dark:text-neutral300 text-black hover:text-neutral600 underline underline-offset-4"
+              className="dark:hover:text-yellow hover:text-neutral600"
             >
-              Contact
+              /contact
             </Link>
           </div>
         </div>
@@ -101,7 +96,7 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className={`${montserrat.className} my-4 font-medium text-xs px-2 py-1 rounded-full bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
+          className={`${montserrat.className} my-4 font-medium text-xs px-2 py-1 rounded-lg  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
         >
           Back to top
         </button>

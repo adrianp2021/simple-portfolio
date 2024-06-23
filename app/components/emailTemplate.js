@@ -28,24 +28,23 @@ export const EmailTemplate = ({ name, email, message }) => {
         <Heading style={styles.heading}>
           Hi, you've received an email from {name}
         </Heading>
-        
+
         <div style={styles.formContainer}>
-          
           <div style={styles.formGroup}>
             <label style={styles.label}>Name:</label>
             <div style={styles.input}>{name}</div>
           </div>
-          
+
           {/* <div style={styles.formGroup}>
             <label style={styles.label}>Last name:</label>
             <div style={styles.input}></div>
           </div> */}
-          
+
           <div style={styles.formGroup}>
             <label style={styles.label}>Email:</label>
             <div style={styles.input}>{email}</div>
           </div>
-          
+
           <div style={styles.formGroup}>
             <label style={styles.label}>Message:</label>
             <div style={styles.input}>{message}</div>

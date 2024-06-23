@@ -2,9 +2,13 @@
 import { use, useState } from "react";
 import emailTemplate from "../components/emailTemplate";
 import Link from "next/link";
-import ToggleButton from "../components/buttonDarkMode";
-import Footer from "../components/footer";
-// import { BeakerIcon } from "@heroicons/react/24/solid";
+import Nav from "../components/nav";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 export default function Contact() {
   // const [firstName, setFirstName] = useState("");
@@ -67,12 +71,14 @@ export default function Contact() {
 
   return (
     <>
-      <ToggleButton />
-      <section className=" pb-8 mb-12  ">
-        <h2 className=" pt-8 text-2xl font-semibold dark:text-yellow text-black">
+      <Nav />
+      <section className=" pt-6 mb-12 ">
+        <h2
+          className={`${montserrat.className} pt-8 text-lg font-bold text-black dark:text-offWhite`}
+        >
           Contact
         </h2>
-        <p className="text-base text-black dark:text-offWhite pt-3">
+        <p className="text-base text-black dark:text-neutral400 pt-3">
           If you just want to say hi, discuss a project or get to know each
           other, let's get in touch.{" "}
         </p>
@@ -202,7 +208,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      {/* <Footer /> */}
     </>
   );
 }

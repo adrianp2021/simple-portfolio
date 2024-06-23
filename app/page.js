@@ -6,40 +6,22 @@ import photo from "../public/gandalf.png";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
-import ToggleButton from "./components/buttonDarkMode";
+import Nav from "./components/nav";
 
-import {
-  Roboto,
-  Montserrat,
-  Merriweather,
-  Poppins,
-  Source_Sans_3,
-} from "next/font/google";
+import { Montserrat, Nunito } from "next/font/google";
 
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
+const nunito = Nunito({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
+
 const montserrat = Montserrat({
   weight: ["500", "600", "700", "800"],
-  subsets: ["latin"],
-});
-const merriweather = Merriweather({
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-});
-const poppins = Poppins({
-  weight: ["300", "400", "600", "700", "800"],
-  subsets: ["latin"],
-});
-const sourceSans = Source_Sans_3({
-  weight: ["300", "400", "700"],
   subsets: ["latin"],
 });
 
 const jobs = [
   {
-    // src: "https://static-00.iconduck.com/assets.00/uber-icon-256x256-649uswep.png",
     src: "/uber.png",
     name: "Uber",
     year: "2021 - present",
@@ -48,24 +30,20 @@ const jobs = [
     title: "Public Safety Response Specialist",
     description:
       "Data Compliance and Policy to collaborate with international law enforcement agencies. I conduct in-depth analyses of data requests, guaranteeing alignment with GDPR and international regulations. My focus is on protecting user privacy and fostering trust.",
-    // "Data Compliance and Policy, liaising with law enforcement agencies worldwide. Daily responsibilities include meticulous analyses of data requests to align with global policies and GDPR regulations, all while upholding the highest standards of personal integrity and user trust.",
     recipient: "https://www.uber.com/gb/en/",
   },
   {
-    // src: "https://banner2.cleanpng.com/20180413/xbw/kisspng-general-assembly-seattle-technology-user-experienc-startup-5ad124379ce884.2961021115236557356427.jpg",
     src: "/ga.png",
     name: "General Assembly",
     year: "May - July 2021",
     alt: "General Assembly",
     description:
       "Intensive 12-week bootcamp equipped me with full-stack development capabilities (JavaScript, React) for crafting exceptional UIs. Backend proficiency in Python (Django), Node.js, SQL, and MongoDB.",
-    // "In a 12-week bootcamp, I delved into JavaScript, React, Vue JS, and more for front-end development, refining UI design. Gained expertise in Python, Django, NodeJS, SQL, and MongoDB for back-end. Proficient in Git, GitHub, VS Code, and Agile for efficient project management.",
     location: "London, UK",
     title: "Software Engineering Immersive",
     recipient: "https://generalassemb.ly/",
   },
   {
-    // src: "https://pbs.twimg.com/profile_images/798100060101902336/-MIkj5Pl_400x400.jpg",
     src: "/dep.png",
     name: "De Pinna LLP",
     year: "2020 - 2021",
@@ -154,10 +132,10 @@ const socialMedia = [
 export default function Home() {
   return (
     <>
-      <ToggleButton />
-      <main>
+      <Nav />
+      <main className="pt-8">
         <div>
-          <section className="py-8 dark:text-offWhite text-black ">
+          <section className="pt-6 pb-6 dark:text-offWhite text-black ">
             <div className="flex items-center">
               <Image
                 src={photo}
@@ -167,20 +145,24 @@ export default function Home() {
                 className="rounded-full"
                 unoptimized
               />
-              <div className=" pl-5 text-lg">
-                <h1 className=" font-normal ">Adrian Pantea</h1>
-                <p className="font-bold dark:text-yellow  ">
+              <div className={`pl-5`}>
+                <h1 className=" font-normal dark:text-neutral400">
+                  Adrian Pantea
+                </h1>
+                <p className="font-semibold  ">
                   Product-focused Fullstack Developer
                 </p>
               </div>
             </div>
-            <div className="pt-5">
-              <p className="text-sm mt-2 tracking-normal">
+            <div className="pt-4">
+              <p
+                className={` mt-2 dark:text-neutral400 text-base font-normal tracking-medium  `}
+              >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics. More
                 about me
-                <span className="ml-1 font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-neutral300 text-black hover:text-neutral600">
+                <span className="ml-1 font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600">
                   <Link href="/about">here</Link>
                 </span>
                 .
@@ -188,31 +170,31 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="dark:text-offWhite text-black">
-            <div
-              className={`${montserrat.className} text-xl font-extrabold pb-4 dark:text-yellow`}
-            >
+          <section className="dark:text-offWhite text-black text-base">
+            <div className={`${montserrat.className} text-lg font-bold pb-6 `}>
               <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
               <div
                 key={i}
-                className="flex  flex-col sm:flex-row pb-6 dark:text-offWhite "
+                className={` flex  flex-col sm:flex-row pb-6 dark:text-offWhite `}
               >
-                <div className="w-full sm:w-1/4 text-sm ">
+                <div className="w-full sm:w-1/4  dark:text-neutral400">
                   <p>{job.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className=" font-semibold  dark:text-neutral300 text-sm ">
+                  <p className="font-bold">
                     {job.title} at{" "}
                     <span className="dark:hover:text-yellow hover:text-neutral500 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
                         {job.name}
                       </a>
                     </span>
-                  </h2>
-                  <p className="mt-2 text-sm tracking-normal">
+                  </p>
+                  <p
+                    className={` mt-2  dark:text-neutral400 font-normal tracking-medium `}
+                  >
                     {job.description}
                   </p>
                 </div>
@@ -220,35 +202,37 @@ export default function Home() {
             ))}
           </section>
 
-          <section className=" dark:text-offWhite text-black">
-            <div
-              className={`${montserrat.className} text-xl font-extrabold pb-4 dark:text-yellow`}
-            >
+          <section className=" dark:text-offWhite text-black ">
+            <div className={`${montserrat.className} text-lg font-bold pb-6 `}>
               <h2>Projects</h2>
             </div>
 
             {projects.map((project, i) => (
-              <div key={i} className="flex flex-col sm:flex-row pb-6 ">
-                <div className="w-full sm:w-1/4 font-normal dark:text-neutral300">
-                  <p className="text-sm ">{project.year}</p>
+              <div key={i} className="flex flex-col sm:flex-row pb-6 text-base">
+                <div className="w-full sm:w-1/4 font-normal">
+                  <p className=" font-normal dark:text-neutral400">
+                    {project.year}
+                  </p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className=" font-semibold text-sm">
-                    <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4 dark:text-neutral300 ">
+                  <h2 className={` text-base  font-bold text-md`}>
+                    <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4  ">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
                   </h2>
-                  <p className=" mt-4 text-sm  tracking-normal">
+                  <p
+                    className={` mt-2  dark:text-neutral400 font-normal tracking-medium `}
+                  >
                     {project.description}
                   </p>
                   <div className="flex gap-2 justify-end ">
                     {project.tech.split(" · ").map((tech, index) => (
                       <span
                         key={index}
-                        className=" mt-4 font-medium text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text"
+                        className=" mt-4 font-normal text-xs px-2 py-1 rounded-full bg-black dark:bg-offWhite dark:text-black text-text"
                       >
                         {tech}
                       </span>

@@ -1,6 +1,9 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
+import Nav from "../components/nav";
+import SkillSection from "../components/skillSection";
+
+import { Montserrat } from "next/font/google";
 
 import html from "../../public/html.svg";
 import css from "../../public/css.svg";
@@ -42,28 +45,13 @@ import behance from "../../public/behance.svg";
 import spotify from "../../public/spotify.svg";
 import youtube from "../../public/youtube.svg";
 
-import ToggleButton from "../components/buttonDarkMode";
-
-import {
-  Roboto,
-  Montserrat,
-  Merriweather,
-  Poppins,
-  Source_Sans_3,
-} from "next/font/google";
-
 const montserrat = Montserrat({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-});
-
-export default function About() {
-  const frontEnd = [
+const skills = {
+  frontEnd: [
     {
       name: "HTML 5",
       link: "https://html.com/",
@@ -85,7 +73,7 @@ export default function About() {
     {
       name: "React",
       link: "https://reactjs.org/",
-      description: "Javascript library",
+      description: "JavaScript library",
       image: react,
     },
     {
@@ -118,9 +106,8 @@ export default function About() {
       description: "HTTP requests library",
       image: axios,
     },
-  ];
-
-  const backEnd = [
+  ],
+  backEnd: [
     {
       name: "Node JS",
       link: "https://nodejs.org/en/",
@@ -163,9 +150,8 @@ export default function About() {
       description: "Object data modeling",
       image: mongoose,
     },
-  ];
-
-  const coding = [
+  ],
+  coding: [
     {
       name: "VS Code",
       link: "https://code.visualstudio.com/",
@@ -184,9 +170,8 @@ export default function About() {
       description: "API development platform",
       image: insomnia,
     },
-  ];
-
-  const productivity = [
+  ],
+  productivity: [
     {
       name: "Slack",
       link: "https://slack.com/intl/en-gb/",
@@ -220,7 +205,7 @@ export default function About() {
     {
       name: "Git",
       link: "https://www.git-scm.com/",
-      description: "Version control system ",
+      description: "Version control system",
       image: git,
     },
     {
@@ -235,12 +220,11 @@ export default function About() {
       description: "Code snippets",
       image: ray,
     },
-  ];
-
-  const design = [
+  ],
+  design: [
     {
       name: "Unsplash",
-      link: "https://ray.so/",
+      link: "https://unsplash.com/",
       description: "Image sharing platform",
       image: unsplash,
     },
@@ -268,9 +252,8 @@ export default function About() {
       description: "Creative work platform",
       image: behance,
     },
-  ];
-
-  const other = [
+  ],
+  other: [
     {
       name: "Spotify",
       link: "https://support.spotify.com/us/",
@@ -283,363 +266,129 @@ export default function About() {
       description: "Video sharing platform",
       image: youtube,
     },
-  ];
+  ],
+};
 
+export default function About() {
   return (
-    <main className="">
-      <ToggleButton />
-      <div className={`${poppins.className} pt-6 `}>
-        <Link
-          className="flex items-center text-sm font-medium text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
-          href="/"
-          aria-label="Back to home page"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className=" w-4 mr-1 "
+    <>
+      <Nav />
+      <main className="pt-8">
+        <div className={`pt-6`}>
+          <Link
+            className="flex items-center text-sm font-medium text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
+            href="/"
+            aria-label="Back to home page"
           >
-            <path d="M3 19V5"></path>
-            <path d="m13 6-6 6 6 6"></path>
-            <path d="M7 12h14"></path>
-          </svg>
-          Return to home page
-        </Link>
-      </div>
-
-      <section className="py-4 dark:text-offWhite text-black">
-        <p
-          className={`${montserrat.className} text-xl pb-4  font-extrabold dark:text-yellow`}
-        >
-          More about me
-        </p>
-        <p className="text-sm tracking-normal">
-          Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer fueled
-          by curiosity and a passion for problem-solving. While I'm relatively
-          new to the tech scene, I'm eager to dive headfirst into the world of
-          coding and make my mark.
-        </p>
-      </section>
-
-      <section className=" dark:text-offWhite text-black">
-        <p
-          className={`${montserrat.className} text-xl pb-4  font-extrabold dark:text-yellow`}
-        >
-          Work
-        </p>
-        <p className="text-sm tracking-normal">
-          My professional journey has been diverse, with experiences ranging
-          from legal translation to data compliance and software engineering.
-          Currently, I serve as a Public Safety Response Specialist at Uber,
-          where I ensure <span className="font-bold ">data</span> compliance and
-          policy adherence while maintaining the highest standards of integrity
-          and user trust.
-        </p>
-      </section>
-
-      <section className="pt-4 dark:text-offWhite text-black">
-        <p
-          className={`${montserrat.className} text-xl pb-4 font-extrabold dark:text-yellow`}
-        >
-          Beyond the Screen
-        </p>
-        <p className=" text-sm tracking-normal ">
-          When I'm not coding, you'll often find me immersing myself in virtual
-          worlds or tinkering with new gadgets. I'm an avid gamer, currently
-          engrossed in titles like
-          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
-            <a
-              href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
-              target="_blank"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-4 h-4 mr-2"
             >
-              Assassin's Creed Odyssey
-            </a>
-          </span>{" "}
-          and
-          <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
-            <a
-              href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
-              target="_blank"
-            >
-              The Witcher 3
-            </a>
-          </span>
-          , where I've spent countless hours unraveling their immersive stories.
-        </p>
-      </section>
-
-      <section className="pt-4 dark:text-offWhite text-black">
-        <p
-          className={`${montserrat.className} text-xl font-extrabold dark:text-yellow`}
-        >
-          Stack
-        </p>
-
-        <div className="rounded-2xl mt-4 p-1 bg-babyPowder dark:bg-neutral900 ">
-          <p
-            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
-          >
-            Front End
-          </p>
-          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
-            {frontEnd.map((item, i) => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
-              >
-                <div
-                  key={i}
-                  className="font-extralight mb-1 no-underline items-center flex gap-4 p-1 rounded-lg transition-colors "
-                >
-                  <div className="overflow-hidden rounded-md dark:bg-gray ">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex items-center ">
-                    <div>
-                      <p className="text-sm font-medium tracking-medium text-neutral950 dark:text-neutral100">
-                        {item.name}
-                      </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Back Home
+          </Link>
         </div>
+        <div className="">
+          <section className="pt-6 dark:text-offWhite text-black">
+            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+              More about me
+            </p>
+            <p className="dark:text-neutral400 text-base font-normal tracking-medium">
+              Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer
+              fueled by curiosity and a passion for problem-solving. While I'm
+              relatively new to the tech scene, I'm eager to dive headfirst into
+              the world of coding and make my mark.
+            </p>
+          </section>
 
-        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p
-            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
-          >
-            Back End
-          </p>
-          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
-            {backEnd.map((item, i) => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
-              >
-                <div
-                  key={i}
-                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
-                >
-                  <div className="overflow-hidden rounded-md dark:bg-gray">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
-                        {item.name}
-                      </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+          <section className="dark:text-offWhite text-black py-4">
+            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+              Work
+            </p>
+            <p className="dark:text-neutral400 text-base font-normal tracking-medium  ">
+              My professional journey has been diverse, with experiences ranging
+              from legal translation to data compliance and software
+              engineering. Currently, I serve as a Public Safety Response
+              Specialist at Uber, where I ensure{" "}
+              <span className="font-bold ">data</span> compliance and policy
+              adherence while maintaining the highest standards of integrity and
+              user trust.{" "}
+            </p>
+          </section>
 
-        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p
-            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
-          >
-            Coding
-          </p>
-          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
-            {coding.map((item, i) => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
-              >
-                <div
-                  key={i}
-                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
-                >
-                  <div className="overflow-hidden rounded-md dark:bg-gray">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
-                        {item.name}
-                      </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+          <section className="dark:text-offWhite text-black ">
+            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+              Education
+            </p>
+            <p className="dark:text-neutral400 text-base font-normal tracking-medium">
+              I hold a degree in Law, and this educational journey has
+              surprisingly enhanced my analytical skills, which I now apply to
+              understanding programming languages and software development
+              methodologies. It has also fueled my passion for creating
+              innovative solutions.
+            </p>
+          </section>
 
-        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p
-            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
-          >
-            Productivity
-          </p>
-          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
-            {productivity.map((item, i) => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
-              >
-                <div
-                  key={i}
-                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
-                >
-                  <div className="overflow-hidden rounded-md dark:bg-gray">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
-                        {item.name}
-                      </p>
-                      <p className="text-sm font-light  text-neutral500  dark:text-neutral300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+          <section className="dark:text-offWhite text-black py-4">
+            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+              Interests
+            </p>
+            <p className="dark:text-neutral400 text-base font-normal tracking-medium">
+              Beyond coding, I have a keen interest in{" "}
+              <span className="italic">solving puzzles</span> and{" "}
+              <span className="italic">exploring new technologies</span>. These
+              hobbies allow me to approach problems with a fresh perspective and
+              fuel my desire to continuously learn and grow.
+            </p>
 
-        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-4">
-          <p
-            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
-          >
-            Design
-          </p>
-          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
-            {design.map((item, i) => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
-              >
-                <div
-                  key={i}
-                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
+            <p className=" dark:text-neutral400 text-base font-normal tracking-medium pt-4 ">
+              When I'm not coding, you'll often find me immersing myself in
+              virtual worlds or tinkering with new gadgets. I'm an avid gamer,
+              currently engrossed in titles like
+              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
+                <a
+                  href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
+                  target="_blank"
                 >
-                  <div className="overflow-hidden rounded-md dark:bg-gray">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
-                        {item.name}
-                      </p>
-                      <p className="text-sm font-light text-neutral500  dark:text-neutral300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+                  Assassin's Creed Odyssey
+                </a>
+              </span>{" "}
+              and
+              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
+                <a
+                  href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
+                  target="_blank"
+                >
+                  The Witcher 3
+                </a>
+              </span>
+              , where I've spent countless hours unraveling their immersive
+              stories.
+            </p>
+          </section>
 
-        <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 mt-3 mb-8">
-          <p
-            className={`${montserrat.className} font-semibold text-sm py-2 px-4 text-neutral900 dark:text-neutral100`}
-          >
-            Other
-          </p>
-          <div className="border rounded-xl overflow-hidden bg-white border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 p-2 grid sm:grid-cols-2 gap-x-2">
-            {other.map((item, i) => (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800 "
-              >
-                <div
-                  key={i}
-                  className="font-extralight  mb-1  no-underline items-center flex gap-4 p-2 rounded-lg transition-colors "
-                >
-                  <div className="overflow-hidden rounded-md dark:bg-gray">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex items-center">
-                    <div>
-                      <p className="text-sm font-medium text-neutral950 dark:text-neutral100">
-                        {item.name}
-                      </p>
-                      <p className="text-sm font-light text-neutral500  dark:text-neutral300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <section className=" dark:text-offWhite text-black">
+            <p className={`${montserrat.className} text-lg font-bold pb-4 `}>
+              Stack
+            </p>
+            <SkillSection title="Frontend Skills" skills={skills.frontEnd} />
+            <SkillSection title="Backend Skills" skills={skills.backEnd} />
+            <SkillSection title="Coding Tools" skills={skills.coding} />
+            <SkillSection title="Productivity Tools" skills={skills.productivity} />
+            <SkillSection title="Design Tools" skills={skills.design} />
+            <SkillSection title="Other" skills={skills.other} />
+          </section>
         </div>
-      </section>
-    </main>
+      </main>
+    </>
   );
 }

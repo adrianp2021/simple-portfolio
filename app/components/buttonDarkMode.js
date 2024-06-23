@@ -29,7 +29,7 @@ const ToggleButton = () => {
 
   return (
     <>
-      <button onClick={toggleDarkMode} className=" text-black mt-8">
+      <button onClick={toggleDarkMode} className=" text-black pt-8">
         {/* {darkMode ? "Light Mode" : "Dark Mode"} */}
         {darkMode ? (
           <svg

@@ -6,31 +6,18 @@ import { GeistSans } from "geist/font/sans";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-import {
-  Roboto,
-  Montserrat,
-  Merriweather,
-  Poppins,
-  Source_Sans_3,
-} from "next/font/google";
+import { Nunito } from "next/font/google";
 
 import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
-const poppins = Poppins({
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  weight: ["500", "600", "700", "800"],
+const nunito = Nunito({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
 export const metadata = {
   title: "Adrian Pantea Portfolio",
   description: "My portfolio",
-  // metadata: `${(<link rel="manifest" href="~/manifest.json"></link>)}`,
 };
 
 {
@@ -39,9 +26,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.className}`}>
+    <html lang="en" className={`${nunito.className}`}>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="gandalf.png" size={48} type="/gandalf.png" />
+        <meta name="theme-color" content="#000000" />
+        <title>{metadata.title}</title>
+      </head>
       <body
-        className={`mx-auto max-w-xl px-5 bg-lightBackground dark:bg-background min-h-screen `}
+        className={`mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
         <GoogleAnalytics gaId="G-75GKZZPWKE" />
         {children}
