@@ -26,10 +26,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="cubist.png" size={48} type="/cubist.png" />
+        <link rel="icon" href="cat.png" size={48} type="/cat.png" />
         <meta name="theme-color" content="#000000" />
         <title>{metadata.title}</title>
       </head>
