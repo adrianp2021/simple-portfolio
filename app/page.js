@@ -144,6 +144,7 @@ export default function Home() {
                 height={70}
                 className="rounded-full"
                 unoptimized
+                priority
               />
               <div className={`pl-5`}>
                 <h1 className=" font-normal dark:text-neutral400">
