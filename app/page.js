@@ -135,17 +135,23 @@ export default function Home() {
       <Nav />
       <main className="pt-8">
         <div>
-          <section className="pt-6 pb-6 dark:text-offWhite text-black ">
+          <section className="pt-6 pb-6 dark:text-offWhite text-black">
             <div className="flex items-center">
-              <Image
-                src={photo}
-                alt="my photo"
-                width={60}
-                height={60}
-                className="rounded-full dark:bg-yellow bg-gray shadow-xl"
-                unoptimized
-                priority
-              />
+              <a
+                href="https://www.linkedin.com/in/adrian-pantea/"
+                target="_blank"
+                aria-label="Visit my LinkeIn profile"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={photo}
+                  alt="my photo"
+                  width={60}
+                  height={60}
+                  className="rounded-full dark:bg-yellow bg-gray shadow-xl"
+                  priority
+                />
+              </a>
               <div className={`pl-5`}>
                 <h1 className=" font-normal dark:text-neutral400 ">
                   Adrian Pantea
