@@ -154,7 +154,7 @@ export default function Home() {
                   Adrian Pantea
                 </h1>
                 <p className="font-semibold  ">
-                  Product-focused Fullstack Developer
+                  Fullstack Developer
                 </p>
               </div>
             </div>
