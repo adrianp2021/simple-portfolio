@@ -16,7 +16,7 @@ const SkillSection = ({ title, skills }) => {
             className="no-underline flex items-center gap-4 p-2 rounded-lg hover:text-gray400 hover:bg-neutral200 dark:hover:bg-neutral800"
           >
             <div className="font-extralight mb-1 no-underline items-center flex gap-4 p-1 rounded-lg transition-colors">
-              <div className="overflow-hidden rounded-md dark:bg-gray">
+              <div className="overflow-hidden rounded-md p-1 bg-babyPowder dark:bg-gray">
                 <Image
                   src={item.image}
                   alt={item.name}

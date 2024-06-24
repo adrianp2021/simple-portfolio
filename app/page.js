@@ -163,7 +163,7 @@ export default function Home() {
             </div>
             <div className="pt-4">
               <p
-                className={` mt-2 dark:text-neutral400 text-base font-normal tracking-medium  `}
+                className={`mt-2 dark:text-neutral400 text-base font-normal tracking-medium  `}
               >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences

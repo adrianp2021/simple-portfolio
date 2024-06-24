@@ -34,7 +34,7 @@ export default function Footer() {
   };
 
   return (
-    <footer>
+    <footer className="mt-auto">
       <div className=" dark:text-offWhite text-black">
         <h2 className={`${montserrat.className} text-lg font-bold`}>Connect</h2>
       </div>

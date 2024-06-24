@@ -1,7 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
 
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -20,10 +18,6 @@ export const metadata = {
   description: "My portfolio",
 };
 
-{
-  /* <link rel="manifest" href="~/manifest.json"></link> */
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
@@ -36,7 +30,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${nunito.className} mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen `}
       >
-        <GoogleAnalytics gaId="G-75GKZZPWKE" />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         {children}
         <Footer />
       </body>

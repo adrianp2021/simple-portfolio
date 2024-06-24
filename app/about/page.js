@@ -141,7 +141,7 @@ const skills = {
     {
       name: "Postgresql",
       link: "https://www.postgresql.org/",
-      description: "Relational database system",
+      description: "Database system",
       image: post,
     },
     {
@@ -155,19 +155,19 @@ const skills = {
     {
       name: "VS Code",
       link: "https://code.visualstudio.com/",
-      description: "Code editor for the modern web",
+      description: "Code editor",
       image: vs,
     },
     {
       name: "GitHub",
       link: "https://github.com/",
-      description: "Platform for hosting code",
+      description: "Hosting code platform",
       image: github,
     },
     {
       name: "Insomnia",
       link: "https://insomnia.rest/",
-      description: "API development platform",
+      description: "API platform",
       image: insomnia,
     },
   ],
@@ -193,19 +193,19 @@ const skills = {
     {
       name: "NPM",
       link: "https://www.npmjs.com/",
-      description: "Largest package manager",
+      description: "Package manager",
       image: npm,
     },
     {
       name: "Yarn",
       link: "https://yarnpkg.com/",
-      description: "Open-source package manager",
+      description: "Package manager",
       image: yarn,
     },
     {
       name: "Git",
       link: "https://www.git-scm.com/",
-      description: "Version control system",
+      description: "Control system",
       image: git,
     },
     {
@@ -225,7 +225,7 @@ const skills = {
     {
       name: "Unsplash",
       link: "https://unsplash.com/",
-      description: "Image sharing platform",
+      description: "Image platform",
       image: unsplash,
     },
     {
@@ -243,13 +243,13 @@ const skills = {
     {
       name: "Awwwards",
       link: "https://www.awwwards.com/",
-      description: "Digital design meeting point",
+      description: "Digital design",
       image: awwwards,
     },
     {
       name: "Behance",
       link: "https://www.behance.net/",
-      description: "Creative work platform",
+      description: "Creative work",
       image: behance,
     },
   ],
@@ -383,7 +383,7 @@ export default function About() {
             <SkillSection title="Frontend Skills" skills={skills.frontEnd} />
             <SkillSection title="Backend Skills" skills={skills.backEnd} />
             <SkillSection title="Coding Tools" skills={skills.coding} />
-            <SkillSection title="Productivity Tools" skills={skills.productivity} />
+            <SkillSection title="Productivity Tools" skills={skills.productivity}/>
             <SkillSection title="Design Tools" skills={skills.design} />
             <SkillSection title="Other" skills={skills.other} />
           </section>
