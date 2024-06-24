@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // import photo from "../public/me.jpeg";
-import photo from "../public/mask.png";
+import photo from "../public/face.png";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
