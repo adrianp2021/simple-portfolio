@@ -1,10 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-// import photo from "../public/me.jpeg";
 import photo from "../public/me1.png";
-import Contact from "./components/emailTemplate";
-import { useState } from "react";
 
 import Nav from "./components/nav";
 
@@ -163,15 +160,16 @@ export default function Home() {
             </div>
             <div className="pt-4">
               <p
-                className={`mt-2 dark:text-neutral400 text-base font-normal tracking-medium  `}
+                className={`mt-2 dark:text-neutral400 text-base font-normal tracking-medium`}
               >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
-                that constantly grow and improve based on user metrics. More
-                about me
-                <span className="ml-1 font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600">
-                  <Link href="/about">here</Link>
-                </span>
+                that constantly grow and improve based on user metrics.{" "}
+                <Link href="/about">
+                  <span className="font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600">
+                    Learn more about Adrian Pantea
+                  </span>
+                </Link>
                 .
               </p>
             </div>

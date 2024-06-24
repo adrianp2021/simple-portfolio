@@ -93,6 +93,8 @@ export default function Footer() {
         <button
           onClick={scrollToTop}
           className={`my-4 font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
+          role="button"
+          aria-label="Back to the top"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
