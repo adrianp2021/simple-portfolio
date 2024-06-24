@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // import photo from "../public/me.jpeg";
-import photo from "../public/cool.png";
+import photo from "../public/me1.png";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
@@ -142,12 +142,12 @@ export default function Home() {
                 alt="my photo"
                 width={60}
                 height={60}
-                className="rounded-full"
+                className="rounded-full dark:bg-yellow bg-gray shadow-xl"
                 unoptimized
                 priority
               />
               <div className={`pl-5`}>
-                <h1 className=" font-normal dark:text-neutral400">
+                <h1 className=" font-normal dark:text-neutral400 ">
                   Adrian Pantea
                 </h1>
                 <p className="font-semibold  ">

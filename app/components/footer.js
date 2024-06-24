@@ -36,13 +36,8 @@ export default function Footer() {
   return (
     <footer>
       <div className=" dark:text-offWhite text-black">
-        <h2
-          className={`${montserrat.className} text-lg font-bold`}
-        >
-          Connect
-        </h2>
+        <h2 className={`${montserrat.className} text-lg font-bold`}>Connect</h2>
       </div>
-      {/* <div> */}
       <div className="justify-between block sm:flex ">
         <div className="">
           <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
@@ -96,9 +91,25 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className={`${montserrat.className} my-4 font-medium text-xs px-2 py-1 rounded-lg  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
+          className={`my-4 font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black  dark:hover:bg-yellow `}
         >
-          Back to top
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M11.47 10.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 12.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+              clipRule="evenodd"
+            />
+            <path
+              fillRule="evenodd"
+              d="M11.47 4.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+              clipRule="evenodd"
+            />
+          </svg>
         </button>
       </div>
 

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="cool.png" size={48} type="/cool.png" />
+        <link rel="icon" href="me1.png" size={48} type="/me1.png" />
         <meta name="theme-color" content="#000000" />
         <title>{metadata.title}</title>
       </head>
