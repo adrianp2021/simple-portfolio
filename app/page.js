@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // import photo from "../public/me.jpeg";
-import photo from "../public/cat.png";
+import photo from "../public/mask.png";
 import Contact from "./components/emailTemplate";
 import { useState } from "react";
 
@@ -142,7 +142,7 @@ export default function Home() {
                 alt="my photo"
                 width={60}
                 height={60}
-                className="rounded-full shadow-xl"
+                className="rounded-full"
                 unoptimized
                 priority
               />
