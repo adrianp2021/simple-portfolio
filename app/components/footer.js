@@ -38,6 +38,7 @@ export default function Footer() {
       <div className=" dark:text-offWhite text-black">
         <h2 className={`${montserrat.className} text-lg font-bold`}>Connect</h2>
       </div>
+      {/* <div> */}
       <div className="justify-between block sm:flex ">
         <div className="">
           <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
@@ -91,7 +92,7 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className={`my-4 font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black  dark:hover:bg-yellow `}
+          className={`my-4 font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
