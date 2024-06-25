@@ -160,7 +160,7 @@ export default function Home() {
             </div>
             <div className="pt-4">
               <p
-                className={`mt-2 dark:text-neutral300 text-base font-light tracking-medium`}
+                className={`mt-2 dark:text-neutral300 text-base font-normal tracking-medium`}
               >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
@@ -176,7 +176,7 @@ export default function Home() {
           </section>
 
           <section className="dark:text-offWhite text-black text-base">
-            <div className={`${montserrat.className} text-lg font-bold pb-6 `}>
+            <div className={`${montserrat.className} text-lg font-bold pb-6 dark:text-yellow`}>
               <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
@@ -198,7 +198,7 @@ export default function Home() {
                     </span>
                   </p>
                   <p
-                    className={` mt-2  dark:text-neutral300 font-light tracking-medium `}
+                    className={` mt-2  dark:text-neutral300 font-normal tracking-medium `}
                   >
                     {job.description}
                   </p>
@@ -208,7 +208,7 @@ export default function Home() {
           </section>
 
           <section className=" dark:text-offWhite text-black ">
-            <div className={`${montserrat.className} text-lg font-bold pb-6 `}>
+            <div className={`${montserrat.className} text-lg font-bold pb-6 dark:text-yellow`}>
               <h2>Projects</h2>
             </div>
 
@@ -229,7 +229,7 @@ export default function Home() {
                     </span>
                   </h2>
                   <p
-                    className={` mt-2  dark:text-neutral300 font-light tracking-medium `}
+                    className={` mt-2  dark:text-neutral300 font-normal tracking-medium `}
                   >
                     {project.description}
                   </p>

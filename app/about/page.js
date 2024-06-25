@@ -299,10 +299,10 @@ export default function About() {
         </div>
         <div className="">
           <section className="pt-6 dark:text-offWhite text-black">
-            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
               More about me
             </p>
-            <p className="dark:text-neutral300 text-base font-light tracking-medium">
+            <p className="dark:text-neutral300 text-base font-normal tracking-medium">
               Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer
               fueled by curiosity and a passion for problem-solving. While I'm
               relatively new to the tech scene, I'm eager to dive headfirst into
@@ -311,10 +311,10 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black py-4">
-            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
               Work
             </p>
-            <p className="dark:text-neutral300 text-base font-light tracking-medium  ">
+            <p className="dark:text-neutral300 text-base font-normal tracking-medium  ">
               My professional journey has been diverse, with experiences ranging
               from legal translation to data compliance and software
               engineering. Currently, I serve as a Public Safety Response
@@ -326,10 +326,10 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black ">
-            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
               Education
             </p>
-            <p className="dark:text-neutral300 text-base font-light tracking-medium">
+            <p className="dark:text-neutral300 text-base font-normal tracking-medium">
               I hold a degree in Law, and this educational journey has
               surprisingly enhanced my analytical skills, which I now apply to
               understanding programming languages and software development
@@ -339,10 +339,10 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black py-4">
-            <p className={`${montserrat.className} text-lg font-bold pb-4`}>
+            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
               Interests
             </p>
-            <p className="dark:text-neutral300 text-base font-light tracking-medium">
+            <p className="dark:text-neutral300 text-base font-normal tracking-medium">
               Beyond coding, I have a keen interest in{" "}
               <span className="italic">solving puzzles</span> and{" "}
               <span className="italic">exploring new technologies</span>. These
@@ -350,7 +350,7 @@ export default function About() {
               fuel my desire to continuously learn and grow.
             </p>
 
-            <p className=" dark:text-neutral300 text-base font-light tracking-medium pt-4 ">
+            <p className=" dark:text-neutral300 text-base font-normal tracking-medium pt-4 ">
               When I'm not coding, you'll often find me immersing myself in
               virtual worlds or tinkering with new gadgets. I'm an avid gamer,
               currently engrossed in titles like
@@ -377,7 +377,7 @@ export default function About() {
           </section>
 
           <section className=" dark:text-offWhite text-black">
-            <p className={`${montserrat.className} text-lg font-bold pb-4 `}>
+            <p className={`${montserrat.className} text-lg font-bold pb-6 dark:text-yellow`}>
               Stack
             </p>
             <SkillSection title="Frontend Skills" skills={skills.frontEnd} />

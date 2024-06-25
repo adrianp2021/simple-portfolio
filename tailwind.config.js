@@ -12,7 +12,6 @@ module.exports = {
       lightBackground: "#fbfefe",
       text: "#F3F4F8",
       accent: "#FF7F11",
-      darkBlue: "#011627",
       offWhite: "#FDFFFC",
       turquoise: "#2EC4B6",
       red: "#E71D36",

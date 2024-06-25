@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer className="mt-auto">
       <div className=" dark:text-offWhite text-black">
-        <h2 className={`${montserrat.className} text-lg font-bold`}>Connect</h2>
+        <h2 className={`${montserrat.className} text-lg font-bold dark:text-yellow`}>Connect</h2>
       </div>
       {/* <div> */}
       <div className="justify-between block sm:flex ">
