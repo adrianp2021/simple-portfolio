@@ -160,7 +160,7 @@ export default function Home() {
             </div>
             <div className="pt-4">
               <p
-                className={`mt-2 dark:text-neutral400 text-base font-normal tracking-medium`}
+                className={`mt-2 dark:text-neutral300 text-base font-light tracking-medium`}
               >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
@@ -182,7 +182,7 @@ export default function Home() {
             {jobs.map((job, i) => (
               <div
                 key={i}
-                className={` flex  flex-col sm:flex-row pb-6 dark:text-offWhite `}
+                className={`flex flex-col sm:flex-row pb-6 dark:text-offWhite `}
               >
                 <div className="w-full sm:w-1/4  dark:text-neutral400">
                   <p>{job.year}</p>
@@ -198,7 +198,7 @@ export default function Home() {
                     </span>
                   </p>
                   <p
-                    className={` mt-2  dark:text-neutral400 font-normal tracking-medium `}
+                    className={` mt-2  dark:text-neutral300 font-light tracking-medium `}
                   >
                     {job.description}
                   </p>
@@ -229,7 +229,7 @@ export default function Home() {
                     </span>
                   </h2>
                   <p
-                    className={` mt-2  dark:text-neutral400 font-normal tracking-medium `}
+                    className={` mt-2  dark:text-neutral300 font-light tracking-medium `}
                   >
                     {project.description}
                   </p>
