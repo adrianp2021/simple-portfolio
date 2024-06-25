@@ -150,12 +150,8 @@ export default function Home() {
                 />
               </a>
               <div className={`pl-5`}>
-                <h1 className=" font-normal dark:text-neutral400 ">
-                  Adrian Pantea
-                </h1>
-                <p className="font-semibold  ">
-                  Fullstack Developer
-                </p>
+                <h1 className=" font-normal dark:text-neutral400 ">Adrian Pantea</h1>
+                <p className="font-semibold dark:text-saffron">Fullstack Developer</p>
               </div>
             </div>
             <div className="pt-4">
@@ -176,7 +172,9 @@ export default function Home() {
           </section>
 
           <section className="dark:text-offWhite text-black text-base">
-            <div className={`${montserrat.className} text-lg font-bold pb-6 dark:text-yellow`}>
+            <div
+              className={`${montserrat.className} text-lg font-extrabold pb-6`}
+            >
               <h2>Work experience</h2>
             </div>
             {jobs.map((job, i) => (
@@ -208,7 +206,9 @@ export default function Home() {
           </section>
 
           <section className=" dark:text-offWhite text-black ">
-            <div className={`${montserrat.className} text-lg font-bold pb-6 dark:text-yellow`}>
+            <div
+              className={`${montserrat.className} text-lg font-extrabold pb-6 `}
+            >
               <h2>Projects</h2>
             </div>
 

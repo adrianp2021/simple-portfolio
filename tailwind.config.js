@@ -35,6 +35,7 @@ module.exports = {
       neutral900: "#171717",
       neutral950: "#0a0a0a",
       babyPowder: "#f6f7f5",
+      saffron: "#f4bf43"
     },
 
     fontSize: {

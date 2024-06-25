@@ -75,7 +75,7 @@ export default function Contact() {
         <Nav />
         <section className=" pt-6 mb-12 ">
           <h2
-            className={`${montserrat.className} pt-8 text-lg font-bold text-black dark:text-yellow`}
+            className={`${montserrat.className} pt-8 text-lg font-extrabold text-black dark:text-offWhite `}
           >
             Contact
           </h2>

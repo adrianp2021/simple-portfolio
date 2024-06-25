@@ -299,7 +299,9 @@ export default function About() {
         </div>
         <div className="">
           <section className="pt-6 dark:text-offWhite text-black">
-            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
+            <p
+              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+            >
               More about me
             </p>
             <p className="dark:text-neutral300 text-base font-normal tracking-medium">
@@ -311,7 +313,9 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black py-4">
-            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
+            <p
+              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+            >
               Work
             </p>
             <p className="dark:text-neutral300 text-base font-normal tracking-medium  ">
@@ -326,7 +330,9 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black ">
-            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
+            <p
+              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+            >
               Education
             </p>
             <p className="dark:text-neutral300 text-base font-normal tracking-medium">
@@ -339,7 +345,9 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black py-4">
-            <p className={`${montserrat.className} text-lg font-bold pb-4 dark:text-yellow`}>
+            <p
+              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+            >
               Interests
             </p>
             <p className="dark:text-neutral300 text-base font-normal tracking-medium">
@@ -377,13 +385,18 @@ export default function About() {
           </section>
 
           <section className=" dark:text-offWhite text-black">
-            <p className={`${montserrat.className} text-lg font-bold pb-6 dark:text-yellow`}>
+            <p
+              className={`${montserrat.className} text-lg font-extrabold pb-6 `}
+            >
               Stack
             </p>
             <SkillSection title="Frontend Skills" skills={skills.frontEnd} />
             <SkillSection title="Backend Skills" skills={skills.backEnd} />
             <SkillSection title="Coding Tools" skills={skills.coding} />
-            <SkillSection title="Productivity Tools" skills={skills.productivity}/>
+            <SkillSection
+              title="Productivity Tools"
+              skills={skills.productivity}
+            />
             <SkillSection title="Design Tools" skills={skills.design} />
             <SkillSection title="Other" skills={skills.other} />
           </section>
