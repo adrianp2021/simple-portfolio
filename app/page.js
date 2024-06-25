@@ -150,8 +150,8 @@ export default function Home() {
                 />
               </a>
               <div className={`pl-5`}>
-                <h1 className=" font-normal dark:text-neutral400 ">Adrian Pantea</h1>
-                <p className="font-semibold ">Fullstack Developer</p>
+                <h1 className=" font-normal  ">Adrian Pantea</h1>
+                <p className="font-semibold dark:text-saffron">Fullstack Developer</p>
               </div>
             </div>
             <div className="pt-4">
