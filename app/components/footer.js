@@ -41,7 +41,7 @@ export default function Footer() {
         </h2>
       </div>
       <div className="justify-between block sm:flex ">
-        <div className="">
+        <div>
           <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
             Social
           </h2>
@@ -49,7 +49,7 @@ export default function Footer() {
             {socialMedia.map((social, i) => (
               <div
                 key={i}
-                className=" mr-4 font-normal text-sm dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600 underline underline-offset-4"
+                className=" mr-4 font-normal text-sm dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600 underline underline-offset-4"
               >
                 <a
                   href={social.recipient}
@@ -67,22 +67,22 @@ export default function Footer() {
           <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
             Pages
           </h2>
-          <div className="font-normal text-sm underline underline-offset-4  dark:text-offWhite text-black ">
+          <div className=" text-sm underline underline-offset-4  dark:text-offWhite text-black ">
             <Link
-              className=" dark:hover:text-yellow hover:text-neutral600"
+              className=" dark:hover:text-saffron hover:text-neutral600"
               href="/"
             >
               Home
             </Link>
             <Link
-              className="mx-4 dark:hover:text-yellow hover:text-neutral600"
+              className="mx-4 dark:hover:text-saffron hover:text-neutral600"
               href="/about"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="dark:hover:text-yellow hover:text-neutral600"
+              className="dark:hover:text-saffron hover:text-neutral600"
             >
               Contact
             </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className={`my-4 flex flex-col items-center font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-yellow `}
+          className={`my-4 flex flex-col items-center font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-saffron `}
           role="button"
           aria-label="Back to the top"
         >
@@ -121,7 +121,7 @@ export default function Footer() {
       <div className="text-center border-t-[0.5px] text-sm font-light text-black dark:text-offWhite border-t-black dark:border-t-offWhite py-4">
         <p>
           &copy; 2024 All rights reserved. Icons by{" "}
-          <span className=" underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
+          <span className=" underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-saffron hover:text-neutral600">
             <a href="https://icons8.com/" target="_blank">
               Icons8
             </a>

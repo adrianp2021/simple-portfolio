@@ -104,7 +104,7 @@ export default function Contact() {
                     name="name"
                     type="text"
                     required
-                    className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full "
+                    className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-saffron dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full "
                     placeholder="John Doe"
                     value={name}
                     // onChange={handleChange}
@@ -122,14 +122,14 @@ export default function Contact() {
                     <input
                       name="email"
                       type="email"
-                      className="peer ... dark:bg-neutral-950 dark:border-neutral-800 ring-gray-600 focus:ring-orange-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500 my-2 rounded-lg font-normal focus:outline-none px-3 py-2.5 ring-1 ring-inset dark:bg-background dark:border-neutral800 dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full"
+                      className="peer ... dark:bg-neutral-950 dark:border-neutral-800 ring-gray-600 focus:ring-orange-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-500 invalid:text-red-600 focus:invalid:border-red-500 focus:invalid:ring-red-500 my-2 rounded-lg font-normal focus:outline-none px-3 py-2.5 ring-1 ring-inset dark:bg-background dark:border-neutral800 dark:focus:ring-saffron dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full"
                       placeholder="johndoe@email.com"
                       value={email}
                       onChange={handleEmailChange}
                       onBlur={() => setEmailTouched(true)}
                     />
                     {emailTouched && email && !isValidEmail(email) && (
-                      <p className="my-1 text-sm dark:text-yellow text-black font-normal">
+                      <p className="my-1 text-sm dark:text-saffron text-black font-normal">
                         Please provide a valid email address.
                       </p>
                     )}
@@ -145,7 +145,7 @@ export default function Contact() {
                     name="message"
                     type="text"
                     required
-                    className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-yellow dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
+                    className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-saffron dark:ring-neutral600 ring-neutral400   focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite  w-full "
                     placeholder="Write your message..."
                     value={message}
                     // onChange={handleChange}

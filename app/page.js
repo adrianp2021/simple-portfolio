@@ -145,24 +145,26 @@ export default function Home() {
                   alt="my photo"
                   width={60}
                   height={60}
-                  className="rounded-full dark:bg-yellow bg-gray shadow-xl"
+                  className="rounded-full dark:bg-saffron bg-gray shadow-xl"
                   priority
                 />
               </a>
               <div className={`pl-5`}>
                 <h1 className=" font-normal  ">Adrian Pantea</h1>
-                <p className="font-semibold dark:text-saffron">Fullstack Developer</p>
+                <p className="font-semibold dark:text-saffron">
+                  Fullstack Developer
+                </p>
               </div>
             </div>
             <div className="pt-4">
               <p
-                className={`mt-2 dark:text-neutral300 text-base font-normal tracking-medium`}
+                className={`mt-2 dark:text-neutral300 text-base tracking-medium`}
               >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics.{" "}
                 <Link href="/about">
-                  <span className="font-bold underline underline-offset-4 dark:hover:text-yellow dark:text-offWhite text-black hover:text-neutral600">
+                  <span className=" underline underline-offset-4 dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600">
                     Learn more about Adrian Pantea
                   </span>
                 </Link>
@@ -182,22 +184,20 @@ export default function Home() {
                 key={i}
                 className={`flex flex-col sm:flex-row pb-6 dark:text-offWhite `}
               >
-                <div className="w-full sm:w-1/4  dark:text-neutral400">
+                <div className="w-full sm:w-1/4  dark:text-neutral300">
                   <p>{job.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <p className="font-bold">
+                  <p>
                     {job.title} at{" "}
-                    <span className="dark:hover:text-yellow hover:text-neutral500 underline underline-offset-4">
+                    <span className="dark:hover:text-saffron hover:text-neutral500 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
                         {job.name}
                       </a>
                     </span>
                   </p>
-                  <p
-                    className={` mt-2  dark:text-neutral300 font-normal tracking-medium `}
-                  >
+                  <p className={` mt-2  dark:text-neutral300 tracking-medium `}>
                     {job.description}
                   </p>
                 </div>
@@ -214,23 +214,19 @@ export default function Home() {
 
             {projects.map((project, i) => (
               <div key={i} className="flex flex-col sm:flex-row pb-6 text-base">
-                <div className="w-full sm:w-1/4 font-normal">
-                  <p className=" font-normal dark:text-neutral400">
-                    {project.year}
-                  </p>
+                <div className="w-full sm:w-1/4">
+                  <p className="  dark:text-neutral300">{project.year}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className={` text-base  font-bold text-md`}>
-                    <span className="dark:hover:text-yellow hover:text-neutral600 underline underline-offset-4  ">
+                  <h2 className={` text-base text-md`}>
+                    <span className="dark:hover:text-saffron hover:text-neutral600 underline underline-offset-4  ">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
                   </h2>
-                  <p
-                    className={` mt-2  dark:text-neutral300 font-normal tracking-medium `}
-                  >
+                  <p className={` mt-2  dark:text-neutral300 tracking-medium `}>
                     {project.description}
                   </p>
                   <div className="flex gap-2 justify-end ">
