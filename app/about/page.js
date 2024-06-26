@@ -276,7 +276,7 @@ export default function About() {
       <main className="pt-8">
         <div className={`pt-6`}>
           <Link
-            className="flex items-center text-sm font-medium text-black hover:text-neutral600 dark:hover:text-yellow dark:text-offWhite"
+            className="flex items-center text-sm font-medium text-black hover:text-neutral600 dark:hover:text-saffron dark:text-offWhite"
             href="/"
             aria-label="Back to home page"
           >
@@ -362,7 +362,7 @@ export default function About() {
               When I'm not coding, you'll often find me immersing myself in
               virtual worlds or tinkering with new gadgets. I'm an avid gamer,
               currently engrossed in titles like
-              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
+              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-saffron hover:text-neutral600">
                 <a
                   href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
                   target="_blank"
@@ -371,7 +371,7 @@ export default function About() {
                 </a>
               </span>{" "}
               and
-              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-yellow hover:text-neutral600">
+              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-saffron hover:text-neutral600">
                 <a
                   href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
                   target="_blank"

@@ -6,7 +6,7 @@ export default function Nav() {
     <nav className="flex justify-between items-end ">
       <ToggleButton />
       <div>
-        <div className="font-normal text-sm underline underline-offset-4  dark:text-offWhite text-black ">
+        <div className="font-semibold text-sm underline underline-offset-4  dark:text-offWhite text-black ">
           <Link
             className=" dark:hover:text-saffron hover:text-neutral600"
             href="/"

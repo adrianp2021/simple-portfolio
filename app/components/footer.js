@@ -45,11 +45,11 @@ export default function Footer() {
           <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
             Social
           </h2>
-          <div className="text-sm flex ">
+          <div className="text-sm flex font-semibold">
             {socialMedia.map((social, i) => (
               <div
                 key={i}
-                className=" mr-4 font-normal text-sm dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600 underline underline-offset-4"
+                className=" mr-4 text-sm dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600 underline underline-offset-4"
               >
                 <a
                   href={social.recipient}
@@ -67,9 +67,9 @@ export default function Footer() {
           <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
             Pages
           </h2>
-          <div className=" text-sm underline underline-offset-4  dark:text-offWhite text-black ">
+          <div className="font-semibold text-sm underline underline-offset-4  dark:text-offWhite text-black ">
             <Link
-              className=" dark:hover:text-saffron hover:text-neutral600"
+              className="font-semibold dark:hover:text-saffron hover:text-neutral600"
               href="/"
             >
               Home
