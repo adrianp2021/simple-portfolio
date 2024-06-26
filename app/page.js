@@ -164,7 +164,7 @@ export default function Home() {
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics.{" "}
                 <Link href="/about">
-                  <span className=" underline underline-offset-4 dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600">
+                  <span className="font-medium underline underline-offset-4 dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600">
                     Learn more about Adrian Pantea
                   </span>
                 </Link>
@@ -189,7 +189,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <p>
+                  <p className="font-medium">
                     {job.title} at{" "}
                     <span className="dark:hover:text-saffron hover:text-neutral500 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
@@ -219,7 +219,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className={` text-base text-md`}>
+                  <h2 className={`font-medium text-base text-md`}>
                     <span className="dark:hover:text-saffron hover:text-neutral600 underline underline-offset-4  ">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
