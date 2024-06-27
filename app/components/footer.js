@@ -25,13 +25,14 @@ const socialMedia = [
   },
 ];
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <footer className="mt-auto">
@@ -120,7 +121,7 @@ export default function Footer() {
 
       <div className="text-center border-t-[0.5px] text-sm font-light text-black dark:text-offWhite border-t-black dark:border-t-offWhite py-4">
         <p>
-          &copy; 2024 All rights reserved. Icons by{" "}
+          &copy; {new Date().getFullYear()} All rights reserved. Icons by{" "}
           <span className=" underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-saffron hover:text-neutral600">
             <a href="https://icons8.com/" target="_blank">
               Icons8
