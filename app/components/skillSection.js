@@ -30,7 +30,7 @@ const SkillSection = ({ title, skills }) => {
                   <p className="text-sm font-medium tracking-medium text-neutral950 dark:text-neutral100">
                     {item.name}
                   </p>
-                  <p className="text-sm font-light text-neutral500 dark:text-neutral300">
+                  <p className="text-sm font-light text-neutral600 dark:text-neutral300">
                     {item.description}
                   </p>
                 </div>

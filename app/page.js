@@ -158,7 +158,7 @@ export default function Home() {
             </div>
             <div className="pt-4">
               <p
-                className={`mt-2 dark:text-neutral300 text-base tracking-medium`}
+                className={`mt-2 dark:text-neutral300 text-base font-light`}
               >
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
@@ -189,7 +189,7 @@ export default function Home() {
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <p className="font-semibold">
+                  <p className="font-medium">
                     {job.title} at{" "}
                     <span className="dark:hover:text-saffron hover:text-neutral500 underline underline-offset-4">
                       <a href={job.recipient} target="_blank">
@@ -197,7 +197,7 @@ export default function Home() {
                       </a>
                     </span>
                   </p>
-                  <p className={` mt-2  dark:text-neutral300 tracking-medium `}>
+                  <p className={` mt-2  dark:text-neutral300  font-light`}>
                     {job.description}
                   </p>
                 </div>
@@ -219,14 +219,14 @@ export default function Home() {
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
-                  <h2 className={`font-semibold text-base text-md`}>
+                  <h2 className={`font-medium text-base text-md`}>
                     <span className="dark:hover:text-saffron hover:text-neutral600 underline underline-offset-4  ">
                       <a href={project.githubRepo} target="_blank">
                         {project.name}
                       </a>
                     </span>
                   </h2>
-                  <p className={` mt-2  dark:text-neutral300 tracking-medium `}>
+                  <p className={` mt-2  dark:text-neutral300 font-light `}>
                     {project.description}
                   </p>
                   <div className="flex gap-2 justify-end ">

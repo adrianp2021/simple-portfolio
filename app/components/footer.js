@@ -43,10 +43,10 @@ export default function Footer() {
       </div>
       <div className="justify-between block sm:flex ">
         <div>
-          <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
+          <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-semibold">
             Social
           </h2>
-          <div className="text-sm flex font-semibold">
+          <div className="text-sm flex font-light">
             {socialMedia.map((social, i) => (
               <div
                 key={i}
@@ -65,12 +65,12 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-bold">
+          <h2 className="dark:text-neutral400 text-neutral800 mt-6 mb-2 font-semibold">
             Pages
           </h2>
-          <div className="font-semibold text-sm underline underline-offset-4  dark:text-offWhite text-black ">
+          <div className="font-light text-sm underline underline-offset-4  dark:text-offWhite text-black ">
             <Link
-              className="font-semibold dark:hover:text-saffron hover:text-neutral600"
+              className=" dark:hover:text-saffron hover:text-neutral600"
               href="/"
             >
               Home
@@ -94,7 +94,7 @@ export default function Footer() {
       <div className="flex justify-end sm:justify-center  ">
         <button
           onClick={scrollToTop}
-          className={`my-4 flex flex-col items-center font-medium px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-saffron `}
+          className={`my-4 flex flex-col items-center px-2 py-2 rounded-full  bg-black hover:bg-neutral600 dark:bg-offWhite dark:text-black text-text dark:hover:bg-saffron `}
           role="button"
           aria-label="Back to the top"
         >

@@ -79,7 +79,7 @@ export default function Contact() {
           >
             Contact
           </h2>
-          <p className="text-base text-black dark:text-neutral400 pt-3">
+          <p className="text-base font-light text-black dark:text-neutral400 pt-3">
             If you just want to say hi, discuss a project or get to know each
             other, let's get in touch.{" "}
           </p>

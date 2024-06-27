@@ -304,7 +304,7 @@ export default function About() {
             >
               More about me
             </p>
-            <p className="dark:text-neutral300 text-base font-normal tracking-medium">
+            <p className="dark:text-neutral300 text-base font-light tracking-medium">
               Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer
               fueled by curiosity and a passion for problem-solving. While I'm
               relatively new to the tech scene, I'm eager to dive headfirst into
@@ -318,7 +318,7 @@ export default function About() {
             >
               Work
             </p>
-            <p className="dark:text-neutral300 text-base font-normal tracking-medium  ">
+            <p className="dark:text-neutral300 text-base font-light tracking-medium  ">
               My professional journey has been diverse, with experiences ranging
               from legal translation to data compliance and software
               engineering. Currently, I serve as a Public Safety Response
@@ -335,7 +335,7 @@ export default function About() {
             >
               Education
             </p>
-            <p className="dark:text-neutral300 text-base font-normal tracking-medium">
+            <p className="dark:text-neutral300 text-base font-light tracking-medium">
               I hold a degree in Law, and this educational journey has
               surprisingly enhanced my analytical skills, which I now apply to
               understanding programming languages and software development
@@ -350,7 +350,7 @@ export default function About() {
             >
               Interests
             </p>
-            <p className="dark:text-neutral300 text-base font-normal tracking-medium">
+            <p className="dark:text-neutral300 text-base font-light tracking-medium">
               Beyond coding, I have a keen interest in{" "}
               <span className="italic">solving puzzles</span> and{" "}
               <span className="italic">exploring new technologies</span>. These
@@ -358,7 +358,7 @@ export default function About() {
               fuel my desire to continuously learn and grow.
             </p>
 
-            <p className=" dark:text-neutral300 text-base font-normal tracking-medium pt-4 ">
+            <p className=" dark:text-neutral300 text-base font-light tracking-medium pt-4 ">
               When I'm not coding, you'll often find me immersing myself in
               virtual worlds or tinkering with new gadgets. I'm an avid gamer,
               currently engrossed in titles like
