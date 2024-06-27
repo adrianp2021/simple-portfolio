@@ -186,7 +186,6 @@ export default function Home() {
               >
                 <div className="w-full sm:w-1/4  dark:text-neutral300">
                   <p>{job.year}</p>
-                  <p>{job.location}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
