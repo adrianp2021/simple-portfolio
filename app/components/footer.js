@@ -114,7 +114,7 @@ export default function Footer() {
               clipRule="evenodd"
             />
           </svg>
-          <p className="text-xs">Top</p>
+          {/* <p className="text-xs">Top</p> */}
         </button>
       </div>
 
