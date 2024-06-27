@@ -26,7 +26,7 @@ const jobs = [
     location: "London, UK (remote based)",
     title: "Public Safety Response Specialist",
     description:
-      "Data Compliance and Policy to collaborate with international law enforcement agencies. I conduct in-depth analyses of data requests, guaranteeing alignment with GDPR and international regulations. My focus is on protecting user privacy and fostering trust.",
+      "GDPR and international compliance while facilitating effective collaboration between international law enforcement and user privacy protection.",
     recipient: "https://www.uber.com/gb/en/",
   },
   {
@@ -186,6 +186,7 @@ export default function Home() {
               >
                 <div className="w-full sm:w-1/4  dark:text-neutral300">
                   <p>{job.year}</p>
+                  <p>{job.location}</p>
                 </div>
 
                 <div className="w-full sm:w-3/4 sm:mt-0 mt-2 ">
