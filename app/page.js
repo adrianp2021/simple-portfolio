@@ -143,9 +143,9 @@ export default function Home() {
                 <Image
                   src={photo}
                   alt="my photo"
-                  width={60}
-                  height={60}
-                  className="rounded-full"
+                  width={70}
+                  height={70}
+                  className="rounded-full dark:bg-sand bg-gray shadow-xl"
                   priority
                 />
               </a>
