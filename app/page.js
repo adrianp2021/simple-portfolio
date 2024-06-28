@@ -145,7 +145,7 @@ export default function Home() {
                   alt="my photo"
                   width={70}
                   height={70}
-                  className="rounded-full dark:bg-sand bg-gray shadow-xl"
+                  className="rounded-full dark:bg-black bg-gray shadow-xl"
                   priority
                 />
               </a>
