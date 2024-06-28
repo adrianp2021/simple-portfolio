@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import photo from "../public/face.png";
+import photo from "../public/me.png";
 
 import Nav from "./components/nav";
 
@@ -145,7 +145,7 @@ export default function Home() {
                   alt="my photo"
                   width={60}
                   height={60}
-                  className="rounded-full dark:bg-sand bg-gray shadow-xl"
+                  className="rounded-full"
                   priority
                 />
               </a>
