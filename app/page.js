@@ -163,7 +163,7 @@ export default function Home() {
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics.{" "}
                 <Link href="/about">
-                  <span className="font-semibold underline underline-offset-4 dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600">
+                  <span className="font-light underline underline-offset-4 dark:hover:text-saffron dark:text-offWhite text-black hover:text-neutral600">
                     Learn more about Adrian Pantea
                   </span>
                 </Link>
