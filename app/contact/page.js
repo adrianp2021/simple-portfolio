@@ -159,7 +159,7 @@ export default function Contact() {
                     className={`flex justify-center rounded-lg px-3 py-2.5 text-sm text-white shadow-sm ${
                       status === "success"
                         ? "bg-neutral600 text-offWhite font-normal cursor-not-allowed"
-                        : "rounded-lg px-3 font-normal shadow-sm dark:bg-yellow dark:hover:bg-saffron dark:text-black bg-neutral800 text-offWhite hover:bg-neutral600"
+                        : "rounded-lg px-3 font-normal shadow-sm dark:bg-lightBackground dark:hover:bg-saffron dark:text-black bg-black text-offWhite hover:bg-neutral600"
                     }`}
                     disabled={status === "success"}
                   >
