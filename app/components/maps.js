@@ -110,7 +110,7 @@ export default function Maps() {
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyBTQ87C-O0lie1u17qywrQ28UFisYQeB38",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
   });
 
   const [map, setMap] = React.useState(null);
