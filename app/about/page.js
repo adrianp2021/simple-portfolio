@@ -3,7 +3,13 @@ import Link from "next/link";
 import Nav from "../components/nav";
 import SkillSection from "../components/skillSection";
 
-import { Montserrat } from "next/font/google";
+// import { figtree } from "next/font/google";
+import { Figtree } from "next/font/google";
+
+const figtree = Figtree({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+});
 
 import html from "../../public/html.svg";
 import css from "../../public/css.svg";
@@ -45,10 +51,6 @@ import behance from "../../public/behance.svg";
 import spotify from "../../public/spotify.svg";
 import youtube from "../../public/youtube.svg";
 
-const montserrat = Montserrat({
-  weight: ["500", "600", "700", "800"],
-  subsets: ["latin"],
-});
 
 const skills = {
   frontEnd: [
@@ -269,6 +271,8 @@ const skills = {
   ],
 };
 
+
+
 export default function About() {
   return (
     <>
@@ -297,10 +301,10 @@ export default function About() {
             Back Home
           </Link>
         </div>
-        <div className="">
+        <div >
           <section className="pt-6 dark:text-offWhite text-black">
             <p
-              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+              className={`${figtree.className} text-xl font-bold pb-4`}
             >
               More about me
             </p>
@@ -314,7 +318,7 @@ export default function About() {
 
           <section className="dark:text-offWhite text-black py-4">
             <p
-              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+              className={`${figtree.className} text-xl font-bold pb-4 `}
             >
               Work
             </p>
@@ -331,7 +335,7 @@ export default function About() {
 
           <section className="dark:text-offWhite text-black ">
             <p
-              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+              className={`${figtree.className} text-xl font-bold pb-4 `}
             >
               Education
             </p>
@@ -346,14 +350,14 @@ export default function About() {
 
           <section className="dark:text-offWhite text-black py-4">
             <p
-              className={`${montserrat.className} text-lg font-extrabold pb-4 `}
+              className={`${figtree.className} text-xl font-bold pb-4 `}
             >
               Interests
             </p>
             <p className="dark:text-neutral300 text-base font-light tracking-medium">
-              Beyond coding, I have a keen interest in{" "}
-              <span className="italic">solving puzzles</span> and{" "}
-              <span className="italic">exploring new technologies</span>. These
+              Beyond coding, I have a keen interest in
+              solving puzzles and
+              exploring new technologies. These
               hobbies allow me to approach problems with a fresh perspective and
               fuel my desire to continuously learn and grow.
             </p>
@@ -386,7 +390,7 @@ export default function About() {
 
           <section className=" dark:text-offWhite text-black">
             <p
-              className={`${montserrat.className} text-lg font-extrabold pb-6 `}
+              className={`${figtree.className} text-xl font-bold pb-6 `}
             >
               Stack
             </p>

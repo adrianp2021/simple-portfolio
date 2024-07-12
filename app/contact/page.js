@@ -3,9 +3,10 @@ import { use, useState } from "react";
 import emailTemplate from "../components/emailTemplate";
 import Link from "next/link";
 import Nav from "../components/nav";
-import { Montserrat } from "next/font/google";
+import { Figtree } from "next/font/google";
+import Maps from "../components/maps";
 
-const montserrat = Montserrat({
+const figtree = Figtree({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
 });
@@ -71,20 +72,22 @@ export default function Contact() {
 
   return (
     <>
-      <div className="">
+      <div>
         <Nav />
-        <section className=" pt-6 mb-12 ">
-          <h2
-            className={`${montserrat.className} pt-8 text-lg font-extrabold text-black dark:text-offWhite `}
-          >
-            Contact
-          </h2>
-          <p className="text-base font-light text-black dark:text-neutral400 pt-3">
-            If you just want to say hi, discuss a project or get to know each
-            other, let's get in touch.{" "}
-          </p>
+        <section className="pt-6 ">
+          <div className="">
+            <h2
+              className={`${figtree.className} pt-8 text-xl font-bold text-black dark:text-offWhite `}
+            >
+              Contact
+            </h2>
+            <p className="text-base font-light text-black dark:text-neutral400 pt-3">
+              If you just want to say hi, discuss a project or get to know each
+              other, let's get in touch.{" "}
+            </p>
+          </div>
 
-          <div className="rounded-2xl mt-8 p-1 bg-babyPowder dark:bg-neutral900 text-black">
+          <div className="rounded-2xl  p-1 bg-babyPowder dark:bg-neutral900 text-black my-10">
             <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
               Let's connect
             </p>
@@ -156,7 +159,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className={`flex justify-center rounded-lg px-3 py-2.5 text-sm text-white shadow-sm ${
+                    className={`flex justify-center rounded-lg px-2.5 py-2.5 text-sm text-white shadow-sm  ${
                       status === "success"
                         ? "bg-neutral600 text-offWhite font-normal cursor-not-allowed"
                         : "rounded-lg px-3 font-normal shadow-sm dark:bg-lightBackground dark:hover:bg-saffron dark:text-black bg-black text-offWhite hover:bg-neutral600"
@@ -205,6 +208,17 @@ export default function Contact() {
                     ) : null}
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 text-black mb-8">
+            <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
+              Currently located in Leeds, UK.
+            </p>
+            <div className="border rounded-xl overflow-hidden shadow-sm border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 ">
+              <div className="">
+                <Maps />
               </div>
             </div>
           </div>

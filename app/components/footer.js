@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
+import { Figtree } from "next/font/google";
 
-const montserrat = Montserrat({
+const figtree = Figtree({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
 });
@@ -33,11 +33,10 @@ const scrollToTop = () => {
 };
 
 export default function Footer() {
-
   return (
-    <footer className="mt-auto">
-      <div className=" dark:text-offWhite text-black">
-        <h2 className={`${montserrat.className} text-lg font-extrabold `}>
+    <footer className="">
+      <div className=" ">
+        <h2 className={`${figtree.className} text-xl font-bold dark:text-offWhite text-black`}>
           Connect
         </h2>
       </div>
@@ -102,7 +101,7 @@ export default function Footer() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="size-5"
+            className="size-4"
           >
             <path
               fillRule="evenodd"

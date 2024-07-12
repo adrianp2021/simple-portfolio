@@ -5,7 +5,7 @@ import photo from "../public/cat.png";
 
 import Nav from "./components/nav";
 
-import { Montserrat, Nunito } from "next/font/google";
+import { Montserrat, Nunito, Figtree } from "next/font/google";
 
 const nunito = Nunito({
   weight: ["300", "400", "500", "600", "700"],
@@ -13,6 +13,11 @@ const nunito = Nunito({
 });
 
 const montserrat = Montserrat({
+  weight: ["500", "600", "700", "800"],
+  subsets: ["latin"],
+});
+
+const figtree = Figtree({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
 });
@@ -35,7 +40,7 @@ const jobs = [
     year: "May - July 2021",
     alt: "General Assembly",
     description:
-      "Intensive 12-week bootcamp equipped me with full-stack development capabilities (JavaScript, React) for crafting exceptional UIs. Backend proficiency in Python (Django), Node.js, SQL, and MongoDB.",
+      "Intensive 12-week bootcamp equipped me with full-stack development capabilities (JavaScript, React, Next JS) for crafting exceptional UIs. Backend proficiency in Python (Django), Node.js, SQL, and MongoDB.",
     location: "London, UK",
     title: "Software Engineering Immersive",
     recipient: "https://generalassemb.ly/",
@@ -156,9 +161,7 @@ export default function Home() {
               </div>
             </div>
             <div className="pt-4">
-              <p
-                className={`mt-2 dark:text-neutral300 text-base font-light`}
-              >
+              <p className={`mt-2 dark:text-neutral300 text-base font-light`}>
                 Hi, I'm Adrian. I enjoy building simple, creative products from
                 start to finish. Focused on developing intuitive experiences
                 that constantly grow and improve based on user metrics.{" "}
@@ -173,10 +176,8 @@ export default function Home() {
           </section>
 
           <section className="dark:text-offWhite text-black text-base">
-            <div
-              className={`${montserrat.className} text-lg font-extrabold pb-6`}
-            >
-              <h2>Work experience</h2>
+            <div className={`${figtree.className} text-xl font-bold pb-6`}>
+              <p>Work experience</p>
             </div>
             {jobs.map((job, i) => (
               <div
@@ -206,9 +207,9 @@ export default function Home() {
 
           <section className=" dark:text-offWhite text-black ">
             <div
-              className={`${montserrat.className} text-lg font-extrabold pb-6 `}
+              className={`${figtree.className} text-xl font-bold pb-6 `}
             >
-              <h2>Projects</h2>
+              <p>Projects</p>
             </div>
 
             {projects.map((project, i) => (
