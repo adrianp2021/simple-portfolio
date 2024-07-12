@@ -18,10 +18,7 @@ export const metadata = {
   description: "My portfolio",
 };
 
-console.log(
-  "NEXT_PUBLIC_MAPS_API_KEY in layout page -> ",
-  process.env.NEXT_PUBLIC_MAPS_API_KEY
-);
+console.log('NEXT_PUBLIC_MAPS_API_KEY in layout page -> ', process.env.NEXT_PUBLIC_MAPS_API_KEY)
 
 export default function RootLayout({ children }) {
   return (
@@ -44,7 +41,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="manifest" href="/manifest.json" />
         <script
-          src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_MAPS_API_KEY}&loading=async`}
+          src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_MAPS_API_KEY}` }
         ></script>
         <link rel="icon" href="cat.png" sizes="60x60" type="image/png" />
         <meta name="theme-color" content="#000000" />
