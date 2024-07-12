@@ -43,9 +43,11 @@ export default function RootLayout({ children }) {
       </Script>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        {/* <script
+        <script
           src={`//maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_MAPS_API_KEY}&loading=async`}
-        ></script> */}
+          async
+          defer
+        ></script>
         <link rel="icon" href="cat.png" sizes="60x60" type="image/png" />
         <meta name="theme-color" content="#000000" />
         <title>{metadata.title}</title>
