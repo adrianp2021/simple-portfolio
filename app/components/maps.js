@@ -142,8 +142,6 @@ export default function Maps() {
       onLoad={onLoad}
       onUnmount={onUnmount}
       options={{ styles: customStyles }}
-    >
-      <></>
-    </GoogleMap>
+    ></GoogleMap>
   );
 }
