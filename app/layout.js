@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
         });
       `}
       </Script>
+      
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="cat.png" sizes="60x60" type="image/png" />
