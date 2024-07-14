@@ -14,10 +14,8 @@ export default function Maps() {
     lng: -1.5491,
   };
 
-  // Birds eye view over Leeds
   const zoom = 11;
 
-  // Custom styles for the map
   const customStyles = [
     {
       elementType: "geometry",
@@ -108,8 +106,6 @@ export default function Maps() {
     },
   ];
 
-
-  
   const { isLoaded, loadError } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS,
