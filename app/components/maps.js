@@ -8,7 +8,6 @@ export default function Maps() {
     height: "300px",
   };
 
-  // Center point for Leeds
   const center = {
     lat: 53.8008,
     lng: -1.5491,

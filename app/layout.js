@@ -18,6 +18,8 @@ export const metadata = {
   description: "My portfolio",
 };
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
@@ -36,7 +38,6 @@ export default function RootLayout({ children }) {
         });
       `}
       </Script>
-      
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="cat.png" sizes="60x60" type="image/png" />
