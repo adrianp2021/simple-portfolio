@@ -1,6 +1,6 @@
 // "use client";
 import React from "react";
-import { GoogleMap, useJsApiLoader, LoadScript } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
 export default function Maps() {
   const containerStyle = {
