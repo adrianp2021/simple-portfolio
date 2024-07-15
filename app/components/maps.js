@@ -18,7 +18,7 @@ export default function Maps() {
   const customStyles = [
     {
       elementType: "geometry",
-      stylers: [{ color: "#3e4646" }],
+      stylers: [{ color: "#292929" }],
     },
     {
       elementType: "labels.text.stroke",
@@ -31,17 +31,17 @@ export default function Maps() {
     {
       featureType: "administrative.locality",
       elementType: "labels.text.fill",
-      stylers: [{ color: "#b0b0b0" }],
+      stylers: [{ color: "#cccccc" }],
     },
     {
       featureType: "poi",
       elementType: "labels.text.fill",
-      stylers: [{ color: "#b0b0b0" }],
+      stylers: [{ color: "#cccccc" }],
     },
     {
       featureType: "poi.park",
       elementType: "geometry",
-      stylers: [{ color: "#263c3f" }],
+      stylers: [{ color: "#272525" }],
     },
     {
       featureType: "poi.park",
@@ -51,12 +51,12 @@ export default function Maps() {
     {
       featureType: "road",
       elementType: "geometry",
-      stylers: [{ color: "#515c5c" }], // small roads
+      stylers: [{ color: "#1F1F1F" }],
     },
     {
       featureType: "road",
       elementType: "geometry.stroke",
-      stylers: [{ color: "#515c5c" }],
+      stylers: [{ color: "#3d3d3d" }],
     },
     {
       featureType: "road",
@@ -66,12 +66,12 @@ export default function Maps() {
     {
       featureType: "road.highway",
       elementType: "geometry",
-      stylers: [{ color: "#515c5c" }],
+      stylers: [{ color: "#3d3d3d" }],
     },
     {
       featureType: "road.highway",
       elementType: "geometry.stroke",
-      stylers: [{ color: "#1f2835" }],
+      stylers: [{ color: "#3d3d3d" }],
     },
     {
       featureType: "road.highway",
@@ -91,7 +91,7 @@ export default function Maps() {
     {
       featureType: "water",
       elementType: "geometry",
-      stylers: [{ color: "#323939" }],
+      stylers: [{ color: "#1F1F1F" }],
     },
     {
       featureType: "water",
@@ -136,7 +136,7 @@ export default function Maps() {
       zoom={zoom}
       onLoad={onLoad}
       onUnmount={onUnmount}
-      options={{ styles: customStyles }}
+      // options={{ styles: customStyles }}
     ></GoogleMap>
   );
 }
