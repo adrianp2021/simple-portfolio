@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body
-        className={`${nunito.className} mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background h-screen`}
+        className={`${nunito.className} mx-auto max-w-lg px-5 bg-lightBackground dark:bg-background min-h-screen`}
       >
         {children}
         <Footer />

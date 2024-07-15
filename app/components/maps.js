@@ -18,7 +18,7 @@ export default function Maps() {
   const customStyles = [
     {
       elementType: "geometry",
-      stylers: [{ color: "#242f3e" }],
+      stylers: [{ color: "#3e4646" }],
     },
     {
       elementType: "labels.text.stroke",
@@ -51,12 +51,12 @@ export default function Maps() {
     {
       featureType: "road",
       elementType: "geometry",
-      stylers: [{ color: "#38414e" }], // small roads
+      stylers: [{ color: "#515c5c" }], // small roads
     },
     {
       featureType: "road",
       elementType: "geometry.stroke",
-      stylers: [{ color: "#212a37" }],
+      stylers: [{ color: "#515c5c" }],
     },
     {
       featureType: "road",
@@ -91,7 +91,7 @@ export default function Maps() {
     {
       featureType: "water",
       elementType: "geometry",
-      stylers: [{ color: "#17263c" }],
+      stylers: [{ color: "#323939" }],
     },
     {
       featureType: "water",

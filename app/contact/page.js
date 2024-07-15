@@ -212,7 +212,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 text-black mb-8">
+          <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 text-black mb-8 ">
             <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
               Currently located in Leeds, UK.
             </p>
