@@ -144,7 +144,7 @@ export default function Home() {
                 target="_blank"
                 aria-label="Visit my LinkeIn profile"
                 rel="noopener noreferrer"
-                className=" shadow-lg rounded-full"
+                className=" dark:bg-saffron bg-neutral100 shadow-inner rounded-full"
               >
                 <Image
                   src={photo}
