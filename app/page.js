@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import photo from "../public/eye.png";
+import photo from "../public/me1.png";
 
 import Nav from "./components/nav";
 
@@ -144,19 +144,19 @@ export default function Home() {
                 target="_blank"
                 aria-label="Visit my LinkeIn profile"
                 rel="noopener noreferrer"
-                className=" dark:bg-saffron bg-neutral100 shadow-inner rounded-full"
+                className="rounded-2xl dark:bg-saffron bg-neutral100 "
               >
                 <Image
                   src={photo}
                   alt="my photo"
-                  width={70}
-                  height={70}
+                  width={65}
+                  height={65}
                   priority
                 />
               </a>
               <div className="pl-5">
                 <h1 className=" font-normal  ">Adrian Pantea</h1>
-                <p className="font-semibold dark:text-saffron">
+                <p className="font-semibold dark:text-neutral400">
                   Fullstack Developer
                 </p>
               </div>

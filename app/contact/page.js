@@ -107,7 +107,7 @@ export default function Contact() {
                     name="name"
                     type="text"
                     required
-                    className="my-2 rounded-lg font-normal  focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-saffron dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full "
+                    className="my-2 rounded-lg font-normal focus:outline-none px-3 py-2.5 ring-1 ring-inset  dark:bg-background dark:border-neutral800  dark:focus:ring-saffron dark:ring-neutral600 ring-neutral400 focus:ring-black text-sm placeholder-neutral500 dark:placeholder-neutral400 dark:text-offwhite w-full "
                     placeholder="John Doe"
                     value={name}
                     // onChange={handleChange}
