@@ -144,7 +144,7 @@ export default function Home() {
                 target="_blank"
                 aria-label="Visit my LinkeIn profile"
                 rel="noopener noreferrer"
-                className="rounded-2xl dark:bg-saffron bg-neutral100 "
+                className="rounded-2xl dark:bg-saffron bg-neutral100 scale-x-[-1]"
               >
                 <Image
                   src={photo}
@@ -152,6 +152,7 @@ export default function Home() {
                   width={65}
                   height={65}
                   priority
+                  
                 />
               </a>
               <div className="pl-5">
