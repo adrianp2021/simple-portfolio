@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
       </Script>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="hey.png" sizes="60x60" type="image/png" />
+        <link rel="icon" href="cat1.png" sizes="60x60" type="image/png" />
         <meta name="theme-color" content="#000000" />
         <title>{metadata.title}</title>
       </head>
