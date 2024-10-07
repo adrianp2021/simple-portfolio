@@ -149,8 +149,8 @@ export default function Home() {
                 <Image
                   src={photo}
                   alt="my photo"
-                  width={70}
-                  height={70}
+                  width={60}
+                  height={60}
                   priority
                   
                 />
