@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import photo from "../public/cat1.png";
+import photo from "../public/m.png";
 
 import Nav from "./components/nav";
 
@@ -144,7 +144,7 @@ export default function Home() {
                 target="_blank"
                 aria-label="Visit my LinkeIn profile"
                 rel="noopener noreferrer"
-                className=""
+                className=" rounded-full overflow-hidden "
               >
                 <Image
                   src={photo}
