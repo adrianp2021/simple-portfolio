@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from "react";
 import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
@@ -14,6 +15,11 @@ export default function Maps() {
   };
 
   const zoom = 11;
+
+  const options = useMemo(() => ({
+    disableDefaultUI: true,
+    clickableIcons: false,
+  }));
 
   const customStyles = [
     {
@@ -149,7 +155,7 @@ export default function Maps() {
       zoom={zoom}
       onLoad={onLoad}
       onUnmount={onUnmount}
-      options={{ styles: customStyles }}
+      options={{ styles: customStyles, options }}
     ></GoogleMap>
   );
 }
