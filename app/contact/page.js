@@ -212,13 +212,43 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 text-black mb-8 ">
+          {/* <div className="rounded-2xl p-1 bg-babyPowder dark:bg-neutral900 text-black mb-8 ">
             <p className="text-md font-medium py-2 px-4 text-neutral900 dark:text-neutral100">
               Currently located in Leeds, UK.
             </p>
             <div className="border rounded-xl overflow-hidden shadow-sm border-neutral200 bg-lightBackground dark:bg-background dark:border-neutral800 ">
               <div className="">
                 <Maps />
+              </div>
+            </div>
+          </div> */}
+          <div className=" ">
+            {/* Map Container */}
+            <div className="relative w-full h-[300px]">
+              {/* World Map Background */}
+              <div
+                className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-60 "
+                style={{
+                  backgroundImage: "url(/world.svg)",
+                  filter: "brightness(0.3) grayscale(100%)",
+                }}
+              ></div>
+
+              {/* Glowing Location Marker */}
+              <div className="absolute top-[45%] left-[60%] flex flex-col items-center">
+                {/* Glowing Dot */}
+                <div className="relative">
+                  <div className="absolute -top-1 -left-1 w-16 h-16 bg-blue-500 opacity-50 rounded-full blur-xl"></div>
+                  <div className="w-3 h-3 bg-blue-400 rounded-full z-10"></div>
+                </div>
+
+                {/* Vertical Line */}
+                <div className="w-px h-20 bg-blue-500 mt-2"></div>
+
+                {/* Tooltip */}
+                <div className="px-3 py-1 text-sm text-white bg-neutral-600 rounded-lg shadow-lg mt-2">
+                  I am here
+                </div>
               </div>
             </div>
           </div>
