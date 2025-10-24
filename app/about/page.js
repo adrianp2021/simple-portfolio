@@ -51,7 +51,6 @@ import behance from "../../public/behance.svg";
 import spotify from "../../public/spotify.svg";
 import youtube from "../../public/youtube.svg";
 
-
 const skills = {
   frontEnd: [
     {
@@ -271,14 +270,12 @@ const skills = {
   ],
 };
 
-
-
 export default function About() {
   return (
     <>
       <Nav />
       <main className="pt-8">
-        <div className={`pt-6`}>
+        <div className={`pt-4`}>
           <Link
             className="flex items-center text-sm font-medium text-black hover:text-neutral600 dark:hover:text-saffron dark:text-offWhite"
             href="/"
@@ -301,42 +298,56 @@ export default function About() {
             Back Home
           </Link>
         </div>
-        <div >
-          <section className="pt-6 dark:text-offWhite text-black">
-            <p
-              className={`${figtree.className} text-xl font-bold pb-4`}
-            >
+        <div>
+          <section className="pt-4 dark:text-offWhite text-black">
+            <p className={`${figtree.className} text-xl font-bold pb-4`}>
               More about me
             </p>
             <p className="dark:text-neutral300 text-base font-light tracking-medium">
-              Hey there! I'm Adrian Pantea, an aspiring Fullstack Developer
-              fueled by curiosity and a passion for problem-solving. While I'm
-              relatively new to the tech scene, I'm eager to dive headfirst into
-              the world of coding and make my mark.
-            </p>
-          </section>
-
-          <section className="dark:text-offWhite text-black py-4">
-            <p
-              className={`${figtree.className} text-xl font-bold pb-4 `}
-            >
-              Work
-            </p>
-            <p className="dark:text-neutral300 text-base font-light tracking-medium  ">
-              My professional journey has been diverse, with experiences ranging
-              from legal translation to data compliance and software
-              engineering. Currently, I serve as a Public Safety Response
-              Specialist at Uber, where I ensure{" "}
-              <span className="font-bold ">data</span> compliance and policy
-              adherence while maintaining the highest standards of integrity and
-              user trust.{" "}
+              Hi, I’m Adrian. I’ve found that my favorite place to work is right
+              where technology, investigation, and privacy intersect. I like
+              puzzles, exploring patterns in data, and figuring out how tech can
+              help solve complex problems - without ever compromising trust or
+              privacy.
             </p>
           </section>
 
           <section className="dark:text-offWhite text-black ">
-            <p
-              className={`${figtree.className} text-xl font-bold pb-4 `}
-            >
+            <p className={`${figtree.className} text-xl font-bold py-4 `}>
+              Work
+            </p>
+            <p className="dark:text-neutral300 text-base font-light tracking-medium  ">
+              My journey began with law. I was fascinated by rules, systems, and
+              how decisions ripple through real life. Along the way, I
+              discovered technology – suddenly I was building, analysing, and
+              experimenting with tools that could turn information into insight.
+              That’s when I realised I loved the investigative side of tech:
+              mapping, analysing, connecting the dots, and asking the right
+              questions.
+              <br></br>
+              <br></br>
+              I’ve trained in software engineering and enjoy building things
+              with JavaScript, Python, React, Node.js, and more. But what really
+              excites me isn’t just coding - it’s using those skills to
+              understand problems from different angles and find creative,
+              responsible ways to solve them. In my work, I thrive on challenges
+              that make me think critically and make decisions under
+              uncertainty. I enjoy projects that balance multiple priorities and
+              require curiosity, boldness, and care. Every task is an
+              opportunity to learn, adapt, and grow.
+              <br></br>
+              <br></br>
+              I’m particularly drawn to OSINT, mapping, data analysis, and the
+              ways technology and law intersect. I like exploring new
+              approaches, asking questions, and connecting ideas in ways that
+              make sense to both humans and machines. My professional journey
+              has been diverse, with experiences ranging from legal translation
+              to data compliance and software engineering.
+            </p>
+          </section>
+
+          <section className="dark:text-offWhite text-black ">
+            <p className={`${figtree.className} text-xl font-bold py-4 `}>
               Education
             </p>
             <p className="dark:text-neutral300 text-base font-light tracking-medium">
@@ -349,32 +360,14 @@ export default function About() {
           </section>
 
           <section className="dark:text-offWhite text-black py-4">
-            <p
-              className={`${figtree.className} text-xl font-bold pb-4 `}
-            >
+            <p className={`${figtree.className} text-xl font-bold  `}>
               Interests
-            </p>
-            <p className="dark:text-neutral300 text-base font-light tracking-medium">
-              Beyond coding, I have a keen interest in
-              solving puzzles and
-              exploring new technologies. These
-              hobbies allow me to approach problems with a fresh perspective and
-              fuel my desire to continuously learn and grow.
             </p>
 
             <p className=" dark:text-neutral300 text-base font-light tracking-medium pt-4 ">
               When I'm not coding, you'll often find me immersing myself in
               virtual worlds or tinkering with new gadgets. I'm an avid gamer,
               currently engrossed in titles like
-              <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-saffron hover:text-neutral600">
-                <a
-                  href="https://store.steampowered.com/app/812140/Assassins_Creed_Odyssey/"
-                  target="_blank"
-                >
-                  Assassin's Creed Odyssey
-                </a>
-              </span>{" "}
-              and
               <span className="ml-1 underline underline-offset-4 text-black dark:text-offWhite dark:hover:text-saffron hover:text-neutral600">
                 <a
                   href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/"
@@ -389,9 +382,7 @@ export default function About() {
           </section>
 
           <section className=" dark:text-offWhite text-black">
-            <p
-              className={`${figtree.className} text-xl font-bold pb-6 `}
-            >
+            <p className={`${figtree.className} text-xl font-bold pb-6 `}>
               Stack
             </p>
             <SkillSection title="Frontend Skills" skills={skills.frontEnd} />
