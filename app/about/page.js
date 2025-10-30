@@ -337,7 +337,7 @@ export default function About() {
               opportunity to learn, adapt, and grow.
               <br></br>
               <br></br>
-              I’m particularly drawn to OSINT, mapping, data analysis, and the
+              I’m particularly drawn to mapping, data analysis, and the
               ways technology and law intersect. I like exploring new
               approaches, asking questions, and connecting ideas in ways that
               make sense to both humans and machines. My professional journey
