@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import photo from "../public/m.png";
+import photo from "../public/g1.png";
 
 import Nav from "./components/nav";
 
