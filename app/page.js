@@ -35,17 +35,6 @@ const jobs = [
     recipient: "https://www.uber.com/gb/en/",
   },
   {
-    src: "/ga.png",
-    name: "General Assembly",
-    year: "May - July 2021",
-    alt: "General Assembly",
-    description:
-      "Intensive 12-week bootcamp equipped me with full-stack development capabilities (JavaScript, React, Next JS) for crafting exceptional UIs. Backend proficiency in Python (Django), Node.js, SQL, and MongoDB.",
-    location: "London, UK",
-    title: "Software Engineering Immersive",
-    recipient: "https://generalassemb.ly/",
-  },
-  {
     src: "/dep.png",
     name: "De Pinna LLP",
     year: "2020 - 2021",
