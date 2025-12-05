@@ -1,0 +1,17 @@
+{
+  "name": "Adrian Pantea Portfolio",
+  "short_name": "Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "My portfolio",
+  "icons": [
+    {
+      "src": "/me1.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "theme_color": "#ffffff"
+}

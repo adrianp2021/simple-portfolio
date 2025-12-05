@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adrianpantea.net"
+        }
+      ],
+      "destination": "https://www.adrianpantea.dev/$1",
+      "permanent": true
+    }
+  ]
+}
