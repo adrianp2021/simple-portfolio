@@ -18,24 +18,10 @@ export const metadata = {
   description: "My portfolio",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-
-      <Script strategy="afterInteractive">
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}',{
-          page_path: window.location.pathname
-        });
-      `}
-      </Script>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="g1.png" sizes="60x60" type="image/png" />
